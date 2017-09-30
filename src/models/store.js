@@ -1,39 +1,61 @@
-import sql from 'mssql'
+import mysql from 'mysql'
 import config from '../config/db'
+
+const connection = await mysql.createConnection(config)//建立連線
 
 class Store {
 
     async find(ctx) {
-        const pool = await sql.connect(config)
-        const result = await sql.query `select * from StoreList`
+        
+        await connection.connect();//連線資料庫
+        
+        const result = await connection.query(`select * from StoreList`, function(error){
+            if(error){//檢查是否有錯誤
+                console.log('查詢失敗！');
+                throw error;
+            }
+        })
         console.dir(result)
 
-        await sql.close()
+        await connection.end()
         return result['recordsets']
     }
 
     async findById(ctx) {
-        const pool = await sql.connect(config)
+        
+        await connection.connect();//連線資料庫
 
-        let result = await pool.request()
+        let result = await connection.request()
             .input('account', sql.NVarChar, ctx.params.id)
-            .query('select * from StoreList where account = @account')
+            .query('select * from StoreList where account = @account', function(error){
+                if(error){//檢查是否有錯誤
+                    console.log('查詢失敗！');
+                    throw error;
+                }
+            })
         console.dir(result)
 
-        await sql.close()
+        await connection.end()
         return result['recordsets']
     }
 
     async login(ctx) {
-        const pool = await sql.connect(config)
+
+        await connection.connect();//連線資料庫
         console.log(ctx)
-        let result = await pool.request()
+        
+        let result = await connection.request()
             .input('account', sql.NVarChar, ctx.request.body.storeId)
             .input('password', sql.NVarChar, ctx.request.body.storePwd)
-            .query('select * from StoreList where account = @account and password = @password')
+            .query('select * from StoreList where account = @account and password = @password', function(error){
+                if(error){//檢查是否有錯誤
+                    console.log('查詢失敗！');
+                    throw error;
+                }
+            })
         console.dir(result)
 
-        await sql.close()
+        await connection.end()
         return result['recordsets']
     }
 }
