@@ -4,7 +4,7 @@ import config from '../config/db'
 const connection = await mysql.createConnection(config)//建立連線
 
 class Child {
-
+    
     async find(ctx) {
 
         await connection.connect();//連線資料庫
