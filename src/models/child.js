@@ -1,63 +1,40 @@
-import mysql from 'mysql'
+import sql from 'mssql'
 import config from '../config/db'
 
-const connection = await mysql.createConnection(config)//建立連線
-
 class Child {
-    
+
     async find(ctx) {
-
-        await connection.connect();//連線資料庫
-
-        const result = await connection.query(`select * from ChildList`, function(error){
-            if(error){//檢查是否有錯誤
-                console.log('查詢失敗！');
-                throw error;
-            }
-        })
+        const pool = await sql.connect(config)
+        const result = await sql.query `select * from ChildList`
         console.dir(result)
 
+        await sql.close()
         return result['recordsets']
-        await connection.end()
     }
 
     async findById(ctx) {
+        const pool = await sql.connect(config)
 
-        await connection.connect();//連線資料庫
-        
-        let result = await connection.request()
-            .input('account',sql.NVarChar,ctx.params.id)
-            .query('select * from ChildList where account = @account', function(error){
-            if(error){//檢查是否有錯誤
-                console.log('查詢失敗！');
-                throw error;
-            }
-        })
+        let result = await pool.request()
+            .input('account', sql.NVarChar, ctx.params.id)
+            .query('select * from ChildList where account = @account')
         console.dir(result)
 
+        await sql.close()
         return result['recordsets']
-        await connection.end()
     }
 
     async login(ctx) {
-
-        await connection.connect();//連線資料庫
-
+        const pool = await sql.connect(config)
         console.log(ctx)
-
-        let result = await connection.request()
+        let result = await pool.request()
             .input('account', sql.NVarChar, ctx.request.body.childId)
             .input('password', sql.NVarChar, ctx.request.body.childPwd)
-            .query('select * from ChildList where account = @account and password = @password', function(error){
-                if(error){//檢查是否有錯誤
-                    console.log('查詢失敗！');
-                    throw error;
-                }
-        })
+            .query('select * from ChildList where account = @account and password = @password')
         console.dir(result)
 
+        await sql.close()
         return result['recordsets']
-        await connection.end()
     }
 }
 
