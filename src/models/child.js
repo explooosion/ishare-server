@@ -1,40 +1,65 @@
-import sql from 'mssql'
+import mysql from 'mysql'
+//ERROR: app crash-waiting for file changes before starting.. 
+//solution: npm install mysql
 import config from '../config/db'
 
-class Child {
+const connection = mysql.createConnection(config)
 
+class Child {
+    
     async find(ctx) {
-        const pool = await sql.connect(config)
-        const result = await sql.query `select * from ChildList`
+
+        await connection.connect();
+
+        const result = await connection.query(`select * from ChildList`, function(error){
+            if(error){
+                console.log('查詢失敗！');
+                throw error;
+            }
+        })
         console.dir(result)
 
-        await sql.close()
         return result['recordsets']
+        await connection.end()
     }
 
     async findById(ctx) {
-        const pool = await sql.connect(config)
 
-        let result = await pool.request()
-            .input('account', sql.NVarChar, ctx.params.id)
-            .query('select * from ChildList where account = @account')
+        await connection.connect();
+        
+        let result = await connection.request()
+            .input('account',sql.NVarChar,ctx.params.id)
+            .query('select * from ChildList where account = @account', function(error){
+            if(error){
+                console.log('查詢失敗！');
+                throw error;
+            }
+        })
         console.dir(result)
 
-        await sql.close()
         return result['recordsets']
+        await connection.end()
     }
 
     async login(ctx) {
-        const pool = await sql.connect(config)
+
+        await connection.connect();
+
         console.log(ctx)
-        let result = await pool.request()
+
+        let result = await connection.request()
             .input('account', sql.NVarChar, ctx.request.body.childId)
             .input('password', sql.NVarChar, ctx.request.body.childPwd)
-            .query('select * from ChildList where account = @account and password = @password')
+            .query('select * from ChildList where account = @account and password = @password', function(error){
+                if(error){
+                    console.log('查詢失敗！');
+                    throw error;
+                }
+        })
         console.dir(result)
 
-        await sql.close()
         return result['recordsets']
+        await connection.end()
     }
 }
 
