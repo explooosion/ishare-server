@@ -1,7 +1,7 @@
 const config = {
     "user": "ishare",
-    "password": "ishare@666",
-    "server": "163.17.136.183",
+    "password": "ishare@888",
+    "server": "218.161.68.185",
     "database": "ishare"
 };
 
