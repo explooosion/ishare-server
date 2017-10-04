@@ -1,3 +1,5 @@
+'use strict';
+
 import Store from '../models/store';
 
 class StoreControllers {

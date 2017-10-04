@@ -1,3 +1,5 @@
+'use strict';
+
 import Exchange from '../models/exchange';
 
 class ExchangeControllers {
@@ -12,4 +14,4 @@ class ExchangeControllers {
 
 }
 
-export default new ExchangeControllers()
+export default new ExchangeControllers();

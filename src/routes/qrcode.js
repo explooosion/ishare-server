@@ -5,7 +5,7 @@ import Router from 'koa-router';
 const router = new Router();
 
 router.get('/', async(ctx, next) => {
-    await ctx.render('qrcode')
+    await ctx.render('qrcode');
 })
 
 export default router;

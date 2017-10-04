@@ -1,3 +1,5 @@
+'use strict';
+
 import Child from '../models/child';
 
 class ChildControllers {
@@ -15,4 +17,4 @@ class ChildControllers {
     }
 }
 
-export default new ChildControllers()
+export default new ChildControllers();

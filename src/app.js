@@ -13,10 +13,12 @@ import jwtKoa from 'koa-jwt';
 import cors from 'kcors';
 
 // unit
+import open from 'open';
 import middleware from './middleware';
 import routes from './routes';
+import env from './config/env';
 
-const secret = require('./config/secret.json')
+const secret = require('./config/secret.json');
 const app = new Koa();
 
 app
@@ -37,8 +39,11 @@ app
     // }))
     .use(routes())
 
-app.listen(80,
-    () => console.log(`✅  The server is running at http://localhost:80/`)
+app.listen(env.ip,
+    () => {
+        console.log(`✅  The server is running at http://localhost:${env.ip}/`);
+        open(`http://localhost:${env.ip}/`);
+    }
 )
 
-export default app
+export default app;

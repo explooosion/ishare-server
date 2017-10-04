@@ -11,13 +11,13 @@ import activity from './activity';
 const router = new Router();
 
 router.get('/', async(ctx, next) => {
-    await ctx.render('size')
+    await ctx.redirect('/activity');
 })
 
-router.use('/qrcode', qrcode.routes(), qrcode.allowedMethods())
-router.use('/dashboard', dashboard.routes(), dashboard.allowedMethods())
-router.use('/api', api.routes(), api.allowedMethods())
-router.use('/activity', activity.routes(), activity.allowedMethods())
+router.use('/api', api.routes(), api.allowedMethods());
+router.use('/activity', activity.routes(), activity.allowedMethods());
+router.use('/dashboard', dashboard.routes(), dashboard.allowedMethods());
+router.use('/qrcode', qrcode.routes(), qrcode.allowedMethods());
 
 router.get('*', async(ctx, next) => {
     ctx.throw(404);
