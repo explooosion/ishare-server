@@ -1,34 +1,43 @@
 'use strict';
 import mysql from 'mysql2';
-//ERROR: app crash-waiting for file changes before starting.. 
-//solution: npm install mysql
 import config from '../config/db';
-class Child {
+class Mission {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_store');
+            const [rows, fields] = await connection.query('Select * from web_mission');
             return rows;
         } catch (e) {
-            return false
+            return false;
         }
     }
-    async findById(ctx) {
+    async findById(ctx){
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_store where storeusername = ?', [ctx.params.id]
+                'Select * from web_mission where id = ?',[ctx.params.id]
             );
             return rows;
         } catch (e) {
             return false;
         }
     }
-    async login(ctx) {
+    async findByType(ctx){
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_store where storeusername = ? and storepassword = ?', [ctx.request.body.childId, ctx.request.body.childPwd]
+                'Select * from web_mission where missiontype = ?',[ctx.params.Type]
+            );
+            return rows;
+        } catch (e) {
+            return false;
+        }
+    }
+    async findByLocation(ctx){
+        try {
+            const connection = await mysql.createConnection(config);
+            const [rows, fields] = await connection.query(
+                'Select * from web_mission where missionlocation = ?',[ctx.params.location]
             );
             return rows;
         } catch (e) {
@@ -36,4 +45,5 @@ class Child {
         }
     }
 }
-export default new Child();
+export default new Mission();
+
