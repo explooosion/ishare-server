@@ -1,12 +1,12 @@
 'use strict';
 
-import mysql from 'mysql';
+import mysql from 'mysql2';
 //ERROR: app crash-waiting for file changes before starting.. 
 //solution: npm install mysql
 import config from '../config/db';
 
 const connection = mysql.createConnection(config) //建立連線
-
+let temp;
 class Store {
 
     async find(ctx) {
