@@ -13,11 +13,10 @@ class Child {
     async find(ctx) {
 
         connection.connect();
-
-        connection.query('select * from ChildList', function (err, results, fields) {
-            if (error) {
+        connection.query('select * from web_store', function (err, results, fields) {
+            if (err) {
                 console.log('查詢失敗！');
-                throw error;
+                throw err;
             }
             console.log(results);
             temp = results;
@@ -28,34 +27,27 @@ class Child {
 
     async findById(ctx) {
         connection.connect();
-
-        connection.request()
-            .input('account', sql.NVarChar, ctx.params.id)
-            .query('select * from ChildList where account = @account', function (err, results, fields) {
-                if (error) {
-                    console.log('查詢失敗！');
-                    throw error;
-                }
-                console.log(results);
-                temp = results;
-            });
+        connection.query('select * from web_store where storeusername = ' + ctx.params.id, function (err, results, fields) {
+            if (err) {
+                console.log('查詢失敗！');
+                throw err;
+            }
+            console.log(results);
+            temp = results;
+        });
         return temp;
     }
 
     async login(ctx) {
         connection.connect();
-
-        connection.request()
-            .input('account', sql.NVarChar, ctx.request.body.childId)
-            .input('password', sql.NVarChar, ctx.request.body.childPwd)
-            .query('select * from ChildList where account = @account and password = @password', function (err, results, fields) {
-                if (error) {
-                    console.log('查詢失敗！');
-                    throw error;
-                }
-                console.log(results);
-                temp = results;
-            });
+        connection.query('select * from web_store where storeusername = ? and storepassword = ?', [ctx.request.body.childId, ctx.request.body.childPwd], function (err, results, fields) {
+            if (err) {
+                console.log('查詢失敗！');
+                throw err;
+            }
+            console.log(results);
+            temp = results;
+        });
         return temp;
     }
 }

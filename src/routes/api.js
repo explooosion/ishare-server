@@ -8,6 +8,7 @@ import testControllers from '../controllers/test';
 import ChildControllers from '../controllers/child';
 import StoreControllers from '../controllers/store';
 import ExchangeControllers from '../controllers/exchange';
+import UserControllers from '../controllers/user';
 
 const verify = util.promisify(jwt.verify); // 解密 
 const secret = require('../config/secret.json');
@@ -21,22 +22,22 @@ router.get('/', async(ctx, next) => {
 })
 
 // child
-router.get('/child', ChildControllers.find);
-router.get('/child/:id', ChildControllers.findById);
-router.post('/child/login', ChildControllers.login);
+// router.get('/child', ChildControllers.find);
+// router.get('/child/:id', ChildControllers.findById);
+// router.post('/child/login', ChildControllers.login);
 
-// store
-router.post('/store/login', StoreControllers.login);
-router.get('/test/find',testControllers.find);
-// exchange
-router.get('/exchange', ExchangeControllers.find);
-router.post('/exchange/add', ExchangeControllers.add);
+// // store
+// router.post('/store/login', StoreControllers.login);
+// router.get('/test/find',testControllers.find);
+// // exchange
+// router.get('/exchange', ExchangeControllers.find);
+// router.post('/exchange/add', ExchangeControllers.add);
 
 // Mission
 // ....
 
 // User
-// .... 
+router.post('/user/login',UserControllers.login);
 
 // Record
 // ....

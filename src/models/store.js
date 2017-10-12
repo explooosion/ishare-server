@@ -12,11 +12,10 @@ class Store {
     async find(ctx) {
 
         connection.connect();
-
-        connection.query('select * from StoreList', function (err, results, fields) {
-            if (error) {
+        connection.query('select * from web_store', function (err, results, fields) {
+            if (err) {
                 console.log('查詢失敗！');
-                throw error;
+                throw err;
             }
             console.log(results);
             temp = results;
@@ -31,10 +30,10 @@ class Store {
 
         connection.request()
             .input('account', sql.NVarChar, ctx.params.id)
-            .query('select * from StoreList where account = @account', function (err, results, fields) {
-                if (error) {
+            .query('select * from web_store where account = @account', function (err, results, fields) {
+                if (err) {
                     console.log('查詢失敗！');
-                    throw error;
+                    throw err;
                 }
                 console.log(results);
                 temp = results;
@@ -45,14 +44,10 @@ class Store {
     async login(ctx) {
 
         connection.connect();
-
-        connection.request()
-            .input('account', sql.NVarChar, ctx.request.body.storeId)
-            .input('password', sql.NVarChar, ctx.request.body.storePwd)
-            .query('select * from StoreList where account = @account and password = @password', function (err, results, fields) {
-                if (error) {
+        connection.query('select * from web_store where account = ? and password = ?',[ctx.request.body.storeId,ctx.request.body.storePwd], function (err, results, fields) {
+                if (err) {
                     console.log('查詢失敗！');
-                    throw error;
+                    throw err;
                 }
                 console.log(results);
                 temp = results;

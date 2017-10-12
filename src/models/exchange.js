@@ -12,13 +12,13 @@ class Exchange {
 
     async find(ctx) {
 
-        
+
         connection.connect();
 
-        connection.query('select * from ExchangeList order by id desc', function (err, results, fields) {
-            if (error) {
+        connection.query('select * from web_store order by id desc', function (err, results, fields) {
+            if (err) {
                 console.log('查詢失敗！');
-                throw error;
+                throw err;
             }
             console.log(results);
             temp = results;
@@ -30,30 +30,22 @@ class Exchange {
     async add(ctx) {
         const resPoint = Number(ctx.request.body.point) - Number(ctx.request.body.pointCost)
         connection.connect();
-
-        connection.request()
-            .input('account', sql.NVarChar, ctx.request.body.childId)
-            .input('point', sql.Int, resPoint)
-            .query('update ChildList set point = @point where account = @account', function (err, results, fields) {
-                if (error) {
-                    console.log('查詢失敗！');
-                    throw error;
-                }
-                console.log(results);
-                temp = results;
-            });
-
-        connection.request()
-            .input('account', sql.NVarChar, ctx.request.body.childId)
-            .input('point', sql.Int, resPoint)
-            .query('update ChildList set point = @point where account = @account', function (err, results, fields) {
-                if (error) {
-                    console.log('查詢失敗！');
-                    throw error;
-                }
-                console.log(results);
-                temp = results;
-            });
+        connection.query('update web_store set point = ? where account = ?', [ctx.request.body.childId, resPoint], function (err, results, fields) {
+            if (err) {
+                console.log('查詢失敗！');
+                throw err;
+            }
+            console.log(results);
+            temp = results;
+        });
+        connection.query('update web_store set point = ? where account = ?', [ctx.request.body.childId, resPoint], function (err, results, fields) {
+            if (err) {
+                console.log('查詢失敗！');
+                throw err;
+            }
+            console.log(results);
+            temp = results;
+        });
         return temp;
 
         await connection.connect(); //連線資料庫
