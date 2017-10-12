@@ -13,5 +13,15 @@ class Record {
             return false;
         }
     }
+
+    async add(ctx) {
+        try {
+            const connection = await mysql.createConnection(config);
+            console.log(ctx.request.body);
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
 }
 export default new Record();
