@@ -44,7 +44,7 @@ class User {
                 try {
                     const connection = await mysql.createConnection(config);
                     const [rows, fields] = await connection.query(
-                        'select * from web_student where studentusername = ? and studentpassword = ?', [ctx.request.body.userId, tx.request.body.userPwd]
+                        'select * from web_student where childusername = ? and childpassword = ?', [ctx.request.body.userId, tx.request.body.userPwd]
                     );
                     return rows;
                 } catch (e) {

@@ -7,7 +7,7 @@ class Exchange {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_store order by id desc');
+            const [rows, fields] = await connection.query('select * from web_store order by id desc'); //待修改
             return rows;
         } catch (e) {
             return false;
@@ -17,7 +17,7 @@ class Exchange {
         const resPoint = Number(ctx.request.body.point) - Number(ctx.request.body.pointCost)
         const connection = await mysql.createConnection(config);
         const [rows, fields] = await connection.query(
-            'update web_store set point = ? where account = ?', [ctx.request.body.childId, resPoint]
+            'update web_student set point = ? where account = ?', [ctx.request.body.childId, resPoint]
         );
         return rows;
     }

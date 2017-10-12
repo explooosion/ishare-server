@@ -7,7 +7,7 @@ class Child {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_store');
+            const [rows, fields] = await connection.query('select * from web_student');
             return rows;
         } catch (e) {
             return false
@@ -17,7 +17,7 @@ class Child {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_store where storeusername = ?', [ctx.params.id]
+                'select * from web_student where childusername = ?', [ctx.params.id]
             );
             return rows;
         } catch (e) {
@@ -28,7 +28,7 @@ class Child {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_store where storeusername = ? and storepassword = ?', [ctx.request.body.childId, ctx.request.body.childPwd]
+                'select * from web_student where childusername = ? and childpassword = ?', [ctx.request.body.childId, ctx.request.body.childPwd]
             );
             return rows;
         } catch (e) {
