@@ -37,7 +37,7 @@ router.get('/', async(ctx, next) => {
 // ....
 
 // User
-router.post('/user/login',UserControllers.login);
+router.post('/user/login', UserControllers.login);
 
 // Record
 // ....

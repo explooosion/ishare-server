@@ -42,7 +42,7 @@ app
 app.listen(env.ip,
     () => {
         console.log(`✅  The server is running at http://localhost:${env.ip}/`);
-        open(`http://localhost:${env.ip}/`);
+        // open(`http://localhost:${env.ip}/`);
     }
 )
 
