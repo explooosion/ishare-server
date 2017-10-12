@@ -11,55 +11,54 @@ class Store {
 
     async find(ctx) {
 
-        await connection.connect(); //連線資料庫
+        connection.connect();
 
-        const result = await connection.query(`select * from StoreList`, function (error) {
-            if (error) { //檢查是否有錯誤
+        connection.query('select * from StoreList', function (err, results, fields) {
+            if (error) {
                 console.log('查詢失敗！');
                 throw error;
             }
-        })
-        console.dir(result);
+            console.log(results);
+            temp = results;
+        });
+        return temp;
 
-        await connection.end();
-        return result['recordsets'];
     }
 
     async findById(ctx) {
 
-        await connection.connect(); //連線資料庫
+        connection.connect();
 
-        let result = await connection.request()
+        connection.request()
             .input('account', sql.NVarChar, ctx.params.id)
-            .query('select * from StoreList where account = @account', function (error) {
-                if (error) { //檢查是否有錯誤
+            .query('select * from StoreList where account = @account', function (err, results, fields) {
+                if (error) {
                     console.log('查詢失敗！');
                     throw error;
                 }
-            })
-        console.dir(result);
-
-        await connection.end();
-        return result['recordsets'];
+                console.log(results);
+                temp = results;
+            });
+        return temp;
     }
 
     async login(ctx) {
 
-        await connection.connect(); //連線資料庫
+        connection.connect();
 
-        let result = await connection.request()
+        connection.request()
             .input('account', sql.NVarChar, ctx.request.body.storeId)
             .input('password', sql.NVarChar, ctx.request.body.storePwd)
-            .query('select * from StoreList where account = @account and password = @password', function (error) {
-                if (error) { //檢查是否有錯誤
+            .query('select * from StoreList where account = @account and password = @password', function (err, results, fields) {
+                if (error) {
                     console.log('查詢失敗！');
                     throw error;
                 }
-            })
-        console.dir(result);
+                console.log(results);
+                temp = results;
+            });
+        return temp;
 
-        await connection.end();
-        return result['recordsets'];
     }
 }
 
