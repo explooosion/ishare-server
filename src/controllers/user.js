@@ -1,7 +1,7 @@
 'use strict';
 
 import User from '../models/user';
-let temp;
+
 class UserControllers {
     async login(ctx) {
         //console.log(await User.login());
