@@ -37,8 +37,9 @@ router.post('/record/add', RecordControllers.add);
 // Mission
 router.get('/mission', MissionControllers.find);
 router.get('/mission/:id', MissionControllers.findById);
-router.get('/mission/:type', MissionControllers.findByType);
-router.get('/mission/:location', MissionControllers.findByLocation);
+// router.get('/mission/:type', MissionControllers.findByType);
+// router.get('/mission/:location', MissionControllers.findByLocation);
+
 // User
 router.post('/user/login', UserControllers.login);
 
