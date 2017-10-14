@@ -4,6 +4,7 @@ import mysql from 'mysql2/promise';
 import config from '../config/db';
 
 class Child {
+
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
@@ -47,4 +48,5 @@ class Child {
         }
     }
 }
+
 export default new Child();
