@@ -15,7 +15,7 @@ const secret = require('../config/secret.json');
 
 const router = new Router();
 
-router.get('/', async(ctx, next) => {
+router.get('/', async (ctx, next) => {
     ctx.body = {
         status: true
     }
@@ -37,8 +37,9 @@ router.post('/record/add', RecordControllers.add);
 // Mission
 router.get('/mission', MissionControllers.find);
 router.get('/mission/:id', MissionControllers.findById);
-// router.get('/mission/:type', MissionControllers.findByType);
-// router.get('/mission/:location', MissionControllers.findByLocation);
+router.post('/mission/add', MissionControllers.add);
+router.post('/mission/update', MissionControllers.update);
+router.post('/mission/delete', MissionControllers.delete);
 
 // User
 router.post('/user/login', UserControllers.login);

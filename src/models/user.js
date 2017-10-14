@@ -5,7 +5,7 @@ import config from '../config/db';
 
 class User {
     async login(ctx) {
-        let group = ctx.request.body.loginbar;
+        let group = ctx.request.body.logingroup;
         console.log(ctx.request.body);
         switch (group) {
             case 1: //社福單位
