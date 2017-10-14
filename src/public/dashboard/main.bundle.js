@@ -173,16 +173,17 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_charts__ = __webpack_require__("../../../../ng2-charts/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_charts__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__toverux_ngsweetalert2__ = __webpack_require__("../../../../@toverux/ngsweetalert2/dist/types+es2015-modules/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__container_nav_nav_component__ = __webpack_require__("../../../../../src/app/container/nav/nav.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__container_home_home_component__ = __webpack_require__("../../../../../src/app/container/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__container_child_child_component__ = __webpack_require__("../../../../../src/app/container/child/child.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__container_store_store_component__ = __webpack_require__("../../../../../src/app/container/store/store.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__container_record_record_component__ = __webpack_require__("../../../../../src/app/container/record/record.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__container_account_account_component__ = __webpack_require__("../../../../../src/app/container/account/account.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__container_timer_timer_component__ = __webpack_require__("../../../../../src/app/container/timer/timer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__container_log_log_component__ = __webpack_require__("../../../../../src/app/container/log/log.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__container_login_login_component__ = __webpack_require__("../../../../../src/app/container/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_pagination__ = __webpack_require__("../../../../ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__container_nav_nav_component__ = __webpack_require__("../../../../../src/app/container/nav/nav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__container_home_home_component__ = __webpack_require__("../../../../../src/app/container/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__container_child_child_component__ = __webpack_require__("../../../../../src/app/container/child/child.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__container_store_store_component__ = __webpack_require__("../../../../../src/app/container/store/store.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__container_record_record_component__ = __webpack_require__("../../../../../src/app/container/record/record.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__container_account_account_component__ = __webpack_require__("../../../../../src/app/container/account/account.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__container_timer_timer_component__ = __webpack_require__("../../../../../src/app/container/timer/timer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__container_log_log_component__ = __webpack_require__("../../../../../src/app/container/log/log.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__container_login_login_component__ = __webpack_require__("../../../../../src/app/container/login/login.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -195,6 +196,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 // Plugin
+
 
 
 // Component
@@ -216,16 +218,16 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__container_nav_nav_component__["a" /* NavComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__container_home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__container_child_child_component__["a" /* ChildComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__container_store_store_component__["a" /* StoreComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__container_record_record_component__["a" /* RecordComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__container_account_account_component__["a" /* AccountComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__container_timer_timer_component__["a" /* TimerComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__container_log_log_component__["a" /* LogComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__container_login_login_component__["a" /* LoginComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_9__container_nav_nav_component__["a" /* NavComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__container_home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__container_child_child_component__["a" /* ChildComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__container_store_store_component__["a" /* StoreComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__container_record_record_component__["a" /* RecordComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__container_account_account_component__["a" /* AccountComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__container_timer_timer_component__["a" /* TimerComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__container_log_log_component__["a" /* LogComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__container_login_login_component__["a" /* LoginComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -234,10 +236,11 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* HttpModule */],
             __WEBPACK_IMPORTED_MODULE_3__angular_http__["d" /* JsonpModule */],
             __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_6__toverux_ngsweetalert2__["b" /* SweetAlert2Module */].forRoot({})
+            __WEBPACK_IMPORTED_MODULE_6__toverux_ngsweetalert2__["b" /* SweetAlert2Module */].forRoot({}),
+            __WEBPACK_IMPORTED_MODULE_7_ngx_pagination__["a" /* NgxPaginationModule */]
         ],
         providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* AppComponent */]]
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -327,7 +330,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/child/child.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">學童管理</li>\r\n  </ol>\r\n\r\n  <!-- Example Tables Card -->\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 學童列表\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal\">新增</button>\r\n    </div>\r\n    <div class=\"card-block\">\r\n      <div class=\"table-responsive\">\r\n        <table class=\"table table-bordered\" width=\"100%\" id=\"dataTable\" cellspacing=\"0\">\r\n          <thead>\r\n            <tr>\r\n              <th>姓名</th>\r\n              <th>性別</th>\r\n              <th>出年年月</th>\r\n              <th>葷素</th>\r\n              <th>電話</th>\r\n              <th>住址</th>\r\n              <th>就讀學校</th>\r\n              <th>監護人</th>\r\n              <th>監護人手機</th>\r\n              <th>現有點數</th>\r\n            </tr>\r\n          </thead>\r\n          <!--<tfoot>\r\n                  <tr>\r\n                      <th>姓名</th>\r\n                      <th>性別</th>\r\n                      <th>出年年月</th>\r\n                      <th>葷素</th>\r\n                      <th>電話</th>\r\n                      <th>住址</th>\r\n                      <th>就讀學校</th>\r\n                      <th>監護人</th>\r\n                      <th>監護人手機</th>\r\n                      <th>現有點數</th>\r\n                  </tr>\r\n              </tfoot>-->\r\n          <tbody>\r\n            <tr>\r\n              <td>王小明</td>\r\n              <td>男</td>\r\n              <td>90/05/21</td>\r\n              <td>葷食</td>\r\n              <td>04-2458-1234</td>\r\n              <td>台中市南區</td>\r\n              <td>中山國小</td>\r\n              <td>王大仁</td>\r\n              <td>0989-777-123</td>\r\n              <td>3</td>\r\n            </tr>\r\n            <tr>\r\n              <td>劉曉萱</td>\r\n              <td>女</td>\r\n              <td>92/07/14</td>\r\n              <td>素食</td>\r\n              <td>04-2218-4254</td>\r\n              <td>台中市北區</td>\r\n              <td>中山國小</td>\r\n              <td>劉國豪</td>\r\n              <td>0976-123-456</td>\r\n              <td>2</td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      最後更新 早上 08:30\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">姓名:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">性別:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">男生</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">女生</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">葷素:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">葷食</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">素食</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">電話:</label>\r\n              <input type=\"tel\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">住址:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">就讀學校:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">監護人:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">監護人手機:</label>\r\n              <input type=\"tel\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">備註:</label>\r\n              <textarea class=\"form-control\"></textarea>\r\n            </div>\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</main>\r\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">學童管理</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 學童列表\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#modelAddChild\">新增</button>\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table\">\r\n        <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>帳號</th>\r\n            <th>姓名</th>\r\n            <th>學號</th>\r\n            <th>點數</th>\r\n            <th>代號</th>\r\n            <th>就讀學校</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"6\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page }\">\r\n            <td>{{data.childusername}}</td>\r\n            <td>{{data.childname}}</td>\r\n            <td>{{data.childstudentid}}</td>\r\n            <td>{{data.childpoint}}</td>\r\n            <td>{{data.childcode}}</td>\r\n            <td>{{data.childschool}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      最後更新 早上 08:30\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" #modelAddChild id=\"modelAddChild\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\"\r\n    aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\r\n          <button #modelClose type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">帳號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childusername\" [(ngModel)]=\"childusername\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"childpassword\" [(ngModel)]=\"childpassword\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">確認密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"childpasswordRe\" [(ngModel)]=\"childpasswordRe\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">兌換代碼:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childcode\" [(ngModel)]=\"childcode\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">姓名:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childname\" [(ngModel)]=\"childname\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">性別（暫不填）:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input name=\"childgender\" type=\"radio\" value=\"男生\" class=\"custom-control-input\" [ngModel]=\"childgender\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">男生</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input name=\"childgender\" type=\"radio\" value=\"女生\" class=\"custom-control-input\" [ngModel]=\"childgender\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">女生</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">學號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childstudentid\" [(ngModel)]=\"childstudentid\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">點數:</label>\r\n              <input type=\"number\" class=\"form-control\" name=\"childpoint\" min=\"0\" max=\"1000\" [(ngModel)]=\"childpoint\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">就讀學校:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childschool\" [(ngModel)]=\"childschool\" required>\r\n            </div>\r\n\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <swal #dialogSuccess title=\"新增成功\" type=\"success\"></swal>\r\n          <swal #dialogError title=\"資料錯誤，請重新確認\" type=\"error\"></swal>\r\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"userAddChild(modelAddChild);\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</main>\r\n"
 
 /***/ }),
 
@@ -337,6 +340,9 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChildComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__ = __webpack_require__("../../../../../src/app/service/user/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__ = __webpack_require__("../../../../@toverux/ngsweetalert2/dist/types+es2015-modules/index.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -346,24 +352,174 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
 
 var ChildComponent = (function () {
-    function ChildComponent() {
+    function ChildComponent(router, userService) {
+        this.router = router;
+        this.userService = userService;
+        this.datas = [];
+        this.page = 1;
+        this.isLoading = true;
+        this.childusername = 'yeeman9487';
+        this.childpassword = '123456';
+        this.childpasswordRe = '123456';
+        this.childname = 'Yee';
+        this.childgender = '男生';
+        this.childpoint = 120;
+        this.childcode = 'B';
+        this.childschool = '臺北市立敦化國民小學';
+        this.childstudentid = '10111';
     }
     ChildComponent.prototype.ngOnInit = function () {
-        $('#dataTable').DataTable();
+        this.userGetChild();
+    };
+    ChildComponent.prototype.userGetChild = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.userService.userGetChild().subscribe(function (result) {
+                            _this.isLoading = false;
+                            _this.datas = result;
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ChildComponent.prototype.userAddChild = function (obj) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var body;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        console.log(obj);
+                        if (!(this.childpassword != this.childpasswordRe)) return [3 /*break*/, 1];
+                        this.swalDialogError
+                            .show().then(function (value) {
+                            _this.childpassword = '';
+                            _this.childpasswordRe = '';
+                        });
+                        return [3 /*break*/, 4];
+                    case 1:
+                        if (!(this.childusername == '' ||
+                            this.childpassword == '' ||
+                            this.childpasswordRe == '' ||
+                            this.childname == '' ||
+                            this.childgender == '' ||
+                            this.childpoint > 1000 ||
+                            this.childcode == '' ||
+                            this.childschool == '' ||
+                            this.childstudentid == '')) return [3 /*break*/, 2];
+                        this.swalDialogError
+                            .show().then(function (value) {
+                            _this.childpassword = '';
+                            _this.childpasswordRe = '';
+                            _this.childpoint = 0;
+                        });
+                        return [3 /*break*/, 4];
+                    case 2:
+                        body = {
+                            childusername: this.childusername,
+                            childpassword: this.childpassword,
+                            childname: this.childname,
+                            childgender: this.childgender,
+                            childpoint: this.childpoint,
+                            childcode: this.childcode,
+                            childschool: this.childschool,
+                            childstudentid: this.childstudentid
+                        };
+                        return [4 /*yield*/, this.userService.userAddChild(body).subscribe(function (result) {
+                                console.log(result);
+                                if (result.affectedRows > 0) {
+                                    _this.swalDialogSuccess
+                                        .show().then(function (value) {
+                                        _this.modelClose.nativeElement.click();
+                                    });
+                                }
+                                else {
+                                    _this.swalDialogError
+                                        .show().then(function (value) {
+                                        _this.childpassword = '';
+                                        _this.childpasswordRe = '';
+                                        _this.childpoint = 0;
+                                    });
+                                }
+                            })];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
     };
     return ChildComponent;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('modelClose'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+], ChildComponent.prototype, "modelClose", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogError'),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _b || Object)
+], ChildComponent.prototype, "swalDialogError", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogSuccess'),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _c || Object)
+], ChildComponent.prototype, "swalDialogSuccess", void 0);
 ChildComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-child',
         template: __webpack_require__("../../../../../src/app/container/child/child.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/child/child.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/container/child/child.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]) === "function" && _e || Object])
 ], ChildComponent);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=child.component.js.map
 
 /***/ }),
@@ -522,7 +678,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/log/log.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n      <!-- Breadcrumbs -->\n      <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\">\n          <a [routerLink]=\"['']\">首頁</a>\n        </li>\n        <li class=\"breadcrumb-item active\">系統日誌</li>\n      </ol>\n    </main>\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n  <!-- Breadcrumbs -->\n  <ol class=\"breadcrumb\">\n    <li class=\"breadcrumb-item\">\n      <a [routerLink]=\"['']\">首頁</a>\n    </li>\n    <li class=\"breadcrumb-item active\">系統日誌</li>\n  </ol>\n\n  <div class=\"card mb-3\">\n    <div class=\"card-header\">\n      <i class=\"fa fa-users\"></i> 系統日誌\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal1\">新增</button>\n    </div>\n    <div class=\"card-body\">\n      <table class=\"table table-hover\">\n        <thead class=\"thead-default\">\n          <tr>\n            <th>姓名</th>\n            <th>年齡</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let meal of meals | paginate: { itemsPerPage: 10, currentPage: page }\">\n            <td>{{meal.name}}</td>\n            <td>{{meal.age}}</td>\n          </tr>\n        </tbody>\n      </table>\n      <div class=\"has-text-centered text-center\">\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\n      </div>\n    </div>\n    <div class=\"card-footer small text-muted\">\n      最後更新 早上 08:30\n    </div>\n  </div>\n\n\n  <!-- Modal -->\n  <div class=\"modal fade\" id=\"myModal1\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n            <span class=\"sr-only\">Close</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form>\n            <div class=\"form-group\">\n              <label class=\"control-label\">姓名:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">性別:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">男生</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">女生</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">葷素:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">葷食</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">素食</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">電話:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">住址:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">就讀學校:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人手機:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">備註:</label>\n              <textarea class=\"form-control\"></textarea>\n            </div>\n          </form>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</main>\n"
 
 /***/ }),
 
@@ -544,6 +700,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var LogComponent = (function () {
     function LogComponent() {
+        this.meals = [
+            { name: 'Robby', age: 6 },
+            { name: 'asd', age: 8 },
+            { name: 'Robybtvrby', age: 14 },
+            { name: 'ukjyhrtge', age: 1 },
+            { name: '234treth', age: 4 },
+            { name: 'Robby', age: 6 },
+            { name: 'asd', age: 8 },
+            { name: 'Robybtvrby', age: 14 },
+            { name: 'ukjyhrtge', age: 1 },
+            { name: '234treth', age: 4 },
+            { name: 'Robby', age: 6 },
+            { name: 'asd', age: 8 },
+            { name: 'Robybtvrby', age: 14 },
+            { name: 'ukjyhrtge', age: 1 },
+            { name: '234treth', age: 4 }
+        ];
+        this.page = 1;
     }
     LogComponent.prototype.ngOnInit = function () {
     };
@@ -583,7 +757,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-12 ml-sm-auto col-md-12 pt-5 login-page\" role=\"main\">\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-md-4 mx-auto bg-white login-form\">\n        <h4 class=\"login-title bg-success\">系統登入</h4>\n        <form class=\"login-group\">\n          <div class=\"form-group\">\n            <label for=\"txtUserId\">帳號：</label>\n            <input type=\"email\" class=\"form-control\" id=\"txtUserId\" placeholder=\"請輸入帳號\">\n          </div>\n          <div class=\"form-group\">\n            <label for=\"txtUserPwd\">密碼：</label>\n            <input type=\"password\" class=\"form-control\" id=\"txtUserPwd\" placeholder=\"請輸入密碼\">\n          </div>\n          <!-- <div class=\"form-check\">\n            <label class=\"form-check-label\">\n              <input type=\"checkbox\" class=\"form-check-input\"> Check me out\n            </label>\n          </div> -->\n          <swal #dialogSuccess title=\"登入成功\" type=\"success\"></swal>\n          <button type=\"submit\" class=\"btn btn-primary\" (click)=\"login()\">登入</button>\n        </form>\n      </div>\n    </div>\n  </div>\n</main>\n"
+module.exports = "<main class=\"col-sm-12 ml-sm-auto col-md-12 pt-5 login-page\" role=\"main\">\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-md-4 mx-auto bg-white login-form\">\n        <h4 class=\"login-title bg-primary\">系統登入</h4>\n        <form class=\"login-group\">\n          <div class=\"form-group\">\n            <label for=\"txtUserId\">帳號：</label>\n            <input type=\"email\" class=\"form-control\" name=\"txtUserId\" id=\"txtUserId\" placeholder=\"請輸入帳號\" [(ngModel)]=\"userId\">\n          </div>\n          <div class=\"form-group\">\n            <label for=\"txtUserPwd\">密碼：</label>\n            <input type=\"password\" class=\"form-control\" name=\"txtUserPwd\" id=\"txtUserPwd\" placeholder=\"請輸入密碼\" [(ngModel)]=\"userPwd\">\n          </div>\n          <!-- <div class=\"form-check\">\n            <label class=\"form-check-label\">\n              <input type=\"checkbox\" class=\"form-check-input\"> Check me out\n            </label>\n          </div> -->\n          <swal #dialogSuccess title=\"登入成功\" type=\"success\"></swal>\n          <button type=\"submit\" class=\"btn btn-lg btn-primary\" (click)=\"login()\">登入</button>\n        </form>\n      </div>\n    </div>\n  </div>\n</main>\n"
 
 /***/ }),
 
@@ -597,6 +771,7 @@ module.exports = "<main class=\"col-sm-12 ml-sm-auto col-md-12 pt-5 login-page\"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__ = __webpack_require__("../../../../ng2-cookies/ng2-cookies.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__ = __webpack_require__("../../../../@toverux/ngsweetalert2/dist/types+es2015-modules/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_user_user_service__ = __webpack_require__("../../../../../src/app/service/user/user.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -606,24 +781,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
 
 
 
 
 var LoginComponent = (function () {
-    function LoginComponent(router) {
+    function LoginComponent(router, userService) {
         this.router = router;
-        this.userId = '';
-        this.userPwd = '';
+        this.userService = userService;
+        this.userId = 'jack123';
+        this.userPwd = 'jack321';
     }
     LoginComponent.prototype.ngOnInit = function () {
     };
     LoginComponent.prototype.login = function () {
-        this.swalDialogSuccess
-            .show()
-            .then(function (value) {
-            __WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__["Cookie"].set('dashboardLogin', JSON.stringify({ status: true }));
-            location.href = "./dashboard";
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var body;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        body = {
+                            userId: this.userId,
+                            userPwd: this.userPwd,
+                            logingroup: 3
+                        };
+                        return [4 /*yield*/, this.userService.userLogin(body).subscribe(function (result) {
+                                if (result[0]) {
+                                    __WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__["Cookie"].set('dashboardLogin', JSON.stringify(result[0]));
+                                    _this.swalDialogSuccess
+                                        .show().then(function (value) { location.href = "./dashboard"; });
+                                }
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
         });
     };
     return LoginComponent;
@@ -636,12 +866,13 @@ LoginComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-login',
         template: __webpack_require__("../../../../../src/app/container/login/login.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/login/login.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/container/login/login.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_4__service_user_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_user_user_service__["a" /* UserService */]) === "function" && _c || Object])
 ], LoginComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
@@ -654,7 +885,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/*\r\n * Sidebar\r\n */\r\n\r\n.sidebar {\r\n    position: relative;\r\n}\r\n\r\n@media screen and (min-width:768px) {\r\n    .sidebar {\r\n        position: fixed;\r\n        top: 54px;\r\n        bottom: 0;\r\n        left: 0;\r\n        z-index: 1000;\r\n        overflow-x: hidden;\r\n        overflow-y: auto;\r\n        width: 225px;\r\n        background-color: #292B2C;\r\n        border-right: 1px solid #eee;\r\n    }\r\n}\r\n\r\n\r\n/* Sidebar navigation */\r\n\r\n.sidebar {\r\n    padding-left: 0;\r\n    padding-right: 0;\r\n}\r\n\r\n.sidebar .nav {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sidebar .nav-item {\r\n    width: 100%;\r\n}\r\n\r\n.sidebar .nav-item+.nav-item {\r\n    margin-left: 0;\r\n}\r\n\r\n.sidebar .nav-link {\r\n    padding: 1rem;\r\n    font-size: 16px;\r\n    color: hsla(0, 0%, 100%, .5);\r\n    border-radius: 0;\r\n}\r\n\r\n.sidebar .nav-link:hover {\r\n    color: #fff;\r\n}\r\n\r\n.sidebar .nav-link-collapse:after {\r\n    font-family: FontAwesome;\r\n    float: right;\r\n    content: \"\\F107\";\r\n    color: #aaa;\r\n}\r\n\r\n.sidebar .nav-link-collapse.collapsed:hover:after {\r\n    content: \"\\F107\";\r\n}\r\n\r\n.sidebar .nav-link-collapse.collapsed:after {\r\n    content: \"\\F105\";\r\n}\r\n\r\n.sidebar .nav-link.active {\r\n    background-color: #464a4c;\r\n    color: #fff;\r\n}\r\n\r\n.sidebar .nav-link i {\r\n    margin-right: 4px;\r\n}\r\n\r\n\r\n/* sidebar-second */\r\n\r\n.sidebar-sub {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sidebar-sub>li>a {\r\n    display: block;\r\n    padding: 0.8rem 0rem 0.8rem;\r\n    color: #636c72;\r\n    font-size: 16px;\r\n    text-decoration: unset;\r\n}\r\n\r\n.sidebar-sub>li>a:hover {\r\n    color: #fff;\r\n}\r\n\r\n.sidebar-sub>li>a.active {\r\n    color: #fff;\r\n}\r\n", ""]);
+exports.push([module.i, "/*\r\n * Sidebar\r\n */\r\n\r\n.sidebar {\r\n    position: relative;\r\n}\r\n\r\n@media screen and (min-width:768px) {\r\n    .sidebar {\r\n        position: fixed;\r\n        top: 54px;\r\n        bottom: 0;\r\n        left: 0;\r\n        z-index: 1000;\r\n        overflow-x: hidden;\r\n        overflow-y: auto;\r\n        width: 225px;\r\n        background-color: #292B2C;\r\n        border-right: 1px solid #eee;\r\n    }\r\n}\r\n\r\n\r\n/* Sidebar navigation */\r\n\r\n.sidebar {\r\n    padding-left: 0;\r\n    padding-right: 0;\r\n}\r\n\r\n.sidebar .nav {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sidebar .nav-item {\r\n    width: 100%;\r\n}\r\n\r\n.sidebar .nav-item+.nav-item {\r\n    margin-left: 0;\r\n}\r\n\r\n.sidebar .nav-link {\r\n    padding: 1rem;\r\n    font-size: 16px;\r\n    color: hsla(0, 0%, 100%, .5);\r\n    border-radius: 0;\r\n}\r\n\r\n.sidebar .nav-link:hover {\r\n    color: #fff;\r\n}\r\n\r\n.sidebar .nav-link-collapse:after {\r\n    font-family: FontAwesome;\r\n    float: right;\r\n    content: \"\\F107\";\r\n    color: #aaa;\r\n}\r\n\r\n.sidebar .nav-link-collapse.collapsed:hover:after {\r\n    content: \"\\F107\";\r\n}\r\n\r\n.sidebar .nav-link-collapse.collapsed:after {\r\n    content: \"\\F105\";\r\n}\r\n\r\n.sidebar .nav-link.active {\r\n    background-color: #464a4c;\r\n    color: #fff;\r\n}\r\n\r\n.sidebar .nav-link i {\r\n    margin-right: 4px;\r\n}\r\n\r\n\r\n/* sidebar-second */\r\n\r\n.sidebar-sub {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sidebar-sub>li>a {\r\n    display: block;\r\n    padding: 0.8rem 0rem 0.8rem 2.8rem;\r\n    color: #636c72;\r\n    font-size: 16px;\r\n    text-decoration: unset;\r\n}\r\n\r\n.sidebar-sub>li>a:hover {\r\n    color: #fff;\r\n}\r\n\r\n.sidebar-sub>li>a.active {\r\n    color: #fff;\r\n}\r\n", ""]);
 
 // exports
 
@@ -667,7 +898,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/nav/nav.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">\r\n  <a class=\"navbar-brand\" href=\"#\" [routerLink]=\"['home']\" (click)=\"sidebarActive($event)\">天使計劃 - 後台管理系統</a>\r\n  <button class=\"navbar-toggler d-lg-none\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\"\r\n    aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n    <div *ngIf=\"this.isLogin\" class=\"sidebar\">\r\n      <ul class=\"navbar-nav nav-pills flex-column\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': 'home'==sideActive }\" href=\"#\" [routerLink]=\"['home']\" (click)=\"sidebarActive($event)\">\r\n            <i class=\"fa fa-fw fa-home\"></i>首頁\r\n            <span class=\"sr-only\">(current)</span>\r\n          </a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': 'child'==sideActive }\" href=\"#\" [routerLink]=\"['child']\" (click)=\"sidebarActive($event)\">\r\n            <i class=\"fa fa-fw fa-users\"></i>學童管理\r\n          </a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': 'store'==sideActive }\" href=\"#\" [routerLink]=\"['store']\" (click)=\"sidebarActive($event)\">\r\n            <i class=\"fa fa-fw fa-university\"></i>店家管理\r\n          </a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': 'record'==sideActive }\" href=\"#\" [routerLink]=\"['record']\" (click)=\"sidebarActive($event)\">\r\n            <i class=\" fa fa-fw fa-credit-card \"></i>點數管理\r\n          </a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link nav-link-collapse collapsed\" [ngClass]=\"{'active': 'account'==sideActive || 'timer'==sideActive }\" data-toggle=\"collapse\"\r\n            href=\"#collapseSystem\" aria-expanded=\"false \">\r\n            <i class=\"fa fa-fw fa-cog \"></i> 系統參數</a>\r\n          <ul class=\"sidebar-sub collapse\" id=\"collapseSystem\" aria-expanded=\"false\">\r\n            <li>\r\n              <a [ngClass]=\"{'active': 'account'==sideActive }\" href=\"#\" [routerLink]=\"['account']\" (click)=\"sidebarActive($event)\">系統帳戶管理</a>\r\n            </li>\r\n            <li>\r\n              <a [ngClass]=\"{'active': 'timer'==sideActive }\" href=\"#\" [routerLink]=\"['timer']\" (click)=\"sidebarActive($event)\">時段管理</a>\r\n            </li>\r\n          </ul>\r\n        </li>\r\n        <li class=\"nav-item \">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': 'log'==sideActive }\" href=\"#\" [routerLink]=\"['log']\" (click)=\"sidebarActive($event)\">\r\n            <i class=\"fa fa-fw fa-calendar\"></i>系統日誌\r\n          </a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n    <form *ngIf=\"isLogin\" class=\"form-inline ml-auto\">\r\n      <!-- <input class=\"form-control mr-sm-2 \" type=\"text\" placeholder=\"Search\" aria-label=\"Search\"> -->\r\n      <label class=\"form-control bg-dark text-white\">Hi, Admin</label>\r\n      <swal #dialogLogout title=\"確定要登出？\" type=\"question\" [options]=\"{ showCancelButton: 'true' }\" (confirm)=\"logout()\"></swal>\r\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\" (click)=\"dialogLogout.show()\">登出</button>\r\n    </form>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">\r\n  <a class=\"navbar-brand\" href=\"#\" [routerLink]=\"['home']\" (click)=\"sidebarActive($event)\">天使計劃 - 後台管理系統</a>\r\n  <button class=\"navbar-toggler d-lg-none\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\"\r\n    aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n    <span class=\"navbar-toggler-icon\"></span>\r\n  </button>\r\n\r\n  <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\r\n    <div *ngIf=\"this.isLogin\" class=\"sidebar\">\r\n      <ul class=\"navbar-nav nav-pills flex-column\">\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': 'home'==sideActive }\" href=\"#\" [routerLink]=\"['home']\" (click)=\"sidebarActive($event)\">\r\n            <i class=\"fa fa-fw fa-home\"></i>首頁\r\n            <span class=\"sr-only\">(current)</span>\r\n          </a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': 'child'==sideActive }\" href=\"#\" [routerLink]=\"['child']\" (click)=\"sidebarActive($event)\">\r\n            <i class=\"fa fa-fw fa-users\"></i>學童管理\r\n          </a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': 'store'==sideActive }\" href=\"#\" [routerLink]=\"['store']\" (click)=\"sidebarActive($event)\">\r\n            <i class=\"fa fa-fw fa-university\"></i>店家管理\r\n          </a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': 'record'==sideActive }\" href=\"#\" [routerLink]=\"['record']\" (click)=\"sidebarActive($event)\">\r\n            <i class=\" fa fa-fw fa-credit-card \"></i>點數管理\r\n          </a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link nav-link-collapse collapsed\" [ngClass]=\"{'active': 'account'==sideActive || 'timer'==sideActive }\" data-toggle=\"collapse\"\r\n            href=\"#collapseSystem\" aria-expanded=\"false \">\r\n            <i class=\"fa fa-fw fa-cog \"></i> 系統參數</a>\r\n          <ul class=\"sidebar-sub collapse\" id=\"collapseSystem\" aria-expanded=\"false\">\r\n            <li>\r\n              <a [ngClass]=\"{'active': 'account'==sideActive }\" href=\"#\" [routerLink]=\"['account']\" (click)=\"sidebarActive($event)\">系統帳戶管理</a>\r\n            </li>\r\n            <li>\r\n              <a [ngClass]=\"{'active': 'timer'==sideActive }\" href=\"#\" [routerLink]=\"['timer']\" (click)=\"sidebarActive($event)\">時段管理</a>\r\n            </li>\r\n          </ul>\r\n        </li>\r\n        <li class=\"nav-item \">\r\n          <a class=\"nav-link\" [ngClass]=\"{'active': 'log'==sideActive }\" href=\"#\" [routerLink]=\"['log']\" (click)=\"sidebarActive($event)\">\r\n            <i class=\"fa fa-fw fa-calendar\"></i>系統日誌\r\n          </a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n    <form *ngIf=\"isLogin\" class=\"form-inline ml-auto\">\r\n      <!-- <input class=\"form-control mr-sm-2 \" type=\"text\" placeholder=\"Search\" aria-label=\"Search\"> -->\r\n      <label class=\"form-control bg-dark text-white\">Hi, {{ isLogin.teachername }}</label>\r\n      <swal #dialogLogout title=\"確定要登出？\" type=\"question\" [options]=\"{ showCancelButton: 'true' }\" (confirm)=\"logout()\"></swal>\r\n      <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\" (click)=\"dialogLogout.show()\">登出</button>\r\n    </form>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -714,6 +945,7 @@ var NavComponent = (function () {
             this.router.navigate(["/login"]);
         }
         else {
+            console.log(this.isLogin);
             this.router.navigate(["/home"]);
         }
     };
@@ -786,7 +1018,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/record/record.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n  <!-- Breadcrumbs -->\n  <ol class=\"breadcrumb\">\n    <li class=\"breadcrumb-item\">\n      <a [routerLink]=\"['']\">首頁</a>\n    </li>\n    <li class=\"breadcrumb-item active\">兌換紀錄</li>\n  </ol>\n\n  <!-- Example Tables Card -->\n  <div class=\"card mb-3\">\n    <div class=\"card-header\">\n      <i class=\"fa fa-users\"></i> 兌換列表\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal\">新增</button>\n    </div>\n    <div class=\"card-block\">\n      <div class=\"table-responsive\">\n        <table class=\"table table-bordered\" width=\"100%\" id=\"dataTable\" cellspacing=\"0\">\n          <thead>\n            <tr>\n              <th>學童帳號</th>\n              <th>店家帳號</th>\n              <th>兌換點數</th>\n              <th>兌換日期</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr *ngFor=\"let data of datas\">\n              <td>{{ data['recordchild']}}</td>\n              <td>{{ data['recordstore']}}</td>\n              <td>{{ data['recordpoint']}}</td>\n              <td>{{ data['recordtime']}}</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n    </div>\n    <div class=\"card-footer small text-muted\">\n      最後更新 早上 08:30\n    </div>\n  </div>\n\n  <!-- Modal -->\n  <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n            <span class=\"sr-only\">Close</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form>\n            <div class=\"form-group\">\n              <label class=\"control-label\">姓名:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">性別:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">男生</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">女生</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">葷素:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">葷食</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">素食</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">電話:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">住址:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">就讀學校:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人手機:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">備註:</label>\n              <textarea class=\"form-control\"></textarea>\n            </div>\n          </form>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\n        </div>\n      </div>\n    </div>\n  </div>\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n  <!-- Breadcrumbs -->\n  <ol class=\"breadcrumb\">\n    <li class=\"breadcrumb-item\">\n      <a [routerLink]=\"['']\">首頁</a>\n    </li>\n    <li class=\"breadcrumb-item active\">兌換紀錄</li>\n  </ol>\n\n  <div class=\"card mb-3\">\n    <div class=\"card-header\">\n      <i class=\"fa fa-users\"></i> 兌換列表\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal\">新增</button>\n    </div>\n\n    <div class=\"card-body\">\n      <table class=\"table\">\n        <thead class=\"thead-default\">\n          <tr>\n            <th>學童帳號</th>\n            <th>店家帳號</th>\n            <th>兌換點數</th>\n            <th>兌換日期</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\n            <td colspan=\"4\">\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\n            </td>\n          </tr>\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page }\">\n            <td>{{ data['recordchild']}}</td>\n            <td>{{ data['recordstore']}}</td>\n            <td>{{ data['recordpoint']}}</td>\n            <td>{{ data['recordtime']}}</td>\n          </tr>\n        </tbody>\n      </table>\n      <div class=\"has-text-centered text-center\">\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\n      </div>\n    </div>\n    <div class=\"card-footer small text-muted\">\n      最後更新 早上 08:30\n    </div>\n  </div>\n\n  <!-- Modal -->\n  <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n            <span class=\"sr-only\">Close</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form>\n            <div class=\"form-group\">\n              <label class=\"control-label\">姓名:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">性別:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">男生</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">女生</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">葷素:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">葷食</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">素食</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">電話:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">住址:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">就讀學校:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人手機:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">備註:</label>\n              <textarea class=\"form-control\"></textarea>\n            </div>\n          </form>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\n        </div>\n      </div>\n    </div>\n  </div>\n"
 
 /***/ }),
 
@@ -847,10 +1079,11 @@ var RecordComponent = (function () {
     function RecordComponent(recordService) {
         this.recordService = recordService;
         this.datas = [];
+        this.page = 1;
+        this.isLoading = true;
     }
     RecordComponent.prototype.ngOnInit = function () {
         this.recordList();
-        $('#dataTable').DataTable();
     };
     RecordComponent.prototype.recordList = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -858,6 +1091,7 @@ var RecordComponent = (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.recordService.recordList().subscribe(function (result) {
+                            _this.isLoading = false;
                             _this.datas = result;
                         })];
                     case 1:
@@ -905,7 +1139,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/store/store.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n      <!-- Breadcrumbs -->\n      <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\">\n          <a [routerLink]=\"['']\">首頁</a>\n        </li>\n        <li class=\"breadcrumb-item active\">店家管理</li>\n      </ol>\n    </main>\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n  <!-- Breadcrumbs -->\n  <ol class=\"breadcrumb\">\n    <li class=\"breadcrumb-item\">\n      <a [routerLink]=\"['']\">首頁</a>\n    </li>\n    <li class=\"breadcrumb-item active\">店家管理</li>\n  </ol>\n\n  <div class=\"card mb-3\">\n    <div class=\"card-header\">\n      <i class=\"fa fa-users\"></i> 店家列表\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal\">新增</button>\n    </div>\n\n    <div class=\"card-body\">\n      <table class=\"table\">\n        <thead class=\"thead-default\">\n          <tr>\n            <th>帳號</th>\n            <th>店名</th>\n            <th>地址</th>\n            <th>店長</th>\n            <th>電話</th>\n            <th>統一編號</th>\n            <th>店家類型</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\n            <td colspan=\"7\">\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\n            </td>\n          </tr>\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page }\">\n            <td>{{data.storeusername}}</td>\n            <td>{{data.storename}}</td>\n            <td>{{data.storeaddr}}</td>\n            <td>{{data.storeadminstore}}</td>\n            <td>{{data.storetel}}</td>\n            <td>{{data.storeein}}</td>\n            <td>{{data.storetype}}</td>\n          </tr>\n        </tbody>\n      </table>\n      <div class=\"has-text-centered text-center\">\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\n      </div>\n    </div>\n    <div class=\"card-footer small text-muted\">\n      最後更新 早上 08:30\n    </div>\n  </div>\n\n  <!-- Modal -->\n  <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n            <span class=\"sr-only\">Close</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form>\n            <div class=\"form-group\">\n              <label class=\"control-label\">姓名:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">性別:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">男生</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">女生</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">葷素:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">葷食</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">素食</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">電話:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">住址:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">就讀學校:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人手機:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">備註:</label>\n              <textarea class=\"form-control\"></textarea>\n            </div>\n          </form>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</main>\n"
 
 /***/ }),
 
@@ -915,6 +1149,7 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_user_user_service__ = __webpack_require__("../../../../../src/app/service/user/user.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -924,11 +1159,69 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
 
 var StoreComponent = (function () {
-    function StoreComponent() {
+    function StoreComponent(userService) {
+        this.userService = userService;
+        this.datas = [];
+        this.page = 1;
+        this.isLoading = true;
     }
     StoreComponent.prototype.ngOnInit = function () {
+        this.userGetChild();
+    };
+    StoreComponent.prototype.userGetChild = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.userService.userGetStore().subscribe(function (result) {
+                            _this.isLoading = false;
+                            _this.datas = result;
+                            console.log(_this.datas);
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
     return StoreComponent;
 }());
@@ -936,11 +1229,13 @@ StoreComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-store',
         template: __webpack_require__("../../../../../src/app/container/store/store.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/store/store.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/container/store/store.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_1__service_user_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_user_user_service__["a" /* UserService */]) === "function" && _a || Object])
 ], StoreComponent);
 
+var _a;
 //# sourceMappingURL=store.component.js.map
 
 /***/ }),
@@ -1049,6 +1344,94 @@ RecordService = __decorate([
 
 var _a;
 //# sourceMappingURL=record.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/service/user/user.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UserService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var UserService = (function () {
+    function UserService(http) {
+        this.http = http;
+    }
+    /**
+     * 使用者登入
+     *
+     * @param {object} body
+     * @returns
+     * @memberof UserService
+     */
+    UserService.prototype.userLogin = function (body) {
+        return this.http.post('/api/user/login', body)
+            .map(function (res) {
+            return res.json() || {};
+        });
+    };
+    /**
+     * 學童資料取得
+     *
+     * @returns
+     * @memberof UserService
+     */
+    UserService.prototype.userGetChild = function () {
+        return this.http.get('/api/child')
+            .map(function (res) {
+            return res.json() || {};
+        });
+    };
+    /**
+     * 學童資料新增
+     *
+     * @param {object} body
+     * @returns
+     * @memberof UserService
+     */
+    UserService.prototype.userAddChild = function (body) {
+        return this.http.post('/api/child/add', body)
+            .map(function (res) {
+            console.log(res);
+            return res.json() || {};
+        });
+    };
+    /**
+     * 店家資料取得
+     *
+     * @returns
+     * @memberof UserService
+     */
+    UserService.prototype.userGetStore = function () {
+        return this.http.get('/api/store')
+            .map(function (res) {
+            return res.json() || {};
+        });
+    };
+    return UserService;
+}());
+UserService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], UserService);
+
+var _a;
+//# sourceMappingURL=user.service.js.map
 
 /***/ }),
 

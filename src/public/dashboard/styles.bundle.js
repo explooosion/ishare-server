@@ -1,5 +1,32 @@
 webpackJsonp(["styles"],{
 
+/***/ "../../../../../src/plugin/reset/reset.min.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/plugin/reset/reset.min.css");
+if(typeof content === 'string') content = [[module.i, content, '']];
+// add the styles to the DOM
+var update = __webpack_require__("../../../../style-loader/addStyles.js")(content, {});
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/index.js??postcss!./reset.min.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js??ref--8-1!../../../node_modules/postcss-loader/index.js??postcss!./reset.min.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
 /***/ "../../../../../src/styles.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -77,7 +104,22 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/*\r\n\r\n  按鈕客製化\r\n\r\n  使用方法如同 bootstrap 的 btn-lg\r\n\r\n  bootstrap 預設：\r\n  class=\"btn-lg\"\r\n  class=\"btn-sm\"\r\n\r\n*/\r\n\r\n.btn {\r\n    border: 0;\r\n}\r\n\r\n.btn-maxw {\r\n    width: 100%;\r\n}\r\n", ""]);
+exports.push([module.i, "/*\r\n\r\n  按鈕客製化\r\n\r\n  使用方法如同 bootstrap 的 btn-lg\r\n\r\n  bootstrap 預設：\r\n  class=\"btn-lg\"\r\n  class=\"btn-sm\"\r\n\r\n*/\r\n\r\n.btn {\r\n    border: none !important;\r\n    outline: none !important;\r\n}\r\n\r\n.btn-maxw {\r\n    width: 100%;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/card.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* 修正 card  */\r\n\r\n.card {\r\n    background-color: transparent;\r\n}\r\n\r\n.card .card-header {\r\n    line-height: 2.2rem;\r\n    font-size: 1.2rem;\r\n}\r\n", ""]);
 
 // exports
 
@@ -99,6 +141,21 @@ exports.push([module.i, "/*\r\n\r\n  物件文字顏色\r\n\r\n  使用方法如
 
 /***/ }),
 
+/***/ "../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/plugin/reset/reset.min.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/styles.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -108,6 +165,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/earlyaccess/no
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/button.css"), "");
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/bg-color.css"), "");
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/text-color.css"), "");
+exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/card.css"), "");
 
 // module
 exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\n* {\r\n    font-family: 'Noto Sans TC', sans-serif;\r\n}\r\n\r\nbody {\r\n    padding-top: 3.5rem;\r\n    line-height: 1.428571429;\r\n    font-size: 14px;\r\n    color: #333;\r\n    background-color: #fff;\r\n}\r\n\r\nh1 {\r\n    margin-bottom: 20px;\r\n    padding-bottom: 9px;\r\n    border-bottom: 1px solid #eee;\r\n}\r\n\r\n.placeholders {\r\n    padding-bottom: 3rem;\r\n}\r\n\r\n.placeholder img {\r\n    padding-top: 1.5rem;\r\n    padding-bottom: 1.5rem;\r\n}\r\n", ""]);
@@ -597,6 +655,7 @@ if(false) {
 /***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__("../../../../../src/plugin/reset/reset.min.css");
 __webpack_require__("../../../../font-awesome/css/font-awesome.min.css");
 __webpack_require__("../../../../bootstrap/dist/css/bootstrap.min.css");
 __webpack_require__("../../../../sweetalert2/dist/sweetalert2.css");
