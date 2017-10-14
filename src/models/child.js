@@ -51,9 +51,9 @@ class Child {
                 ctx.request.body.childstudentid
             ];
             const connection = await mysql.createConnection(config);
-            await connection.query(
+            const [result] = await connection.query(
                 'insert into web_student (childusername, childpassword, childname, childgender, childpoint, childcode, childschool, childstudentid) values (?, ?, ?, ?, ?, ?, ?, ?)', params);
-            return true;
+            return result;
         } catch (e) {
             console.log(e);
             return false;
