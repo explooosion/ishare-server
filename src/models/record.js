@@ -8,6 +8,7 @@ class Record {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query('select * from web_record order by id desc'); //待修改
+            console.log(rows);
             return rows;
         } catch (e) {
             console.log(e);
