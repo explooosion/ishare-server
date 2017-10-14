@@ -15,22 +15,23 @@ const secret = require('../config/secret.json');
 
 const router = new Router();
 
-router.get('/', async (ctx, next) => {
+router.get('/', async(ctx, next) => {
     ctx.body = {
         status: true
     }
 })
 
-// child
+// Child
 router.get('/child', ChildControllers.find);
 router.get('/child/:id', ChildControllers.findById);
 router.post('/child/login', ChildControllers.login);
 
-// store
+// Store
+router.get('/store', StoreControllers.find);
+router.get('/store/find', StoreControllers.findById);
 router.post('/store/login', StoreControllers.login);
-router.get('/test/find', testControllers.find);
 
-// record
+// Record
 router.get('/record', RecordControllers.find);
 router.post('/record/add', RecordControllers.add);
 
@@ -41,11 +42,8 @@ router.post('/mission/add', MissionControllers.add);
 router.post('/mission/update', MissionControllers.update);
 router.post('/mission/delete', MissionControllers.delete);
 
-// User
+// User Login
 router.post('/user/login', UserControllers.login);
-
-// Record
-// ....
 
 // Log
 // ....
