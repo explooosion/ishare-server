@@ -14,7 +14,7 @@ class Mission {
                 return false
             }
             return rows;
-        } else if (ctx.query.type == undefined) {
+        } else if (ctx.query.type == undefined & ctx.query.location != undefined) {
             const [rows, fields] = await connection.query(
                 'Select * from web_mission where locationid = ?', [ctx.query.location]
             );
@@ -22,7 +22,7 @@ class Mission {
                 return false
             }
             return rows;
-        } else if (ctx.query.location == undefined) {
+        } else if (ctx.query.location == undefined & ctx.query.type != undefined) {
             const [rows, fields] = await connection.query(
                 'Select * from web_mission where missiontype = ?', [ctx.query.type]
             );
@@ -32,6 +32,7 @@ class Mission {
             return rows;
         } else {
             const [rows, fields] = await connection.query('Select * from web_mission');
+            return rows;
         }
     }
     async findById(ctx) {
