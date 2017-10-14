@@ -15,6 +15,11 @@ class ChildControllers {
     async login(ctx) {
         ctx.body = await Child.login(ctx);
     }
+
+    async add(ctx) {
+        ctx.body = await Child.add(ctx);
+    }
+    
 }
 
 export default new ChildControllers();
