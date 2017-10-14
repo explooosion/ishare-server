@@ -39,11 +39,23 @@ class Child {
 
     async add(ctx) {
         try {
+
+            let params = [
+                ctx.request.body.childusername,
+                ctx.request.body.childpassword,
+                ctx.request.body.childname,
+                ctx.request.body.childgender,
+                ctx.request.body.childpoint,
+                ctx.request.body.childcode,
+                ctx.request.body.childschool,
+                ctx.request.body.childstudentid
+            ];
             const connection = await mysql.createConnection(config);
             await connection.query(
-                'insert into web_student (childusername, childpassword, childname, childgender, childpoint, childcode, childschool, childstudentid) values (?, ?, ?, ?, ?, ?, ?, ?)', [ctx.request.body.childusername, ctx.request.body.childpassword, ctx.request.body.childname, ctx.request.body.childgender, ctx.request.body.childcode, ctx.request.body.childschool, ctx.request.body.childstudentid]);
+                'insert into web_student (childusername, childpassword, childname, childgender, childpoint, childcode, childschool, childstudentid) values (?, ?, ?, ?, ?, ?, ?, ?)', params);
             return true;
         } catch (e) {
+            console.log(e);
             return false;
         }
     }
