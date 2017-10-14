@@ -1,5 +1,5 @@
 'use strict';
-import mysql from 'mysql2';
+import mysql from 'mysql2/promise';
 //ERROR: app crash-waiting for file changes before starting.. 
 //solution: npm install mysql
 import config from '../config/db';
