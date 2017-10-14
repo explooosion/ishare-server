@@ -15,6 +15,10 @@ class StoreControllers {
     async login(ctx) {
         ctx.body = await Store.login(ctx);
     }
+
+    async add(ctx) {
+        ctx.body = await Store.add(ctx);
+    }
 }
 
 export default new StoreControllers()

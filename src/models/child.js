@@ -18,7 +18,7 @@ class Child {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_student where childusername = ?', [ctx.params.id]
+                'select * from web_student where id = ?', [ctx.params.id]
             );
             return rows;
         } catch (e) {
@@ -41,7 +41,7 @@ class Child {
         try {
             const connection = await mysql.createConnection(config);
             await connection.query(
-                'insert into web_student (childusername, childpassword, childname, childgender, childpoint, childcode, childschool, childstudentid) values (?, ?, ?, ?, ?)', [ctx.request.body.childusername, ctx.request.body.childpassword, ctx.request.body.childname, ctx.request.body.childgender, ctx.request.body.childcode, ctx.request.body.childschool, ctx.request.body.childstudentid]);
+                'insert into web_student (childusername, childpassword, childname, childgender, childpoint, childcode, childschool, childstudentid) values (?, ?, ?, ?, ?, ?, ?, ?)', [ctx.request.body.childusername, ctx.request.body.childpassword, ctx.request.body.childname, ctx.request.body.childgender, ctx.request.body.childcode, ctx.request.body.childschool, ctx.request.body.childstudentid]);
             return true;
         } catch (e) {
             return false;

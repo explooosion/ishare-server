@@ -3,11 +3,11 @@ import mysql from 'mysql2/promise';
 //ERROR: app crash-waiting for file changes before starting.. 
 //solution: npm install mysql
 import config from '../config/db';
-class Store {
+class Teacher {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_store');
+            const [rows, fields] = await connection.query('select * from web_teacher');
             return rows;
         } catch (e) {
             return false;
@@ -17,7 +17,7 @@ class Store {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_store where id = ?', [ctx.params.id]
+                'select * from web_teacher where id = ?', [ctx.params.id]
             );
             return rows;
         } catch (e) {
@@ -28,7 +28,7 @@ class Store {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_store where account = ? and password = ?', [ctx.request.body.storeId, ctx.request.body.storePwd]
+                'select * from web_teacher where account = ? and password = ?', [ctx.request.body.teacherId, ctx.request.body.teacherPwd]
             );
             return rows;
         } catch (e) {
@@ -39,11 +39,11 @@ class Store {
         try {
             const connection = await mysql.createConnection(config);
             await connection.query(
-                'insert into web_store (storeusername, storepassword, storename, storeaddr, storeadminstore, storetel, storeein, storetype, storephoto) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', [ctx.request.body.storeusername, ctx.request.body.storepassword, ctx.request.body.storename, ctx.request.body.storeaddr, ctx.request.body.storeadminstore, ctx.request.body.storetel, ctx.request.body.storeein,ctx.request.body.storetype,ctx.request.storephoto]);
+                'insert into web_teacher (teacherusername, teacherpassword, teachername, teachergender, teachertel) values (?, ?, ?, ?, ?)', [ctx.request.body.teacherusername, ctx.request.body.teacherpassword, ctx.request.body.teachername, ctx.request.body.teachergender, ctx.request.body.teachertel]);
             return true;
         } catch (e) {
             return false;
         }
     }
 }
-export default new Store();
+export default new Teacher();

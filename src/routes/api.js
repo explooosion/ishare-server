@@ -10,6 +10,8 @@ import StoreControllers from '../controllers/store';
 import RecordControllers from '../controllers/record';
 import UserControllers from '../controllers/user';
 import MissionControllers from '../controllers/mission';
+import TeacherControllers from '../controllers/teacher';
+
 const verify = util.promisify(jwt.verify); // 解密 
 const secret = require('../config/secret.json');
 
@@ -29,7 +31,8 @@ router.post('/child/login', ChildControllers.login);
 
 // Store
 router.get('/store', StoreControllers.find);
-router.get('/store/find', StoreControllers.findById);
+router.get('/store/:id', StoreControllers.findById);
+router.post('/store/add', StoreControllers.add);
 router.post('/store/login', StoreControllers.login);
 
 // Record
@@ -46,6 +49,11 @@ router.post('/mission/delete', MissionControllers.delete);
 // User Login
 router.post('/user/login', UserControllers.login);
 
+// Teacher
+router.get('/teacher', TeacherControllers.find);
+router.get('/teacher/:id', TeacherControllers.findById);
+router.post('/teacher/add', TeacherControllers.add);
+router.post('/teacher/login', TeacherControllers.login);
 // Log
 // ....
 
