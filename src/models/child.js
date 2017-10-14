@@ -1,8 +1,8 @@
 'use strict';
+
 import mysql from 'mysql2/promise';
-//ERROR: app crash-waiting for file changes before starting.. 
-//solution: npm install mysql
 import config from '../config/db';
+
 class Child {
     async find(ctx) {
         try {
@@ -31,6 +31,17 @@ class Child {
                 'select * from web_student where childusername = ? and childpassword = ?', [ctx.request.body.childId, ctx.request.body.childPwd]
             );
             return rows;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    async add(ctx) {
+        try {
+            const connection = await mysql.createConnection(config);
+            await connection.query(
+                'insert into web_student (childusername, childpassword, childname, childgender, childpoint, childcode, childschool, childstudentid) values (?, ?, ?, ?, ?)', [ctx.request.body.childusername, ctx.request.body.childpassword, ctx.request.body.childname, ctx.request.body.childgender, ctx.request.body.childcode, ctx.request.body.childschool, ctx.request.body.childstudentid]);
+            return true;
         } catch (e) {
             return false;
         }
