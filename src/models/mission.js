@@ -49,10 +49,10 @@ class Mission {
     async add(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query(
+            const [result] = await connection.query(
                 'insert into web_mission (missionname, missiontype, missioncontent, missionlevel, missionlink,missiondate,locationid) values (?, ?, ?, ?, ?, ?, ?)', [ctx.request.body.name, ctx.request.body.type, ctx.request.body.content, ctx.request.body.level, ctx.request.body.link, ctx.request.body.date, ctx.request.body.location]
             );
-            return true;
+            return result;
         } catch (e) {
             return false;
         }
@@ -60,10 +60,10 @@ class Mission {
     async update(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query(
+            const [result] = await connection.query(
                 'Update web_mission set missionname = ? , missiontype = ? , missioncontent = ?, missionlevel = ? , missionlink = ? , missiondate = ? , locationid = ? where id = ?', [ctx.request.body.name, ctx.request.body.type, ctx.request.body.content, ctx.request.body.level, ctx.request.body.link, ctx.request.body.date, ctx.request.body.location, ctx.request.body.id]
             );
-            return true;
+            return result;
         } catch (e) {
             return false;
         }
@@ -71,10 +71,10 @@ class Mission {
     async delete(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query(
+            const [result] = await connection.query(
                 'delete from web_mission where id = ?', [ctx.request.body.id]
             );
-            return true;
+            return result;
         } catch (e) {
             return false;
         }

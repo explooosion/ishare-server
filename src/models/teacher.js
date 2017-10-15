@@ -38,9 +38,9 @@ class Teacher {
     async add(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            await connection.query(
+            const [result] = await connection.query(
                 'insert into web_teacher (teacherusername, teacherpassword, teachername, teachergender, teachertel) values (?, ?, ?, ?, ?)', [ctx.request.body.teacherusername, ctx.request.body.teacherpassword, ctx.request.body.teachername, ctx.request.body.teachergender, ctx.request.body.teachertel]);
-            return true;
+            return result;
         } catch (e) {
             return false;
         }
