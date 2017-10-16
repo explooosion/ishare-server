@@ -7,7 +7,7 @@ class Teacher {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_teacher');
+            const [rows, fields] = await connection.query('select * from web_teacher limit 1000');
             return rows;
         } catch (e) {
             return false;
@@ -37,9 +37,16 @@ class Teacher {
     }
     async add(ctx) {
         try {
+            let params = [
+                ctx.request.body.teacherusername,
+                ctx.request.body.teacherpassword,
+                ctx.request.body.teachername,
+                ctx.request.body.teachergender,
+                ctx.request.body.teachertel
+            ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_teacher (teacherusername, teacherpassword, teachername, teachergender, teachertel) values (?, ?, ?, ?, ?)', [ctx.request.body.teacherusername, ctx.request.body.teacherpassword, ctx.request.body.teachername, ctx.request.body.teachergender, ctx.request.body.teachertel]);
+                'insert into web_teacher (teacherusername, teacherpassword, teachername, teachergender, teachertel) values (?, ?, ?, ?, ?)', params);
             return result;
         } catch (e) {
             return false;

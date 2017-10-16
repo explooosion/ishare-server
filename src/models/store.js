@@ -7,7 +7,7 @@ class Store {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_store');
+            const [rows, fields] = await connection.query('select * from web_store limit 1000');
             return rows;
         } catch (e) {
             return false;
@@ -37,9 +37,20 @@ class Store {
     }
     async add(ctx) {
         try {
+            let params = [
+                ctx.request.body.storeusername,
+                ctx.request.body.storepassword,
+                ctx.request.body.storename,
+                ctx.request.body.storeaddr,
+                ctx.request.body.storeadminstore,
+                ctx.request.body.storetel,
+                ctx.request.body.storeein,
+                ctx.request.body.storetype,
+                ctx.request.body.storephoto
+            ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_store (storeusername, storepassword, storename, storeaddr, storeadminstore, storetel, storeein, storetype, storephoto) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', [ctx.request.body.storeusername, ctx.request.body.storepassword, ctx.request.body.storename, ctx.request.body.storeaddr, ctx.request.body.storeadminstore, ctx.request.body.storetel, ctx.request.body.storeein,ctx.request.body.storetype,ctx.request.storephoto]
+                'insert into web_store (storeusername, storepassword, storename, storeaddr, storeadminstore, storetel, storeein, storetype, storephoto) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', params
             );
             return result;
         } catch (e) {

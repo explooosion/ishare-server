@@ -5,34 +5,19 @@ import config from '../config/db';
 class Mission {
 
     async find(ctx) {
-        const connection = await mysql.createConnection(config);
-        if (ctx.query.type != undefined & ctx.query.location != undefined) {
-            const [rows, fields] = await connection.query(
-                'Select * from web_mission where missiontype = ? and locationid = ?', [ctx.query.type, ctx.query.location]
-            );
-            if (rows.length == 0) {
-                return false
-            }
+        let sql = 'Select * from web_mission where 1';
+        if (ctx.query.type != undefined) {
+            sql += ' and missiontype = ' + "'" + ctx.query.type + "'";
+        };
+        if (ctx.query.location != undefined) {
+            sql += ' and locationid = ' + "'" + ctx.query.location + "'"
+        };
+        try {
+            const connection = await mysql.createConnection(config);
+            const [rows, fields] = await connection.query(sql + ' limit 1000');
             return rows;
-        } else if (ctx.query.type == undefined & ctx.query.location != undefined) {
-            const [rows, fields] = await connection.query(
-                'Select * from web_mission where locationid = ?', [ctx.query.location]
-            );
-            if (rows.length == 0) {
-                return false
-            }
-            return rows;
-        } else if (ctx.query.location == undefined & ctx.query.type != undefined) {
-            const [rows, fields] = await connection.query(
-                'Select * from web_mission where missiontype = ?', [ctx.query.type]
-            );
-            if (rows.length == 0) {
-                return false
-            }
-            return rows;
-        } else {
-            const [rows, fields] = await connection.query('Select * from web_mission');
-            return rows;
+        } catch (e) {
+            return false;
         }
     }
     async findById(ctx) {
@@ -48,9 +33,18 @@ class Mission {
     }
     async add(ctx) {
         try {
+            let params = [
+                ctx.request.body.missionname,
+                ctx.request.body.missiontype,
+                ctx.request.body.missioncontent,
+                ctx.request.body.missionlevel,
+                ctx.request.body.missionlink,
+                ctx.request.body.missiondate,
+                ctx.request.body.locationid
+            ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_mission (missionname, missiontype, missioncontent, missionlevel, missionlink,missiondate,locationid) values (?, ?, ?, ?, ?, ?, ?)', [ctx.request.body.name, ctx.request.body.type, ctx.request.body.content, ctx.request.body.level, ctx.request.body.link, ctx.request.body.date, ctx.request.body.location]
+                'insert into web_mission (missionname, missiontype, missioncontent, missionlevel, missionlink,missiondate,locationid) values (?, ?, ?, ?, ?, ?, ?)', params
             );
             return result;
         } catch (e) {
@@ -59,9 +53,19 @@ class Mission {
     }
     async update(ctx) {
         try {
+            let params = [
+                ctx.request.body.missionname,
+                ctx.request.body.missiontype,
+                ctx.request.body.missioncontent,
+                ctx.request.body.missionlevel,
+                ctx.request.body.missionlink,
+                ctx.request.body.missiondate,
+                ctx.request.body.locationid,
+                ctx.request.body.id
+            ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'Update web_mission set missionname = ? , missiontype = ? , missioncontent = ?, missionlevel = ? , missionlink = ? , missiondate = ? , locationid = ? where id = ?', [ctx.request.body.name, ctx.request.body.type, ctx.request.body.content, ctx.request.body.level, ctx.request.body.link, ctx.request.body.date, ctx.request.body.location, ctx.request.body.id]
+                'Update web_mission set missionname = ? , missiontype = ? , missioncontent = ?, missionlevel = ? , missionlink = ? , missiondate = ? , locationid = ? where id = ?', params
             );
             return result;
         } catch (e) {
