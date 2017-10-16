@@ -27,8 +27,8 @@ router.get('/', async(ctx, next) => {
 router.get('/child', ChildControllers.find);            
 router.get('/child/:id', ChildControllers.findById);
 router.post('/child/add', ChildControllers.add);
-router.post('/child/update', ChildControllers.login);
-router.post('/child/delete', ChildControllers.login);
+router.post('/child/update', ChildControllers.update);
+router.post('/child/delete', ChildControllers.delete);
 
 // Store
 router.get('/store', StoreControllers.find);
