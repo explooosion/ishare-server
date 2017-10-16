@@ -12,12 +12,16 @@ class TeacherControllers {
         ctx.body = await Teacher.findById(ctx);
     }
 
-    async login(ctx) {
-        ctx.body = await Teacher.login(ctx);
-    }
-
     async add(ctx) {
         ctx.body = await Teacher.add(ctx);
+    }
+
+    async update(ctx) {
+        ctx.body = await Teacher.update(ctx);
+    }
+
+    async delete(ctx) {
+        ctx.body = await Teacher.delete(ctx);
     }
 }
 

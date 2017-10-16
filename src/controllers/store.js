@@ -12,12 +12,16 @@ class StoreControllers {
         ctx.body = await Store.findById(ctx);
     }
 
-    async login(ctx) {
-        ctx.body = await Store.login(ctx);
-    }
-
     async add(ctx) {
         ctx.body = await Store.add(ctx);
+    }
+
+    async update(ctx) {
+        ctx.body = await Store.update(ctx);
+    }
+
+    async delete(ctx) {
+        ctx.body = await Store.delete(ctx);
     }
 }
 

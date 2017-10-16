@@ -24,17 +24,6 @@ class Teacher {
             return false;
         }
     }
-    async login(ctx) {
-        try {
-            const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query(
-                'select * from web_teacher where account = ? and password = ?', [ctx.request.body.teacherId, ctx.request.body.teacherPwd]
-            );
-            return rows;
-        } catch (e) {
-            return false;
-        }
-    }
     async add(ctx) {
         try {
             let params = [
@@ -47,6 +36,36 @@ class Teacher {
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
                 'insert into web_teacher (teacherusername, teacherpassword, teachername, teachergender, teachertel) values (?, ?, ?, ?, ?)', params);
+            return result;
+        } catch (e) {
+            return false;
+        }
+    }
+    async update(ctx){
+        try {
+            let params = [
+                ctx.request.body.teacherusername,
+                ctx.request.body.teacherpassword,
+                ctx.request.body.teachername,
+                ctx.request.body.teachergender,
+                ctx.request.body.teachertel,
+                ctx.request.body.id
+            ];
+            const connection = await mysql.createConnection(config);
+            const [result] = await connection.query(
+                'Update web_teacher set teacherusername = ? , teacherpassword = ? , teachername = ?, teachergender = ? , teachertel = ? where id = ?', params
+            );
+            return result;
+        } catch (e) {
+            return false;
+        }
+    }
+    async delete(ctx) {
+        try {
+            const connection = await mysql.createConnection(config);
+            const [result] = await connection.query(
+                'delete from web_teacher where id = ?', [ctx.request.body.id]
+            );
             return result;
         } catch (e) {
             return false;

@@ -24,20 +24,25 @@ router.get('/', async(ctx, next) => {
 })
 
 // Child
-router.get('/child', ChildControllers.find);
+router.get('/child', ChildControllers.find);            
 router.get('/child/:id', ChildControllers.findById);
 router.post('/child/add', ChildControllers.add);
-router.post('/child/login', ChildControllers.login);
+router.post('/child/update', ChildControllers.login);
+router.post('/child/delete', ChildControllers.login);
 
 // Store
 router.get('/store', StoreControllers.find);
 router.get('/store/:id', StoreControllers.findById);
 router.post('/store/add', StoreControllers.add);
-router.post('/store/login', StoreControllers.login);
+router.post('/store/update', StoreControllers.update);
+router.post('/store/delete', StoreControllers.delete);
 
 // Record
 router.get('/record', RecordControllers.find);
+router.get('/record/:id', RecordControllers.findById);
 router.post('/record/add', RecordControllers.add);
+router.post('/record/update', RecordControllers.update);
+router.post('/record/delete', RecordControllers.delete);
 
 // Mission
 router.get('/mission', MissionControllers.find);
@@ -53,7 +58,8 @@ router.post('/user/login', UserControllers.login);
 router.get('/teacher', TeacherControllers.find);
 router.get('/teacher/:id', TeacherControllers.findById);
 router.post('/teacher/add', TeacherControllers.add);
-router.post('/teacher/login', TeacherControllers.login);
+router.post('/teacher/update', TeacherControllers.update);
+router.post('/teacher/delete', TeacherControllers.delete);
 // Log
 // ....
 

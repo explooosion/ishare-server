@@ -8,7 +8,7 @@ class Child {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_student');
+            const [rows, fields] = await connection.query('select * from web_child limit 1000');
             return rows;
         } catch (e) {
             return false
@@ -18,18 +18,7 @@ class Child {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_student where id = ?', [ctx.params.id]
-            );
-            return rows;
-        } catch (e) {
-            return false;
-        }
-    }
-    async login(ctx) {
-        try {
-            const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query(
-                'select * from web_student where childusername = ? and childpassword = ?', [ctx.request.body.childId, ctx.request.body.childPwd]
+                'select * from web_child where id = ?', [ctx.params.id]
             );
             return rows;
         } catch (e) {
@@ -39,7 +28,6 @@ class Child {
 
     async add(ctx) {
         try {
-
             let params = [
                 ctx.request.body.childusername,
                 ctx.request.body.childpassword,
@@ -52,10 +40,44 @@ class Child {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_student (childusername, childpassword, childname, childgender, childpoint, childcode, childschool, childstudentid) values (?, ?, ?, ?, ?, ?, ?, ?)', params);
+                'insert into web_child (childusername, childpassword, childname, childgender, childpoint, childcode, childschool, childstudentid) values (?, ?, ?, ?, ?, ?, ?, ?)', params);
             return result;
         } catch (e) {
             console.log(e);
+            return false;
+        }
+    }
+
+    async update(ctx){
+        try {
+            let params = [
+                ctx.request.body.childusername,
+                ctx.request.body.childpassword,
+                ctx.request.body.childname,
+                ctx.request.body.childgender,
+                ctx.request.body.childpoint,
+                ctx.request.body.childcode,
+                ctx.request.body.childschool,
+                ctx.request.body.childstudentid,
+                ctx.request.body.id
+            ];
+            const connection = await mysql.createConnection(config);
+            const [result] = await connection.query(
+                'update web_child set childusername = ? , childpassword = ? , childname = ? , childgender = ? , childpoint = ? , childcode = ? , childschool = ? , childstudentid = ? where id = ?', params);
+            return result;
+        } catch(e) {
+            return false;
+        }
+    }
+
+    async delete(ctx){
+        try {
+            const connection = await mysql.createConnection(config);
+            const [result] = await connection.query(
+                'delete from web_child where id = ?', [ctx.request.body.id]
+            );
+            return result;
+        } catch (e) {
             return false;
         }
     }

@@ -12,14 +12,17 @@ class ChildControllers {
         ctx.body = await Child.findById(ctx);
     }
 
-    async login(ctx) {
-        ctx.body = await Child.login(ctx);
-    }
-
     async add(ctx) {
         ctx.body = await Child.add(ctx);
     }
     
+    async update(ctx) {
+        ctx.body = await Child.update(ctx);
+    }
+
+    async delete(ctx) {
+        ctx.body = await Child.delete(ctx);
+    }
 }
 
 export default new ChildControllers();
