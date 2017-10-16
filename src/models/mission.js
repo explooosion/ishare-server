@@ -5,7 +5,7 @@ import config from '../config/db';
 class Mission {
 
     async find(ctx) {
-        let sql = 'Select * from web_mission where 1';
+        let sql = 'Select * from web_mission where 1 = 1';
         if (ctx.query.type != undefined) {
             sql += ' and missiontype = ' + "'" + ctx.query.type + "'";
         };
