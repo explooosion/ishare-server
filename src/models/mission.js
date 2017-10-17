@@ -85,6 +85,79 @@ class Mission {
             return false;
         }
     }
+    async join_find(ctx) {
+        let sql = 'Select * from web_mission_join where 1 = 1';
+        if (ctx.query.username != undefined) {
+            sql += ' and childusername = ' + "'" + ctx.query.username + "'";
+        };
+        if (ctx.query.status != undefined) {
+            sql += ' and status = ' + "'" + ctx.query.status + "'"
+        };
+        if (ctx.query.missionid != undefined) {
+            sql += ' and missionid = ' + "'" + ctx.query.missionid + "'"
+        }
+        try {
+            const connection = await mysql.createConnection(config);
+            const [rows, fields] = await connection.query(sql + ' limit 1000');
+            return rows;
+        } catch (e) {
+            return false;
+        }
+    }
+    async join_add(ctx) {
+        try {
+            let params = [
+                ctx.request.body.missionid,
+                ctx.request.body.childusername,
+                ctx.request.body.createtime,
+                ctx.request.body.finishtime,
+                ctx.request.body.status,
+                ctx.request.body.experience,
+                ctx.request.body.verifytime,
+                ctx.request.body.picture
+            ];
+            const connection = await mysql.createConnection(config);
+            const [result] = await connection.query(
+                'insert into web_mission_join (missionid, childusername, createtime, finishtime, status,experience,verifytime,picture) values (?, ?, ?, ?, ?, ?, ?, ?)', params
+            );
+            return result;
+        } catch (e) {
+            return false;
+        }
+    }
+    async join_update(ctx) {
+        try {
+            let params = [
+                ctx.request.body.missionid,
+                ctx.request.body.childusername,
+                ctx.request.body.createtime,
+                ctx.request.body.finishtime,
+                ctx.request.body.status,
+                ctx.request.body.experience,
+                ctx.request.body.verifytime,
+                ctx.request.body.picture,
+                ctx.request.body.id
+            ];
+            const connection = await mysql.createConnection(config);
+            const [result] = await connection.query(
+                'Update web_mission_join set missionid = ? , childusername = ? , createtime = ?, finishtime = ? , status = ? , experience = ? ,verifytime = ? , picture = ? where id = ?', params
+            );
+            return result;
+        } catch (e) {
+            return false;
+        }
+    }
+    async join_delete(ctx) {
+        try {
+            const connection = await mysql.createConnection(config);
+            const [result] = await connection.query(
+                'delete from web_mission_join where id = ?', [ctx.request.body.id]
+            );
+            return result;
+        } catch (e) {
+            return false;
+        }
+    }
 }
 export default new Mission();
 

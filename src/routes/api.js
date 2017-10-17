@@ -17,14 +17,14 @@ const secret = require('../config/secret.json');
 
 const router = new Router();
 
-router.get('/', async(ctx, next) => {
+router.get('/', async (ctx, next) => {
     ctx.body = {
         status: true
     }
 })
 
 // Child
-router.get('/child', ChildControllers.find);            
+router.get('/child', ChildControllers.find);
 router.get('/child/:id', ChildControllers.findById);
 router.post('/child/add', ChildControllers.add);
 router.post('/child/update', ChildControllers.update);
@@ -60,7 +60,14 @@ router.get('/teacher/:id', TeacherControllers.findById);
 router.post('/teacher/add', TeacherControllers.add);
 router.post('/teacher/update', TeacherControllers.update);
 router.post('/teacher/delete', TeacherControllers.delete);
+
 // Log
-// ....
+
+
+// Mission_Join
+router.get('/mission/join', MissionControllers.join_find);
+router.post('/mission/join/add', MissionControllers.join_add);
+router.post('/mission/join/update', MissionControllers.join_update);
+router.post('/mission/join/delete', MissionControllers.join_delete);
 
 export default router;
