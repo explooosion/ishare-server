@@ -108,21 +108,20 @@ module.exports = "<app-nav></app-nav>\r\n<router-outlet></router-outlet>\r\n\r\n
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_cookies_ng2_cookies__ = __webpack_require__("../../../../ng2-cookies/ng2-cookies.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_cookies_ng2_cookies___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ng2_cookies_ng2_cookies__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent.prototype.ngOnInit = function () {
-        console.log(JSON.parse(__WEBPACK_IMPORTED_MODULE_1_ng2_cookies_ng2_cookies__["Cookie"].get('dashboardLogin')));
         this.scrollShow();
         this.scrollMove();
     };
@@ -153,7 +152,8 @@ AppComponent = __decorate([
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.css")]
-    })
+    }),
+    __metadata("design:paramtypes", [])
 ], AppComponent);
 
 //# sourceMappingURL=app.component.js.map
@@ -174,16 +174,17 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_charts__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__toverux_ngsweetalert2__ = __webpack_require__("../../../../@toverux/ngsweetalert2/dist/types+es2015-modules/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_pagination__ = __webpack_require__("../../../../ngx-pagination/dist/ngx-pagination.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__container_nav_nav_component__ = __webpack_require__("../../../../../src/app/container/nav/nav.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__container_home_home_component__ = __webpack_require__("../../../../../src/app/container/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__container_child_child_component__ = __webpack_require__("../../../../../src/app/container/child/child.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__container_store_store_component__ = __webpack_require__("../../../../../src/app/container/store/store.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__container_record_record_component__ = __webpack_require__("../../../../../src/app/container/record/record.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__container_account_account_component__ = __webpack_require__("../../../../../src/app/container/account/account.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__container_timer_timer_component__ = __webpack_require__("../../../../../src/app/container/timer/timer.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__container_log_log_component__ = __webpack_require__("../../../../../src/app/container/log/log.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__container_login_login_component__ = __webpack_require__("../../../../../src/app/container/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__container_nav_nav_component__ = __webpack_require__("../../../../../src/app/container/nav/nav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__container_home_home_component__ = __webpack_require__("../../../../../src/app/container/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__container_child_child_component__ = __webpack_require__("../../../../../src/app/container/child/child.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__container_store_store_component__ = __webpack_require__("../../../../../src/app/container/store/store.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__container_record_record_component__ = __webpack_require__("../../../../../src/app/container/record/record.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__container_account_account_component__ = __webpack_require__("../../../../../src/app/container/account/account.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__container_timer_timer_component__ = __webpack_require__("../../../../../src/app/container/timer/timer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__container_log_log_component__ = __webpack_require__("../../../../../src/app/container/log/log.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__container_login_login_component__ = __webpack_require__("../../../../../src/app/container/login/login.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -198,6 +199,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 // Plugin
 
 
+
+// Service
 
 // Component
 
@@ -218,16 +221,16 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__container_nav_nav_component__["a" /* NavComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__container_home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__container_child_child_component__["a" /* ChildComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__container_store_store_component__["a" /* StoreComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__container_record_record_component__["a" /* RecordComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__container_account_account_component__["a" /* AccountComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__container_timer_timer_component__["a" /* TimerComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__container_log_log_component__["a" /* LogComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__container_login_login_component__["a" /* LoginComponent */]
+            __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */],
+            __WEBPACK_IMPORTED_MODULE_10__container_nav_nav_component__["a" /* NavComponent */],
+            __WEBPACK_IMPORTED_MODULE_11__container_home_home_component__["a" /* HomeComponent */],
+            __WEBPACK_IMPORTED_MODULE_12__container_child_child_component__["a" /* ChildComponent */],
+            __WEBPACK_IMPORTED_MODULE_13__container_store_store_component__["a" /* StoreComponent */],
+            __WEBPACK_IMPORTED_MODULE_14__container_record_record_component__["a" /* RecordComponent */],
+            __WEBPACK_IMPORTED_MODULE_15__container_account_account_component__["a" /* AccountComponent */],
+            __WEBPACK_IMPORTED_MODULE_16__container_timer_timer_component__["a" /* TimerComponent */],
+            __WEBPACK_IMPORTED_MODULE_17__container_log_log_component__["a" /* LogComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__container_login_login_component__["a" /* LoginComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -239,8 +242,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_6__toverux_ngsweetalert2__["b" /* SweetAlert2Module */].forRoot({}),
             __WEBPACK_IMPORTED_MODULE_7_ngx_pagination__["a" /* NgxPaginationModule */]
         ],
-        providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_8_app_service_common_check_login_service__["a" /* CheckLoginService */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -279,6 +282,7 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -289,10 +293,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var AccountComponent = (function () {
-    function AccountComponent() {
+    function AccountComponent(checkloginService) {
+        this.checkloginService = checkloginService;
     }
     AccountComponent.prototype.ngOnInit = function () {
+        this.checkloginService.checkLogin();
     };
     return AccountComponent;
 }());
@@ -302,9 +309,10 @@ AccountComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/container/account/account.component.html"),
         styles: [__webpack_require__("../../../../../src/app/container/account/account.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _a || Object])
 ], AccountComponent);
 
+var _a;
 //# sourceMappingURL=account.component.js.map
 
 /***/ }),
@@ -330,7 +338,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/child/child.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">學童管理</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 學童列表\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#modelAddChild\">新增</button>\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table\">\r\n        <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>帳號</th>\r\n            <th>姓名</th>\r\n            <th>學號</th>\r\n            <th>點數</th>\r\n            <th>代號</th>\r\n            <th>就讀學校</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"6\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page }\">\r\n            <td>{{data.childusername}}</td>\r\n            <td>{{data.childname}}</td>\r\n            <td>{{data.childstudentid}}</td>\r\n            <td>{{data.childpoint}}</td>\r\n            <td>{{data.childcode}}</td>\r\n            <td>{{data.childschool}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      最後更新 早上 08:30\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" #modelAddChild id=\"modelAddChild\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\"\r\n    aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\r\n          <button #modelClose type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">帳號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childusername\" [(ngModel)]=\"childusername\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"childpassword\" [(ngModel)]=\"childpassword\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">確認密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"childpasswordRe\" [(ngModel)]=\"childpasswordRe\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">兌換代碼:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childcode\" [(ngModel)]=\"childcode\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">姓名:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childname\" [(ngModel)]=\"childname\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">性別（暫不填）:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input name=\"childgender\" type=\"radio\" value=\"男生\" class=\"custom-control-input\" [ngModel]=\"childgender\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">男生</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input name=\"childgender\" type=\"radio\" value=\"女生\" class=\"custom-control-input\" [ngModel]=\"childgender\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">女生</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">學號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childstudentid\" [(ngModel)]=\"childstudentid\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">點數:</label>\r\n              <input type=\"number\" class=\"form-control\" name=\"childpoint\" min=\"0\" max=\"1000\" [(ngModel)]=\"childpoint\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">就讀學校:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childschool\" [(ngModel)]=\"childschool\" required>\r\n            </div>\r\n\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <swal #dialogSuccess title=\"新增成功\" type=\"success\"></swal>\r\n          <swal #dialogError title=\"資料錯誤，請重新確認\" type=\"error\"></swal>\r\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"userAddChild(modelAddChild);\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</main>\r\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">學童管理</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 學童列表 - 共 {{ datas.length }} 筆資料\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#modelAddChild\">新增</button>\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table\">\r\n        <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>#</th>\r\n            <th>帳號</th>\r\n            <th>姓名</th>\r\n            <th>學號</th>\r\n            <th>點數</th>\r\n            <th>代號</th>\r\n            <th>就讀學校</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"6\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page } ; let i = index\">\r\n            <th scope=\"row\">{{ i + ( page - 1 ) * 10 + 1 }}</th>\r\n            <td>{{data.childusername}}</td>\r\n            <td>{{data.childname}}</td>\r\n            <td>{{data.childstudentid}}</td>\r\n            <td>{{data.childpoint}}</td>\r\n            <td>{{data.childcode}}</td>\r\n            <td>{{data.childschool}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      共 {{ datas.length }} 筆資料\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" #modelAddChild id=\"modelAddChild\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\"\r\n    aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\r\n          <button #modelClose type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">帳號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childusername\" [(ngModel)]=\"childusername\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"childpassword\" [(ngModel)]=\"childpassword\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">確認密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"childpasswordRe\" [(ngModel)]=\"childpasswordRe\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">兌換代碼:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childcode\" [(ngModel)]=\"childcode\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">姓名:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childname\" [(ngModel)]=\"childname\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">性別:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input name=\"childgender\" type=\"radio\" value=\"男生\" class=\"custom-control-input\" [ngModel]=\"childgender\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">男生</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input name=\"childgender\" type=\"radio\" value=\"女生\" class=\"custom-control-input\" [ngModel]=\"childgender\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">女生</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">學號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childstudentid\" [(ngModel)]=\"childstudentid\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">點數:</label>\r\n              <input type=\"number\" class=\"form-control\" name=\"childpoint\" min=\"0\" max=\"1000\" [(ngModel)]=\"childpoint\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">就讀學校:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childschool\" [(ngModel)]=\"childschool\" required>\r\n            </div>\r\n\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <swal #dialogSuccess title=\"新增成功\" type=\"success\"></swal>\r\n          <swal #dialogError title=\"資料錯誤，請重新確認\" type=\"error\"></swal>\r\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"userAddChild(modelAddChild);\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</main>\r\n"
 
 /***/ }),
 
@@ -343,6 +351,7 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__ = __webpack_require__("../../../../../src/app/service/user/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__ = __webpack_require__("../../../../@toverux/ngsweetalert2/dist/types+es2015-modules/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -391,10 +400,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+
 var ChildComponent = (function () {
-    function ChildComponent(router, userService) {
+    function ChildComponent(router, userService, checkloginService) {
         this.router = router;
         this.userService = userService;
+        this.checkloginService = checkloginService;
         this.datas = [];
         this.page = 1;
         this.isLoading = true;
@@ -409,6 +420,7 @@ var ChildComponent = (function () {
         this.childstudentid = '10111';
     }
     ChildComponent.prototype.ngOnInit = function () {
+        this.checkloginService.checkLogin();
         this.userGetChild();
     };
     ChildComponent.prototype.userGetChild = function () {
@@ -516,10 +528,10 @@ ChildComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/container/child/child.component.css")],
         providers: [__WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _f || Object])
 ], ChildComponent);
 
-var _a, _b, _c, _d, _e;
+var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=child.component.js.map
 
 /***/ }),
@@ -545,7 +557,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">資訊刊版</li>\r\n  </ol>\r\n\r\n  <section class=\"row text-center placeholders\">\r\n    <div class=\"col-6 col-sm-3 placeholder\">\r\n      <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\"\r\n        alt=\"Generic placeholder thumbnail\">\r\n      <h4>Label</h4>\r\n      <div class=\"text-muted\">Something else</div>\r\n    </div>\r\n    <div class=\"col-6 col-sm-3 placeholder\">\r\n      <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\"\r\n        alt=\"Generic placeholder thumbnail\">\r\n      <h4>Label</h4>\r\n      <span class=\"text-muted\">Something else</span>\r\n    </div>\r\n    <div class=\"col-6 col-sm-3 placeholder\">\r\n      <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\"\r\n        alt=\"Generic placeholder thumbnail\">\r\n      <h4>Label</h4>\r\n      <span class=\"text-muted\">Something else</span>\r\n    </div>\r\n    <div class=\"col-6 col-sm-3 placeholder\">\r\n      <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\"\r\n        alt=\"Generic placeholder thumbnail\">\r\n      <h4>Label</h4>\r\n      <span class=\"text-muted\">Something else</span>\r\n    </div>\r\n  </section>\r\n\r\n  <h2>Section title</h2>\r\n  <div class=\"table-responsive\">\r\n    <table class=\"table table-striped\">\r\n      <thead>\r\n        <tr>\r\n          <th>#</th>\r\n          <th>Header</th>\r\n          <th>Header</th>\r\n          <th>Header</th>\r\n          <th>Header</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr>\r\n          <td>1,001</td>\r\n          <td>Lorem</td>\r\n          <td>ipsum</td>\r\n          <td>dolor</td>\r\n          <td>sit</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,002</td>\r\n          <td>amet</td>\r\n          <td>consectetur</td>\r\n          <td>adipiscing</td>\r\n          <td>elit</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,003</td>\r\n          <td>Integer</td>\r\n          <td>nec</td>\r\n          <td>odio</td>\r\n          <td>Praesent</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,003</td>\r\n          <td>libero</td>\r\n          <td>Sed</td>\r\n          <td>cursus</td>\r\n          <td>ante</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,004</td>\r\n          <td>dapibus</td>\r\n          <td>diam</td>\r\n          <td>Sed</td>\r\n          <td>nisi</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,005</td>\r\n          <td>Nulla</td>\r\n          <td>quis</td>\r\n          <td>sem</td>\r\n          <td>at</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,006</td>\r\n          <td>nibh</td>\r\n          <td>elementum</td>\r\n          <td>imperdiet</td>\r\n          <td>Duis</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,007</td>\r\n          <td>sagittis</td>\r\n          <td>ipsum</td>\r\n          <td>Praesent</td>\r\n          <td>mauris</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,008</td>\r\n          <td>Fusce</td>\r\n          <td>nec</td>\r\n          <td>tellus</td>\r\n          <td>sed</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,009</td>\r\n          <td>augue</td>\r\n          <td>semper</td>\r\n          <td>porta</td>\r\n          <td>Mauris</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,010</td>\r\n          <td>massa</td>\r\n          <td>Vestibulum</td>\r\n          <td>lacinia</td>\r\n          <td>arcu</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,011</td>\r\n          <td>eget</td>\r\n          <td>nulla</td>\r\n          <td>Class</td>\r\n          <td>aptent</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,012</td>\r\n          <td>taciti</td>\r\n          <td>sociosqu</td>\r\n          <td>ad</td>\r\n          <td>litora</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,013</td>\r\n          <td>torquent</td>\r\n          <td>per</td>\r\n          <td>conubia</td>\r\n          <td>nostra</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,014</td>\r\n          <td>per</td>\r\n          <td>inceptos</td>\r\n          <td>himenaeos</td>\r\n          <td>Curabitur</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,015</td>\r\n          <td>sodales</td>\r\n          <td>ligula</td>\r\n          <td>in</td>\r\n          <td>libero</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</main>\r\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">資訊刊版</li>\r\n  </ol>\r\n\r\n  <section class=\"row text-center placeholders\">\r\n    <div class=\"col-6 col-sm-3 placeholder\">\r\n      <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\"\r\n        alt=\"Generic placeholder thumbnail\">\r\n      <h4>統計一</h4>\r\n      <div class=\"text-muted\">Something else</div>\r\n    </div>\r\n    <div class=\"col-6 col-sm-3 placeholder\">\r\n      <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\"\r\n        alt=\"Generic placeholder thumbnail\">\r\n      <h4>統計二</h4>\r\n      <span class=\"text-muted\">Something else</span>\r\n    </div>\r\n    <div class=\"col-6 col-sm-3 placeholder\">\r\n      <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\"\r\n        alt=\"Generic placeholder thumbnail\">\r\n      <h4>統計三</h4>\r\n      <span class=\"text-muted\">Something else</span>\r\n    </div>\r\n    <div class=\"col-6 col-sm-3 placeholder\">\r\n      <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\"\r\n        alt=\"Generic placeholder thumbnail\">\r\n      <h4>統計四</h4>\r\n      <span class=\"text-muted\">Something else</span>\r\n    </div>\r\n  </section>\r\n\r\n  <h2>副標題 - 自訂報表資料</h2>\r\n  <div class=\"table-responsive\">\r\n    <table class=\"table table-striped\">\r\n      <thead>\r\n        <tr>\r\n          <th>#</th>\r\n          <th>Header</th>\r\n          <th>Header</th>\r\n          <th>Header</th>\r\n          <th>Header</th>\r\n        </tr>\r\n      </thead>\r\n      <tbody>\r\n        <tr>\r\n          <td>1,001</td>\r\n          <td>Lorem</td>\r\n          <td>ipsum</td>\r\n          <td>dolor</td>\r\n          <td>sit</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,002</td>\r\n          <td>amet</td>\r\n          <td>consectetur</td>\r\n          <td>adipiscing</td>\r\n          <td>elit</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,003</td>\r\n          <td>Integer</td>\r\n          <td>nec</td>\r\n          <td>odio</td>\r\n          <td>Praesent</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,003</td>\r\n          <td>libero</td>\r\n          <td>Sed</td>\r\n          <td>cursus</td>\r\n          <td>ante</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,004</td>\r\n          <td>dapibus</td>\r\n          <td>diam</td>\r\n          <td>Sed</td>\r\n          <td>nisi</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,005</td>\r\n          <td>Nulla</td>\r\n          <td>quis</td>\r\n          <td>sem</td>\r\n          <td>at</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,006</td>\r\n          <td>nibh</td>\r\n          <td>elementum</td>\r\n          <td>imperdiet</td>\r\n          <td>Duis</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,007</td>\r\n          <td>sagittis</td>\r\n          <td>ipsum</td>\r\n          <td>Praesent</td>\r\n          <td>mauris</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,008</td>\r\n          <td>Fusce</td>\r\n          <td>nec</td>\r\n          <td>tellus</td>\r\n          <td>sed</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,009</td>\r\n          <td>augue</td>\r\n          <td>semper</td>\r\n          <td>porta</td>\r\n          <td>Mauris</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,010</td>\r\n          <td>massa</td>\r\n          <td>Vestibulum</td>\r\n          <td>lacinia</td>\r\n          <td>arcu</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,011</td>\r\n          <td>eget</td>\r\n          <td>nulla</td>\r\n          <td>Class</td>\r\n          <td>aptent</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,012</td>\r\n          <td>taciti</td>\r\n          <td>sociosqu</td>\r\n          <td>ad</td>\r\n          <td>litora</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,013</td>\r\n          <td>torquent</td>\r\n          <td>per</td>\r\n          <td>conubia</td>\r\n          <td>nostra</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,014</td>\r\n          <td>per</td>\r\n          <td>inceptos</td>\r\n          <td>himenaeos</td>\r\n          <td>Curabitur</td>\r\n        </tr>\r\n        <tr>\r\n          <td>1,015</td>\r\n          <td>sodales</td>\r\n          <td>ligula</td>\r\n          <td>in</td>\r\n          <td>libero</td>\r\n        </tr>\r\n      </tbody>\r\n    </table>\r\n  </div>\r\n</main>\r\n"
 
 /***/ }),
 
@@ -555,6 +567,7 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -565,82 +578,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var HomeComponent = (function () {
-    // ==========================================================
-    function HomeComponent() {
-        this.lineChartData = [
-            { data: [5, 8, 4, 13, 18, 8, 4, 10, 17, 6, 4, 13, 9], label: 'Sessions' },
-        ];
-        this.lineChartLabels = ["Mar 1", "Mar 2", "Mar 3", "Mar 4", "Mar 5", "Mar 6", "Mar 7", "Mar 8", "Mar 9", "Mar 10", "Mar 11", "Mar 12", "Mar 13"];
-        this.lineChartOptions = {
-            responsive: true,
-            scaleOverride: true,
-            scaleShowVerticalLines: false,
-            maintainAspectRatio: false,
-            scales: {
-                xAxes: [{
-                        time: {
-                            unit: 'date'
-                        },
-                        gridLines: {
-                            display: false
-                        },
-                        ticks: {
-                            maxTicksLimit: 7
-                        }
-                    }],
-                yAxes: [{
-                        ticks: {
-                            min: 0,
-                            max: 40,
-                            maxTicksLimit: 5
-                        },
-                        gridLines: {
-                            color: "rgba(0, 0, 0, .125)",
-                        }
-                    }],
-            },
-            legend: {
-                display: false
-            }
-        };
-        this.lineChartColors = [
-            {
-                lineTension: 0.3,
-                backgroundColor: "rgba(2,117,216,0.2)",
-                borderColor: "rgba(2,117,216,1)",
-                pointRadius: 5,
-                pointBackgroundColor: "rgba(2,117,216,1)",
-                pointBorderColor: "rgba(255,255,255,0.8)",
-                pointHoverRadius: 5,
-                pointHoverBackgroundColor: "rgba(2,117,216,1)",
-                pointHitRadius: 20,
-                pointBorderWidth: 2,
-            }
-        ];
-        this.lineChartLegend = true;
-        this.lineChartType = 'line';
-        // ==========================================================
-        this.barChartOptions = {
-            scaleShowVerticalLines: false,
-            responsive: true
-        };
-        this.barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-        this.barChartType = 'bar';
-        this.barChartLegend = true;
-        this.barChartData = [
-            { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-            { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
-        ];
+    function HomeComponent(checkloginService) {
+        this.checkloginService = checkloginService;
     }
     HomeComponent.prototype.ngOnInit = function () {
-    };
-    // events
-    HomeComponent.prototype.chartClicked = function (e) {
-        console.log(e);
-    };
-    HomeComponent.prototype.chartHovered = function (e) {
-        console.log(e);
+        this.checkloginService.checkLogin();
     };
     return HomeComponent;
 }());
@@ -650,9 +594,10 @@ HomeComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/container/home/home.component.html"),
         styles: [__webpack_require__("../../../../../src/app/container/home/home.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _a || Object])
 ], HomeComponent);
 
+var _a;
 //# sourceMappingURL=home.component.js.map
 
 /***/ }),
@@ -688,6 +633,7 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -698,8 +644,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var LogComponent = (function () {
-    function LogComponent() {
+    function LogComponent(checkloginService) {
+        this.checkloginService = checkloginService;
         this.meals = [
             { name: 'Robby', age: 6 },
             { name: 'asd', age: 8 },
@@ -720,6 +668,7 @@ var LogComponent = (function () {
         this.page = 1;
     }
     LogComponent.prototype.ngOnInit = function () {
+        this.checkloginService.checkLogin();
     };
     return LogComponent;
 }());
@@ -729,9 +678,10 @@ LogComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/container/log/log.component.html"),
         styles: [__webpack_require__("../../../../../src/app/container/log/log.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _a || Object])
 ], LogComponent);
 
+var _a;
 //# sourceMappingURL=log.component.js.map
 
 /***/ }),
@@ -885,7 +835,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/*\r\n * Sidebar\r\n */\r\n\r\n.sidebar {\r\n    position: relative;\r\n}\r\n\r\n@media screen and (min-width:768px) {\r\n    .sidebar {\r\n        position: fixed;\r\n        top: 54px;\r\n        bottom: 0;\r\n        left: 0;\r\n        z-index: 1000;\r\n        overflow-x: hidden;\r\n        overflow-y: auto;\r\n        width: 225px;\r\n        background-color: #292B2C;\r\n        border-right: 1px solid #eee;\r\n    }\r\n}\r\n\r\n\r\n/* Sidebar navigation */\r\n\r\n.sidebar {\r\n    padding-left: 0;\r\n    padding-right: 0;\r\n}\r\n\r\n.sidebar .nav {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sidebar .nav-item {\r\n    width: 100%;\r\n}\r\n\r\n.sidebar .nav-item+.nav-item {\r\n    margin-left: 0;\r\n}\r\n\r\n.sidebar .nav-link {\r\n    padding: 1rem;\r\n    font-size: 16px;\r\n    color: hsla(0, 0%, 100%, .5);\r\n    border-radius: 0;\r\n}\r\n\r\n.sidebar .nav-link:hover {\r\n    color: #fff;\r\n}\r\n\r\n.sidebar .nav-link-collapse:after {\r\n    font-family: FontAwesome;\r\n    float: right;\r\n    content: \"\\F107\";\r\n    color: #aaa;\r\n}\r\n\r\n.sidebar .nav-link-collapse.collapsed:hover:after {\r\n    content: \"\\F107\";\r\n}\r\n\r\n.sidebar .nav-link-collapse.collapsed:after {\r\n    content: \"\\F105\";\r\n}\r\n\r\n.sidebar .nav-link.active {\r\n    background-color: #464a4c;\r\n    color: #fff;\r\n}\r\n\r\n.sidebar .nav-link i {\r\n    margin-right: 4px;\r\n}\r\n\r\n\r\n/* sidebar-second */\r\n\r\n.sidebar-sub {\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.sidebar-sub>li>a {\r\n    display: block;\r\n    padding: 0.8rem 0rem 0.8rem 2.8rem;\r\n    color: #636c72;\r\n    font-size: 16px;\r\n    text-decoration: unset;\r\n}\r\n\r\n.sidebar-sub>li>a:hover {\r\n    color: #fff;\r\n}\r\n\r\n.sidebar-sub>li>a.active {\r\n    color: #fff;\r\n}\r\n", ""]);
+exports.push([module.i, "/*\r\n * Sidebar\r\n */\r\n\r\n.sidebar {\r\n  position: relative;\r\n}\r\n\r\n@media screen and (min-width:768px) {\r\n  .sidebar {\r\n    position: fixed;\r\n    top: 54px;\r\n    bottom: 0;\r\n    left: 0;\r\n    z-index: 1000;\r\n    overflow-x: hidden;\r\n    overflow-y: auto;\r\n    width: calc( 100vw / 12 * 1.9);\r\n    background-color: #292B2C;\r\n    border-right: 1px solid #eee;\r\n  }\r\n}\r\n\r\n\r\n/* Sidebar navigation */\r\n\r\n.sidebar {\r\n  padding-left: 0;\r\n  padding-right: 0;\r\n}\r\n\r\n.sidebar .nav {\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.sidebar .nav-item {\r\n  width: 100%;\r\n}\r\n\r\n.sidebar .nav-item+.nav-item {\r\n  margin-left: 0;\r\n}\r\n\r\n.sidebar .nav-link {\r\n  padding: 1rem;\r\n  font-size: 16px;\r\n  color: hsla(0, 0%, 100%, .5);\r\n  border-radius: 0;\r\n}\r\n\r\n.sidebar .nav-link:hover {\r\n  color: #fff;\r\n}\r\n\r\n.sidebar .nav-link-collapse:after {\r\n  font-family: FontAwesome;\r\n  float: right;\r\n  content: \"\\F107\";\r\n  color: #aaa;\r\n}\r\n\r\n.sidebar .nav-link-collapse.collapsed:hover:after {\r\n  content: \"\\F107\";\r\n}\r\n\r\n.sidebar .nav-link-collapse.collapsed:after {\r\n  content: \"\\F105\";\r\n}\r\n\r\n.sidebar .nav-link.active {\r\n  background-color: #464a4c;\r\n  color: #fff;\r\n}\r\n\r\n.sidebar .nav-link i {\r\n  margin-right: 4px;\r\n}\r\n\r\n\r\n/* sidebar-second */\r\n\r\n.sidebar-sub {\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.sidebar-sub>li>a {\r\n  display: block;\r\n  padding: 0.8rem 0rem 0.8rem 2.8rem;\r\n  color: #636c72;\r\n  font-size: 16px;\r\n  text-decoration: unset;\r\n}\r\n\r\n.sidebar-sub>li>a:hover {\r\n  color: #fff;\r\n}\r\n\r\n.sidebar-sub>li>a.active {\r\n  color: #fff;\r\n}\r\n", ""]);
 
 // exports
 
@@ -912,6 +862,7 @@ module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__ = __webpack_require__("../../../../ng2-cookies/ng2-cookies.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__ = __webpack_require__("../../../../@toverux/ngsweetalert2/dist/types+es2015-modules/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -925,9 +876,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var NavComponent = (function () {
-    function NavComponent(router) {
+    function NavComponent(router, checkloginService) {
         this.router = router;
+        this.checkloginService = checkloginService;
         this.sideActive = 'home';
         this.isLogin = false;
     }
@@ -945,7 +898,6 @@ var NavComponent = (function () {
             this.router.navigate(["/login"]);
         }
         else {
-            console.log(this.isLogin);
             this.router.navigate(["/home"]);
         }
     };
@@ -956,17 +908,8 @@ var NavComponent = (function () {
      * @memberof NavComponent
      */
     NavComponent.prototype.sidebarActive = function (e) {
-        this.checkLogin();
+        this.checkloginService.checkLogin();
         this.sideActive = e.srcElement.hash.replace('#/', '');
-    };
-    /**
-     * 檢查登入
-     */
-    NavComponent.prototype.checkLogin = function () {
-        this.isLogin = JSON.parse(__WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__["Cookie"].get('dashboardLogin'));
-        if (!this.isLogin) {
-            this.router.navigate(["/login"]);
-        }
     };
     /**
      * 登出
@@ -974,8 +917,7 @@ var NavComponent = (function () {
     NavComponent.prototype.logout = function () {
         __WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__["Cookie"].delete('dashboardLogin');
         this.isLogin = false;
-        this.router.navigate(['/login']);
-        // location.reload();
+        this.checkloginService.checkLogin();
     };
     return NavComponent;
 }());
@@ -989,10 +931,10 @@ NavComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/container/nav/nav.component.html"),
         styles: [__webpack_require__("../../../../../src/app/container/nav/nav.component.css")]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _c || Object])
 ], NavComponent);
 
-var _a, _b;
+var _a, _b, _c;
 //# sourceMappingURL=nav.component.js.map
 
 /***/ }),
@@ -1018,7 +960,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/record/record.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n  <!-- Breadcrumbs -->\n  <ol class=\"breadcrumb\">\n    <li class=\"breadcrumb-item\">\n      <a [routerLink]=\"['']\">首頁</a>\n    </li>\n    <li class=\"breadcrumb-item active\">兌換紀錄</li>\n  </ol>\n\n  <div class=\"card mb-3\">\n    <div class=\"card-header\">\n      <i class=\"fa fa-users\"></i> 兌換列表\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal\">新增</button>\n    </div>\n\n    <div class=\"card-body\">\n      <table class=\"table\">\n        <thead class=\"thead-default\">\n          <tr>\n            <th>學童帳號</th>\n            <th>店家帳號</th>\n            <th>兌換點數</th>\n            <th>兌換日期</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\n            <td colspan=\"4\">\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\n            </td>\n          </tr>\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page }\">\n            <td>{{ data['recordchild']}}</td>\n            <td>{{ data['recordstore']}}</td>\n            <td>{{ data['recordpoint']}}</td>\n            <td>{{ data['recordtime']}}</td>\n          </tr>\n        </tbody>\n      </table>\n      <div class=\"has-text-centered text-center\">\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\n      </div>\n    </div>\n    <div class=\"card-footer small text-muted\">\n      最後更新 早上 08:30\n    </div>\n  </div>\n\n  <!-- Modal -->\n  <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n            <span class=\"sr-only\">Close</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form>\n            <div class=\"form-group\">\n              <label class=\"control-label\">姓名:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">性別:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">男生</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">女生</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">葷素:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">葷食</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">素食</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">電話:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">住址:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">就讀學校:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人手機:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">備註:</label>\n              <textarea class=\"form-control\"></textarea>\n            </div>\n          </form>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\n        </div>\n      </div>\n    </div>\n  </div>\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">兌換紀錄</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 兌換紀錄 - 共 {{ datas.length }} 筆資料\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal\">新增</button>\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table\">\r\n        <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>#</th>\r\n            <th>學童帳號</th>\r\n            <th>店家帳號</th>\r\n            <th>兌換點數</th>\r\n            <th>兌換日期</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"4\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page } ; let i = index\">\r\n            <th scope=\"row\">{{ i + ( page - 1 ) * 10 + 1 }}</th>\r\n            <td>{{ data['recordchild']}}</td>\r\n            <td>{{ data['recordstore']}}</td>\r\n            <td>{{ data['recordpoint']}}</td>\r\n            <td>{{ data['recordtime']}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      共 {{ datas.length }} 筆資料\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">姓名:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">性別:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">男生</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">女生</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">葷素:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">葷食</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">素食</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">電話:</label>\r\n              <input type=\"tel\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">住址:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">就讀學校:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">監護人:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">監護人手機:</label>\r\n              <input type=\"tel\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">備註:</label>\r\n              <textarea class=\"form-control\"></textarea>\r\n            </div>\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -1029,6 +971,7 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecordComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_record_record_service__ = __webpack_require__("../../../../../src/app/service/record/record.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1075,14 +1018,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 
 
+
 var RecordComponent = (function () {
-    function RecordComponent(recordService) {
+    function RecordComponent(recordService, checkloginService) {
         this.recordService = recordService;
+        this.checkloginService = checkloginService;
         this.datas = [];
         this.page = 1;
         this.isLoading = true;
     }
     RecordComponent.prototype.ngOnInit = function () {
+        this.checkloginService.checkLogin();
         this.recordList();
     };
     RecordComponent.prototype.recordList = function () {
@@ -1110,10 +1056,10 @@ RecordComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/container/record/record.component.css")],
         providers: [__WEBPACK_IMPORTED_MODULE_1__service_record_record_service__["a" /* RecordService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_record_record_service__["a" /* RecordService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_record_record_service__["a" /* RecordService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_record_record_service__["a" /* RecordService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_record_record_service__["a" /* RecordService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _b || Object])
 ], RecordComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=record.component.js.map
 
 /***/ }),
@@ -1139,7 +1085,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/store/store.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n  <!-- Breadcrumbs -->\n  <ol class=\"breadcrumb\">\n    <li class=\"breadcrumb-item\">\n      <a [routerLink]=\"['']\">首頁</a>\n    </li>\n    <li class=\"breadcrumb-item active\">店家管理</li>\n  </ol>\n\n  <div class=\"card mb-3\">\n    <div class=\"card-header\">\n      <i class=\"fa fa-users\"></i> 店家列表\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal\">新增</button>\n    </div>\n\n    <div class=\"card-body\">\n      <table class=\"table\">\n        <thead class=\"thead-default\">\n          <tr>\n            <th>帳號</th>\n            <th>店名</th>\n            <th>地址</th>\n            <th>店長</th>\n            <th>電話</th>\n            <th>統一編號</th>\n            <th>店家類型</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\n            <td colspan=\"7\">\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\n            </td>\n          </tr>\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page }\">\n            <td>{{data.storeusername}}</td>\n            <td>{{data.storename}}</td>\n            <td>{{data.storeaddr}}</td>\n            <td>{{data.storeadminstore}}</td>\n            <td>{{data.storetel}}</td>\n            <td>{{data.storeein}}</td>\n            <td>{{data.storetype}}</td>\n          </tr>\n        </tbody>\n      </table>\n      <div class=\"has-text-centered text-center\">\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\n      </div>\n    </div>\n    <div class=\"card-footer small text-muted\">\n      最後更新 早上 08:30\n    </div>\n  </div>\n\n  <!-- Modal -->\n  <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n            <span class=\"sr-only\">Close</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form>\n            <div class=\"form-group\">\n              <label class=\"control-label\">姓名:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">性別:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">男生</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">女生</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">葷素:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">葷食</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">素食</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">電話:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">住址:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">就讀學校:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人手機:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">備註:</label>\n              <textarea class=\"form-control\"></textarea>\n            </div>\n          </form>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\n        </div>\n      </div>\n    </div>\n  </div>\n\n</main>\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">店家管理</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 店家列表 - 共 {{ datas.length }} 筆資料\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#modelAddStore\">新增</button>\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table\">\r\n        <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>#</th>\r\n            <th>帳號</th>\r\n            <th>店名</th>\r\n            <th>地址</th>\r\n            <th>店長</th>\r\n            <th>電話</th>\r\n            <th>統一編號</th>\r\n            <th>店家類型</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"7\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page } ; let i = index\">\r\n            <th scope=\"row\">{{ i + ( page - 1 ) * 10 + 1 }}</th>\r\n            <td>{{data.storeusername}}</td>\r\n            <td>{{data.storename}}</td>\r\n            <td>{{data.storeaddr}}</td>\r\n            <td>{{data.storeadminstore}}</td>\r\n            <td>{{data.storetel}}</td>\r\n            <td>{{data.storeein}}</td>\r\n            <td>{{data.storetype}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      共 {{ datas.length }} 筆資料\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"modelAddStore\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modelAddStoreLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"modelAddStoreLabel\">新增店家</h4>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">帳號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeusername\" [(ngModel)]=\"storeusername\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"storepassword\" [(ngModel)]=\"storepassword\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">確認密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"storepasswordRe\" [(ngModel)]=\"storepasswordRe\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">店名:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storename\" [(ngModel)]=\"storename\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">地址:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeaddr\" [(ngModel)]=\"storeaddr\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">店長:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeadminstore\" [(ngModel)]=\"storeadminstore\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">電話:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storetel\" [(ngModel)]=\"storetel\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">統一編號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeein\" [(ngModel)]=\"storeein\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">店家類型:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storetype\" [(ngModel)]=\"storetype\" required>\r\n            </div>\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <swal #dialogSuccess title=\"新增成功\" type=\"success\"></swal>\r\n          <swal #dialogError title=\"資料錯誤，請重新確認\" type=\"error\"></swal>\r\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"userAddStore(modelAddStore);\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</main>\r\n"
 
 /***/ }),
 
@@ -1149,7 +1095,10 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StoreComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__service_user_user_service__ = __webpack_require__("../../../../../src/app/service/user/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__ = __webpack_require__("../../../../../src/app/service/user/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__ = __webpack_require__("../../../../@toverux/ngsweetalert2/dist/types+es2015-modules/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1196,17 +1145,33 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 
 
+
+
+
 var StoreComponent = (function () {
-    function StoreComponent(userService) {
+    function StoreComponent(router, userService, checkloginService) {
+        this.router = router;
         this.userService = userService;
+        this.checkloginService = checkloginService;
         this.datas = [];
         this.page = 1;
         this.isLoading = true;
+        this.storeusername = 'b01';
+        this.storepassword = '123456';
+        this.storepasswordRe = '123456';
+        this.storename = '好米吉便當專賣';
+        this.storeaddr = '台北市松山區民生東路五段36巷1號';
+        this.storeadminstore = '張大東';
+        this.storetel = '02-2768-9942';
+        this.storeein = '1145671';
+        this.storetype = '';
+        this.storephoto = '';
     }
     StoreComponent.prototype.ngOnInit = function () {
-        this.userGetChild();
+        this.checkloginService.checkLogin();
+        this.userGetStore();
     };
-    StoreComponent.prototype.userGetChild = function () {
+    StoreComponent.prototype.userGetStore = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -1214,7 +1179,6 @@ var StoreComponent = (function () {
                     case 0: return [4 /*yield*/, this.userService.userGetStore().subscribe(function (result) {
                             _this.isLoading = false;
                             _this.datas = result;
-                            console.log(_this.datas);
                         })];
                     case 1:
                         _a.sent();
@@ -1223,19 +1187,97 @@ var StoreComponent = (function () {
             });
         });
     };
+    StoreComponent.prototype.userAddStore = function (obj) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var body;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        console.log(obj);
+                        if (!(this.storepassword != this.storepasswordRe)) return [3 /*break*/, 1];
+                        this.swalDialogError
+                            .show().then(function (value) {
+                            _this.storepassword = '';
+                            _this.storepasswordRe = '';
+                        });
+                        return [3 /*break*/, 4];
+                    case 1:
+                        if (!(this.storeusername == '' ||
+                            this.storepassword == '' ||
+                            this.storepasswordRe == '' ||
+                            this.storename == '' ||
+                            this.storeaddr == '' ||
+                            this.storeadminstore == '' ||
+                            this.storetel == '' ||
+                            this.storeein == '')) return [3 /*break*/, 2];
+                        this.swalDialogError
+                            .show().then(function (value) {
+                            _this.storepassword = '';
+                            _this.storepasswordRe = '';
+                        });
+                        return [3 /*break*/, 4];
+                    case 2:
+                        body = {
+                            storeusername: this.storeusername,
+                            storepassword: this.storepassword,
+                            storename: this.storename,
+                            storeaddr: this.storeaddr,
+                            storeadminstore: this.storeadminstore,
+                            storetel: this.storetel,
+                            storeein: this.storeein,
+                            storetype: this.storetype,
+                            storephoto: this.storephoto
+                        };
+                        return [4 /*yield*/, this.userService.userAddStore(body).subscribe(function (result) {
+                                console.log(result);
+                                if (result.affectedRows > 0) {
+                                    _this.swalDialogSuccess
+                                        .show().then(function (value) {
+                                        _this.modelClose.nativeElement.click();
+                                    });
+                                }
+                                else {
+                                    _this.swalDialogError
+                                        .show().then(function (value) {
+                                        _this.storepassword = '';
+                                        _this.storepasswordRe = '';
+                                    });
+                                }
+                            })];
+                    case 3:
+                        _a.sent();
+                        _a.label = 4;
+                    case 4: return [2 /*return*/];
+                }
+            });
+        });
+    };
     return StoreComponent;
 }());
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('modelClose'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object)
+], StoreComponent.prototype, "modelClose", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogError'),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _b || Object)
+], StoreComponent.prototype, "swalDialogError", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogSuccess'),
+    __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _c || Object)
+], StoreComponent.prototype, "swalDialogSuccess", void 0);
 StoreComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-store',
         template: __webpack_require__("../../../../../src/app/container/store/store.component.html"),
         styles: [__webpack_require__("../../../../../src/app/container/store/store.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_1__service_user_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__service_user_user_service__["a" /* UserService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _f || Object])
 ], StoreComponent);
 
-var _a;
+var _a, _b, _c, _d, _e, _f;
 //# sourceMappingURL=store.component.js.map
 
 /***/ }),
@@ -1271,6 +1313,7 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TimerComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1281,10 +1324,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var TimerComponent = (function () {
-    function TimerComponent() {
+    function TimerComponent(checkloginService) {
+        this.checkloginService = checkloginService;
     }
     TimerComponent.prototype.ngOnInit = function () {
+        this.checkloginService.checkLogin();
     };
     return TimerComponent;
 }());
@@ -1294,10 +1340,58 @@ TimerComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/container/timer/timer.component.html"),
         styles: [__webpack_require__("../../../../../src/app/container/timer/timer.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _a || Object])
 ], TimerComponent);
 
+var _a;
 //# sourceMappingURL=timer.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/service/common/check-login.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckLoginService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__ = __webpack_require__("../../../../ng2-cookies/ng2-cookies.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CheckLoginService = (function () {
+    function CheckLoginService(router) {
+        this.router = router;
+        this.isLogin = false;
+    }
+    /**
+   * 檢查登入
+   */
+    CheckLoginService.prototype.checkLogin = function () {
+        this.isLogin = JSON.parse(__WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__["Cookie"].get('dashboardLogin'));
+        if (!this.isLogin) {
+            this.router.navigate(["/login"]);
+        }
+    };
+    return CheckLoginService;
+}());
+CheckLoginService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object])
+], CheckLoginService);
+
+var _a;
+//# sourceMappingURL=check-login.service.js.map
 
 /***/ }),
 
@@ -1407,7 +1501,6 @@ var UserService = (function () {
     UserService.prototype.userAddChild = function (body) {
         return this.http.post('/api/child/add', body)
             .map(function (res) {
-            console.log(res);
             return res.json() || {};
         });
     };
@@ -1420,6 +1513,20 @@ var UserService = (function () {
     UserService.prototype.userGetStore = function () {
         return this.http.get('/api/store')
             .map(function (res) {
+            return res.json() || {};
+        });
+    };
+    /**
+     * 店家資料新增
+     *
+     * @param {object} body
+     * @returns
+     * @memberof UserService
+     */
+    UserService.prototype.userAddStore = function (body) {
+        return this.http.post('/api/store/add', body)
+            .map(function (res) {
+            console.log(res);
             return res.json() || {};
         });
     };
