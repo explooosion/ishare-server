@@ -11,6 +11,7 @@ import RecordControllers from '../controllers/record';
 import UserControllers from '../controllers/user';
 import MissionControllers from '../controllers/mission';
 import TeacherControllers from '../controllers/teacher';
+import LogControllers from '../controllers/log';
 
 const verify = util.promisify(jwt.verify); // 解密 
 const secret = require('../config/secret.json');
@@ -62,8 +63,9 @@ router.post('/teacher/update', TeacherControllers.update);
 router.post('/teacher/delete', TeacherControllers.delete);
 
 // Log
-
-
+router.get('/log', LogControllers.find);
+router.post('/log/Login', LogControllers.Login);
+router.post('/log/Logout', LogControllers.Logout);
 // Mission_Join
 router.get('/mission/join', MissionControllers.join_find);
 router.post('/mission/join/add', MissionControllers.join_add);
