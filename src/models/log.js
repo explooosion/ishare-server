@@ -14,7 +14,7 @@ class Child {
             return false
         }
     }
-    async Login(ctx) {
+    async login(ctx) {
         try {
             let params = [
                 ctx.request.body.loginusername,
@@ -30,7 +30,7 @@ class Child {
             return false;
         }
     }
-    async Logout(ctx){
+    async logout(ctx){
         try {
             let params = [
                 ctx.request.body.logouttime,
