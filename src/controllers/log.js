@@ -2,7 +2,7 @@
 
 import Log from '../models/log'
 
-class MissionControllers{
+class LogControllers{
     async find(ctx){
         ctx.body = await Log.find(ctx);
     }

@@ -40,6 +40,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_gendir lazy recursive";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__container_mission_join_exhibition_join_exhibition_component__ = __webpack_require__("../../../../../src/app/container/mission/join-exhibition/join-exhibition.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__container_mission_visit_exhibition_visit_exhibition_component__ = __webpack_require__("../../../../../src/app/container/mission/visit-exhibition/visit-exhibition.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__container_mission_create_create_component__ = __webpack_require__("../../../../../src/app/container/mission/create/create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__container_mission_interduce_interduce_component__ = __webpack_require__("../../../../../src/app/container/mission/interduce/interduce.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -56,6 +57,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 // Component - Mission
+
 
 
 
@@ -84,22 +86,23 @@ var routes = [
     { path: 'mission/join-exhibition', component: __WEBPACK_IMPORTED_MODULE_15__container_mission_join_exhibition_join_exhibition_component__["a" /* JoinExhibitionComponent */] },
     { path: 'mission/visit-exhibition', component: __WEBPACK_IMPORTED_MODULE_16__container_mission_visit_exhibition_visit_exhibition_component__["a" /* VisitExhibitionComponent */] },
     { path: 'mission/create', component: __WEBPACK_IMPORTED_MODULE_17__container_mission_create_create_component__["a" /* CreateComponent */] },
+    { path: 'mission/interduce', component: __WEBPACK_IMPORTED_MODULE_18__container_mission_interduce_interduce_component__["a" /* InterduceComponent */] },
     // 強制跳轉至首頁 /home
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
-var AppRoutingModule = (function () {
+var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
+    AppRoutingModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
+            // useHash = true , 防止 http://localhost/# 發生跳轉
+            imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes, { useHash: true })],
+            exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
+        })
+    ], AppRoutingModule);
     return AppRoutingModule;
 }());
-AppRoutingModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
-        // useHash = true , 防止 http://localhost/# 發生跳轉
-        imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes, { useHash: true })],
-        exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
-    })
-], AppRoutingModule);
 
 //# sourceMappingURL=app-routing.module.js.map
 
@@ -143,18 +146,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
-var AppComponent = (function () {
+var AppComponent = /** @class */ (function () {
     function AppComponent() {
     }
+    AppComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-root',
+            template: __webpack_require__("../../../../../src/app/app.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/app.component.css")]
+        })
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-root',
-        template: __webpack_require__("../../../../../src/app/app.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/app.component.css")]
-    })
-], AppComponent);
 
 //# sourceMappingURL=app.component.js.map
 
@@ -192,6 +195,7 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__container_mission_visit_exhibition_visit_exhibition_component__ = __webpack_require__("../../../../../src/app/container/mission/visit-exhibition/visit-exhibition.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__container_mission_join_exhibition_join_exhibition_component__ = __webpack_require__("../../../../../src/app/container/mission/join-exhibition/join-exhibition.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__container_mission_create_create_component__ = __webpack_require__("../../../../../src/app/container/mission/create/create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__container_mission_interduce_interduce_component__ = __webpack_require__("../../../../../src/app/container/mission/interduce/interduce.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -227,53 +231,55 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AppModule = (function () {
+
+var AppModule = /** @class */ (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__container_nav_nav_component__["a" /* NavComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__container_home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__container_footer_footer_component__["a" /* FooterComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__container_user_user_component__["a" /* UserComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__component_modal_login_login_component__["a" /* LoginComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__component_modal_signup_signup_component__["a" /* SignupComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__container_user_profile_profile_component__["a" /* ProfileComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__container_user_point_point_component__["a" /* PointComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__container_search_search_component__["a" /* SearchComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__container_mission_sport_sport_component__["a" /* SportComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__container_mission_bicycle_bicycle_component__["a" /* BicycleComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__container_mission_information_information_component__["a" /* InformationComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__container_mission_art_art_component__["a" /* ArtComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__container_mission_clean_clean_component__["a" /* CleanComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__container_mission_outclean_outclean_component__["a" /* OutcleanComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__container_mission_tourplay_tourplay_component__["a" /* TourplayComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__container_mission_playtour_playtour_component__["a" /* PlaytourComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__container_mission_visit_exhibition_visit_exhibition_component__["a" /* VisitExhibitionComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__container_mission_join_exhibition_join_exhibition_component__["a" /* JoinExhibitionComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__container_mission_create_create_component__["a" /* CreateComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__container_mission_interduce_interduce_component__["a" /* InterduceComponent */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* JsonpModule */],
+                __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_5__toverux_ngsweetalert2__["b" /* SweetAlert2Module */].forRoot({
+                    buttonsStyling: false,
+                    customClass: 'modal-content',
+                    confirmButtonClass: 'btn btn-lg btn-primary',
+                    cancelButtonClass: 'btn btn-lg'
+                })
+            ],
+            providers: [],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* NgModule */])({
-        declarations: [
-            __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
-            __WEBPACK_IMPORTED_MODULE_7__container_nav_nav_component__["a" /* NavComponent */],
-            __WEBPACK_IMPORTED_MODULE_8__container_home_home_component__["a" /* HomeComponent */],
-            __WEBPACK_IMPORTED_MODULE_9__container_footer_footer_component__["a" /* FooterComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__container_user_user_component__["a" /* UserComponent */],
-            __WEBPACK_IMPORTED_MODULE_14__component_modal_login_login_component__["a" /* LoginComponent */],
-            __WEBPACK_IMPORTED_MODULE_15__component_modal_signup_signup_component__["a" /* SignupComponent */],
-            __WEBPACK_IMPORTED_MODULE_11__container_user_profile_profile_component__["a" /* ProfileComponent */],
-            __WEBPACK_IMPORTED_MODULE_12__container_user_point_point_component__["a" /* PointComponent */],
-            __WEBPACK_IMPORTED_MODULE_13__container_search_search_component__["a" /* SearchComponent */],
-            __WEBPACK_IMPORTED_MODULE_16__container_mission_sport_sport_component__["a" /* SportComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__container_mission_bicycle_bicycle_component__["a" /* BicycleComponent */],
-            __WEBPACK_IMPORTED_MODULE_18__container_mission_information_information_component__["a" /* InformationComponent */],
-            __WEBPACK_IMPORTED_MODULE_19__container_mission_art_art_component__["a" /* ArtComponent */],
-            __WEBPACK_IMPORTED_MODULE_20__container_mission_clean_clean_component__["a" /* CleanComponent */],
-            __WEBPACK_IMPORTED_MODULE_21__container_mission_outclean_outclean_component__["a" /* OutcleanComponent */],
-            __WEBPACK_IMPORTED_MODULE_22__container_mission_tourplay_tourplay_component__["a" /* TourplayComponent */],
-            __WEBPACK_IMPORTED_MODULE_23__container_mission_playtour_playtour_component__["a" /* PlaytourComponent */],
-            __WEBPACK_IMPORTED_MODULE_24__container_mission_visit_exhibition_visit_exhibition_component__["a" /* VisitExhibitionComponent */],
-            __WEBPACK_IMPORTED_MODULE_25__container_mission_join_exhibition_join_exhibition_component__["a" /* JoinExhibitionComponent */],
-            __WEBPACK_IMPORTED_MODULE_26__container_mission_create_create_component__["a" /* CreateComponent */]
-        ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* JsonpModule */],
-            __WEBPACK_IMPORTED_MODULE_4__app_routing_module__["a" /* AppRoutingModule */],
-            __WEBPACK_IMPORTED_MODULE_5__toverux_ngsweetalert2__["b" /* SweetAlert2Module */].forRoot({
-                buttonsStyling: false,
-                customClass: 'modal-content',
-                confirmButtonClass: 'btn btn-lg btn-primary',
-                cancelButtonClass: 'btn btn-lg'
-            })
-        ],
-        providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
-    })
-], AppModule);
 
 //# sourceMappingURL=app.module.js.map
 
@@ -300,7 +306,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/component/modal/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form id=\"form\">\r\n  <div class=\"modal fade\" id=\"loginModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"loginModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n\r\n        <div class=\"modal-header\">\r\n          <h5 class=\"modal-title\" id=\"loginModalLabel\">\r\n            <i class=\"fa fa-user\" aria-hidden=\"true\"></i>登入</h5>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <div class=\"form-group\">\r\n            <label for=\"userAccount\">帳號</label>\r\n            <input type=\"text\" class=\"form-control\" id=\"userAccount\" name=\"userAccount\" placeholder=\"請輸入帳號 user\" [(ngModel)]=\"userAccount\"\r\n              required>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"userPassword\">密碼</label>\r\n            <input type=\"password\" class=\"form-control\" id=\"userPassword\" name=\"userPassword\" placeholder=\"請輸入密碼 123456\" [(ngModel)]=\"userPassword\"\r\n              required>\r\n          </div>\r\n          <!-- <div class=\"form-group\">\r\n            <label for=\"\">身分</label>\r\n              <select class=\"form-control\">\r\n                <option value=\"1\" >學生</option>\r\n                <option value=\"2\" >老師</option>\r\n              </select>\r\n          </div> -->\r\n          <div class=\"form-group\">\r\n            <label class=\"custom-control custom-checkbox\">\r\n              <input type=\"checkbox\" class=\"custom-control-input\">\r\n              <span class=\"custom-control-indicator\"></span>\r\n              <span class=\"custom-control-description\">記住我的密碼</span>\r\n            </label>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"modal-footer\">\r\n          <div class=\"container\">\r\n            <div class=\"row\">\r\n              <div class=\"col-lg-12 form-group\">\r\n                <swal #dialogSuccess title=\"登入成功\" type=\"success\"></swal>\r\n                <swal #dialogError title=\"登入失敗\" type=\"error\"></swal>\r\n                <button type=\"submit\" class=\"btn btn-info bg-info btn-maxw\" (click)=\"userLogin();\">登入</button>\r\n              </div>\r\n            </div>\r\n            <div class=\"row\">\r\n              <div class=\"col-lg-12 form-group\">\r\n                <button type=\"button\" class=\"btn btn-light bg-gray btn-maxw\" data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\"#signupModal\">註冊</button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>"
+module.exports = "<form id=\"form\">\r\n  <div class=\"modal fade\" id=\"loginModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"loginModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n\r\n        <div class=\"modal-header\">\r\n          <h5 class=\"modal-title\" id=\"loginModalLabel\">\r\n            <i class=\"fa fa-user\" aria-hidden=\"true\"></i>登入</h5>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <div class=\"form-group\">\r\n            <label for=\"userAccount\">帳號</label>\r\n            <input type=\"text\" class=\"form-control\" id=\"userAccount\" name=\"userAccount\" placeholder=\"請輸入帳號 carie8655\" [(ngModel)]=\"userAccount\"\r\n              required>\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"userPassword\">密碼</label>\r\n            <input type=\"password\" class=\"form-control\" id=\"userPassword\" name=\"userPassword\" placeholder=\"請輸入密碼 popo123\" [(ngModel)]=\"userPassword\"\r\n              required>\r\n          </div>\r\n          <!-- <div class=\"form-group\">\r\n            <label for=\"\">身分</label>\r\n              <select class=\"form-control\">\r\n                <option value=\"1\" >學生</option>\r\n                <option value=\"2\" >老師</option>\r\n              </select>\r\n          </div> -->\r\n          <div class=\"form-group\">\r\n            <label class=\"custom-control custom-checkbox\">\r\n              <input type=\"checkbox\" class=\"custom-control-input\">\r\n              <span class=\"custom-control-indicator\"></span>\r\n              <span class=\"custom-control-description\">記住我的密碼</span>\r\n            </label>\r\n          </div>\r\n        </div>\r\n\r\n        <div class=\"modal-footer\">\r\n          <div class=\"container\">\r\n            <div class=\"row\">\r\n              <div class=\"col-lg-12 form-group\">\r\n                <swal #dialogSuccess title=\"登入成功\" type=\"success\"></swal>\r\n                <swal #dialogError title=\"登入失敗\" type=\"error\"></swal>\r\n                <button type=\"submit\" class=\"btn btn-info bg-info btn-maxw\" (click)=\"userLogin();\">登入</button>\r\n              </div>\r\n            </div>\r\n            <div class=\"row\">\r\n              <div class=\"col-lg-12 form-group\">\r\n                <button type=\"button\" class=\"btn btn-light bg-gray btn-maxw\" data-dismiss=\"modal\" data-toggle=\"modal\" data-target=\"#signupModal\">註冊</button>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n</form>"
 
 /***/ }),
 
@@ -362,7 +368,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-var LoginComponent = (function () {
+var LoginComponent = /** @class */ (function () {
     function LoginComponent(userService) {
         this.userService = userService;
         this.userAccount = '';
@@ -386,8 +392,8 @@ var LoginComponent = (function () {
                     case 0:
                         vailid = this.userAccount == 'user' && this.userPassword == '123456' ? true : false;
                         body = {
-                            userId: this.userAccount,
-                            userPwd: this.userPassword,
+                            userId: 'carie8655',
+                            userPwd: 'popo123',
                             logingroup: 2
                         };
                         return [4 /*yield*/, this.userService.Login(body).subscribe(function (result) {
@@ -410,27 +416,27 @@ var LoginComponent = (function () {
             });
         });
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('dialogSuccess'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _a || Object)
+    ], LoginComponent.prototype, "swalDialogSuccess", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('dialogError'),
+        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _b || Object)
+    ], LoginComponent.prototype, "swalDialogError", void 0);
+    LoginComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-login',
+            template: __webpack_require__("../../../../../src/app/component/modal/login/login.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/component/modal/login/login.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]]
+        }),
+        __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]) === "function" && _c || Object])
+    ], LoginComponent);
     return LoginComponent;
+    var _a, _b, _c;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('dialogSuccess'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _a || Object)
-], LoginComponent.prototype, "swalDialogSuccess", void 0);
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('dialogError'),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _b || Object)
-], LoginComponent.prototype, "swalDialogError", void 0);
-LoginComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-login',
-        template: __webpack_require__("../../../../../src/app/component/modal/login/login.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/component/modal/login/login.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]) === "function" && _c || Object])
-], LoginComponent);
 
-var _a, _b, _c;
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
@@ -478,7 +484,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var SignupComponent = (function () {
+var SignupComponent = /** @class */ (function () {
     function SignupComponent() {
     }
     SignupComponent.prototype.ngOnInit = function () {
@@ -488,22 +494,22 @@ var SignupComponent = (function () {
             .show()
             .then(function (value) { window.location.reload(); });
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('dialogSuccess'),
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _a || Object)
+    ], SignupComponent.prototype, "swalDialogSuccess", void 0);
+    SignupComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-signup',
+            template: __webpack_require__("../../../../../src/app/component/modal/signup/signup.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/component/modal/signup/signup.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SignupComponent);
     return SignupComponent;
+    var _a;
 }());
-__decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_17" /* ViewChild */])('dialogSuccess'),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _a || Object)
-], SignupComponent.prototype, "swalDialogSuccess", void 0);
-SignupComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-signup',
-        template: __webpack_require__("../../../../../src/app/component/modal/signup/signup.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/component/modal/signup/signup.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], SignupComponent);
 
-var _a;
 //# sourceMappingURL=signup.component.js.map
 
 /***/ }),
@@ -549,21 +555,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var FooterComponent = (function () {
+var FooterComponent = /** @class */ (function () {
     function FooterComponent() {
     }
     FooterComponent.prototype.ngOnInit = function () {
     };
+    FooterComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-footer',
+            template: __webpack_require__("../../../../../src/app/container/footer/footer.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/footer/footer.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], FooterComponent);
     return FooterComponent;
 }());
-FooterComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-footer',
-        template: __webpack_require__("../../../../../src/app/container/footer/footer.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/footer/footer.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], FooterComponent);
 
 //# sourceMappingURL=footer.component.js.map
 
@@ -577,7 +583,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\r\n#home {\r\n    background-color: #f5f5f0;    \r\n}\r\n#home .backgroundwhite{\r\n    background-color: #FFFFFF;\r\n}\r\n#home .pictext{\r\n    margin-top: 80px;\r\n    width: 100%;\r\n    height: 300px;\r\n}\r\n#home .row{\r\n    margin-left: 0px;\r\n    margin-right: 0px;\r\n}\r\n#home .card{\r\n    height: 100%;\r\n}\r\n#home .button{\r\n    width: 100%;\r\n    margin-bottom: 20px;\r\n    padding-left: 20px;\r\n    padding-right: 20px;\r\n}\r\n#home .setcardtop{\r\n    top: 20px;\r\n}\r\n#home .setheight{\r\n    overflow: hidden;\r\n}\r\n#home .home-btn{\r\n    width: 100%;\r\n}\r\n#home .setbottompadding{\r\n    padding-bottom: 0px;\r\n}\r\n#home .settop-top{\r\n    margin-top: 30px;\r\n}\r\n#home .setleftpadding{\r\n    padding-left: 0px;\r\n}\r\n#home .setrightpadding{\r\n    padding-right: 0px;\r\n}\r\n#home .setbetweentop{\r\n    margin-top: 20px;\r\n}\r\n#home .setpadding{\r\n    padding-left: 0px;\r\n    padding-right: 0px;\r\n}\r\n#home .setborder{\r\n    border-radius: 1em;\r\n    border: 2px solid #E0E0E0;\r\n}\r\n#home .setradius{\r\n    border-top-left-radius: 1em;\r\n    border-top-right-radius: 1em;\r\n}\r\n#home .setmargin-left{\r\n    margin-left: 15px;\r\n}\r\n#home .setfooterimg{\r\n    margin-top: 10px;\r\n    width: 80px;\r\n    height: 80px;\r\n}\r\n.home-setfooterbackg{\r\n    background-color: #adad85;\r\n}\r\n#home .setfootermargin-right{\r\n    margin-right: 5px;\r\n}\r\n#home .setfootermargin-bottom{\r\n    margin-bottom: 10px;\r\n    margin-left: 10px;\r\n}\r\n#home .sethight{\r\n    height: 350px;\r\n}\r\n#home .setbottom-bottom{\r\n    margin-bottom:  20px;\r\n}\r\n#home .setmargin-bottom{\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n}\r\n#home .textfont{\r\n    /* 活動標題文字設定 */\r\n    font-size: 25px; \r\n    margin-left: 10px;\r\n    text-overflow : ellipsis;\r\n    width: 90%;;\r\n    overflow : hidden;\r\n    display : inline-block ;\r\n}\r\n#home .text-font{\r\n    overflow: hidden;\r\n    font-size: 18px;\r\n    color: #94b8b8;\r\n}\r\n#home .img-thumbnail{\r\n    color: #FF5258;\r\n    border: 1px solid #FF5258;\r\n    border-radius: 99em;\r\n}\r\n#home .img-thumbnail:hover{\r\n    color: #ff0000;\r\n}\r\n#home .btnheight{\r\n    height: 100%;\r\n}\r\n#home .setmarginbotttom{\r\n    margin-bottom: 20px;;\r\n}\r\n#home .hottext{\r\n    /* 愛心圖案文字的設定 */\r\n    font-size: 18px;\r\n    color:  #ff6666;\r\n    margin-left: 10px;\r\n}\r\n#home .text-title{\r\n    font-size: 35px;\r\n    text-overflow : ellipsis;\r\n    width: 90%;;\r\n    overflow : hidden;\r\n}\r\n#home .text-time{\r\n    font-size: 20px;\r\n    color: #94b8b8;\r\n}\r\n#home .sameheight{\r\n    height: 100%;\r\n}\r\n#home .setmiddlehegiht{\r\n    height: 45.7%;\r\n}\r\n#home .text-text{\r\n    font-size: 25px;\r\n    text-overflow : ellipsis;\r\n    width: 90%;;\r\n    overflow : hidden;\r\n}\r\n.home-setcounterhigh{\r\n    margin-top:68px;\r\n}\r\n.home-imgbig{\r\n    height: 250px;\r\n}\r\n.home-imgsmall{\r\n    height: 100px;\r\n}\r\n.home-setimg{\r\n    width: 100%;\r\n    height: 220px;\r\n}\r\n.home-setmiddleheight{\r\n    top: 50px;\r\n}\r\n.home-setbottomhei{\r\n    margin-top: 70px;\r\n}\r\n#home a{\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n.home-setmiddletext{\r\n    margin-top: 10px;\r\n}\r\n.home-setbottompic{\r\n    width: 50px;\r\n    height: 50px;\r\n}\r\n#home .setfootertop{\r\n    margin-top: 20px;\r\n}\r\n.home-setfooterbottom{\r\n    margin-bottom:30px; \r\n}\r\n", ""]);
+exports.push([module.i, "\r\n#home {\r\n    background-color: #f5f5f0;    \r\n}\r\n#home .backgroundwhite{\r\n    background-color: #FFFFFF;\r\n}\r\n#home .pictext{\r\n    margin-top: 80px;\r\n    width: 100%;\r\n    height: 300px;\r\n}\r\n#home setbettop{\r\n    margin-bottom: 20px;\r\n    margin-top: 20px;\r\n}\r\n#home .row{\r\n    margin-left: 0px;\r\n    margin-right: 0px;\r\n}\r\n#home .card{\r\n    height: 100%;\r\n}\r\n#home .button{\r\n    width: 100%;\r\n    margin-bottom: 20px;\r\n    padding-left: 20px;\r\n    padding-right: 20px;\r\n}\r\n#home .title-text{\r\n    font-size: 25px;\r\n}\r\n#home .setcardtop{\r\n    top: 20px;\r\n}\r\n#home .setheight{\r\n    overflow: hidden;\r\n}\r\n#home .home-btn{\r\n    width: 100%;\r\n}\r\n#home .setbottompadding{\r\n    padding-bottom: 0px;\r\n}\r\n#home .settop-top{\r\n    margin-top: 30px;\r\n}\r\n#home .setleftpadding{\r\n    padding-left: 0px;\r\n}\r\n#home .settopbottom{\r\n    margin-top: 20px;\r\n    margin-bottom: 20px;\r\n}\r\n#home .setrightpadding{\r\n    padding-right: 0px;\r\n}\r\n#home .setpadding{\r\n    padding-left: 0px;\r\n    padding-right: 0px;\r\n}\r\n#home .setborder{\r\n    border-radius: 1em;\r\n    border: 2px solid #E0E0E0;\r\n}\r\n#home .setradius{\r\n    border-top-left-radius: 1em;\r\n    border-top-right-radius: 1em;\r\n}\r\n#home .setmargin-left{\r\n    margin-left: 15px;\r\n}\r\n#home .setfooterimg{\r\n    margin-top: 10px;\r\n    width: 80px;\r\n    height: 80px;\r\n}\r\n.home-setfooterbackg{\r\n    background-color: #adad85;\r\n}\r\n#home .setfootermargin-right{\r\n    margin-right: 5px;\r\n}\r\n#home .setfootermargin-bottom{\r\n    margin-bottom: 10px;\r\n    margin-left: 10px;\r\n}\r\n#home .sethight{\r\n    height: 350px;\r\n}\r\n#home .setbottom-bottom{\r\n    margin-bottom:  20px;\r\n}\r\n#home .setmargin-bottom{\r\n    margin-top: 10px;\r\n    margin-bottom: 10px;\r\n}\r\n#home .textfont{\r\n    /* 活動標題文字設定 */\r\n    font-size: 25px; \r\n    margin-left: 10px;\r\n    overflow : hidden;\r\n    white-space:nowrap;\r\n\r\n}\r\n\r\n#home .text-font{\r\n    overflow: hidden;\r\n    font-size: 18px;\r\n    color: #94b8b8;\r\n}\r\n#home .img-thumbnail{\r\n    color: #adad85;\r\n    /* color: #FF5258; */\r\n    border: 1px solid #adad85;\r\n    border-radius: 99em;\r\n}\r\n#home .img-thumbnail:hover{\r\n    color: #ff0000;\r\n    border: 1px solid #FF5258;\r\n}\r\n#home .btnheight{\r\n    height: 100%;\r\n}\r\n#home .setmarginbotttom{\r\n    margin-bottom: 20px;\r\n}\r\n#home .hottext{\r\n    /* 愛心圖案文字的設定 */\r\n    font-size: 18px;\r\n    color:  #ff6666;\r\n    margin-left: 10px;\r\n}\r\n#home .text-title{\r\n    font-size: 18px;\r\n    white-space:nowrap;\r\n    overflow : hidden;\r\n}\r\n#home .text-time{\r\n    font-size: 12px;\r\n    color: #94b8b8;\r\n}\r\n#home .text-text{\r\n    font-size: 16px;\r\n    text-overflow : ellipsis;\r\n    overflow : hidden;\r\n    white-space:nowrap;\r\n    \r\n}\r\n#home .sameheight{\r\n    height: 100%;\r\n}\r\n\r\n.home-setcounterhigh{\r\n    margin-top:68px;\r\n}\r\n.home-imgbig{\r\n    height: 250px;\r\n}\r\n.home-imgsmall{\r\n    height: 100px;\r\n}\r\n.home-setimg{\r\n    width: 100%;\r\n    height: 220px;\r\n}\r\n.home-setmiddleheight{\r\n    top: 50px;\r\n}\r\n.home-setbottomhei{\r\n    margin-top: 70px;\r\n}\r\n#home a{\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n.home-setmiddletext{\r\n    margin-top: 10px;\r\n}\r\n.home-setbottompic{\r\n    width: 50px;\r\n    height: 50px;\r\n}\r\n#home .setfootertop{\r\n    margin-top: 20px;\r\n}\r\n.home-setfooterbottom{\r\n    margin-bottom:30px; \r\n}\r\n", ""]);
 
 // exports
 
@@ -590,7 +596,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"home\">\r\n  <div class=\"container\">\r\n    <div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\r\n      <ol class=\"carousel-indicators\">\r\n        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>\r\n        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>\r\n        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>\r\n        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"3\"></li>\r\n        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"4\"></li>\r\n      </ol>\r\n      <div class=\"carousel-inner\">\r\n        <div class=\"carousel-item active\">\r\n          <img class=\"d-block w-100 sethight\" src=\"./assets/activity/pic1.jpg\" alt=\"First slide\">\r\n        </div>\r\n        <div class=\"carousel-item\">\r\n          <img class=\"d-block w-100 sethight\" src=\"./assets/activity/pic2.jpg\" alt=\"Second slide\">\r\n        </div>\r\n        <div class=\"carousel-item\">\r\n          <img class=\"d-block w-100 sethight\" src=\"./assets/activity/pic3.jpg\" alt=\"Third slide\">\r\n        </div>\r\n        <div class=\"carousel-item\">\r\n          <img class=\"d-block w-100 sethight\" src=\"./assets/activity/pic4.jpg\" alt=\"Four slide\">\r\n        </div>\r\n        <div class=\"carousel-item\">\r\n          <img class=\"d-block w-100 sethight\" src=\"./assets/activity/pic5.jpg\" alt=\"Five slide\">\r\n        </div>\r\n      </div>\r\n      <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">\r\n        <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n      </a>\r\n      <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">\r\n        <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n      </a>\r\n    </div>\r\n  </div>\r\n  <div class=\"container setpadding\">\r\n    <div class=\"row align-items-center setbetweentop\">\r\n      <div class=\"col-md\">\r\n        <h1>展演講座</h1>\r\n      </div>\r\n      <div class=\"col-md text-right setrightpadding\">\r\n        <div class=\"col-md-12\">\r\n          <button type=\"button\" class=\"btn btn-secondary\">前往</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"container setpadding sameheight\">\r\n    <div class=\"row setpadding sameheight\">\r\n      <div class=\"col-md-6 setpadding\">\r\n        <div class=\"col-md-12\" *ngFor=\"let mission of missions[0];let i =index\">\r\n          <div class=\"card\" *ngIf=\"i<=0\">\r\n            <img class=\"card-img-top home-imgbig\" src=\"{{mission.missionpicture}}\">\r\n            <div class=\"card-body \">\r\n              <p class=\"text-title\">{{mission.missionname}}</p>\r\n              <p class=\"text-time\">開始時間：{{mission.missioncreatetime | date: 'yyyy/MM/dd'}}</p>\r\n              <p class=\"text-time\">結束時間：{{mission.missionexperiencetime | date: 'yyyy/MM/dd'}}</p>\r\n              <p class=\"text-text\">地區：{{mission.missionlocation}}</p>\r\n              <p class=\"text-text\">{{mission.missioncontent}}</p>\r\n            </div>\r\n            <div class=\"button\">\r\n              <a href=\"#\" class=\"btn btn-info home-btn\">瞭解詳情</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-6 setpadding\">\r\n        <div class=\"col-md-12 row setpadding sameheight\">\r\n          <div class=\"col-md-6 setmarginbotttom setmiddlehegiht\" *ngFor=\"let mission of missions[0] ;let i =index\">\r\n            <div class=\"card \" *ngIf=\"i>=0 && i<=3\">\r\n              <img class=\"card-img-top home-imgsmall \" src=\"{{mission.missionpicture}}\">\r\n              <div class=\"card-body setbottompadding\">\r\n                <h4 class=\"card-title\">{{mission.missionname}}</h4>\r\n                <p class=\"card-time\">{{mission.missioncreatetime | date: 'yyyy/MM/dd'}}</p>\r\n                <p class=\"card-text\">{{mission.missioncontent}}</p>\r\n                <a href=\"#\" class=\"btn btn-info home-btn\">瞭解詳情</a>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"container setpadding settop-top\">\r\n    <div class=\"col-md-12 row setpadding\">\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md \">\r\n          <h2>影片任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-4 \" *ngFor=\"let mission of missions[1] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<3 \">\r\n            <div class=\"setpadding col-md-12\">\r\n              <a [routerLink]=\"['/mission/information']\">\r\n                <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n              </a>\r\n\r\n            </div>\r\n            <div class=\"setpadding col-md-12 setbetweentop\">\r\n              <a [routerLink]=\"['/mission/information']\">\r\n                <span class=\"textfont\"> {{ mission.missionname }}</span>\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"container setpadding settop-top\">\r\n    <div class=\"col-md-12 row setpadding\">\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md \">\r\n          <h2>展演任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-4\" *ngFor=\"let mission of missions[2] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<3 \">\r\n            <div class=\"setpadding col-md-12\">\r\n              <a [routerLink]=\"['/mission/join-exhibition']\">\r\n                <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding col-md-12 setbetweentop\">\r\n              <a [routerLink]=\"['/mission/join-exhibition']\">\r\n                <span class=\"textfont\"> {{ mission.missionname }}</span>\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"container setpadding settop-top\">\r\n    <div class=\"col-md-12 row setpadding\">\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md \">\r\n          <h2>旅遊任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-4 \" *ngFor=\"let mission of missions[3] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<3 \">\r\n            <div class=\"setpadding col-md-12\">\r\n              <a [routerLink]=\"['/mission/playtour']\">\r\n                <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding col-md-12 setbetweentop\">\r\n              <a [routerLink]=\"['/mission/playtour']\">\r\n                <span class=\"textfont\"> {{ mission.missionname }}</span>\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"container setpadding settop-top\">\r\n    <div class=\"col-md-12 row setpadding\">\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md \">\r\n          <h2>清潔任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-4 \" *ngFor=\"let mission of missions[4] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<3 \">\r\n            <div class=\"setpadding col-md-12\">\r\n              <a [routerLink]=\"['/mission/outclean']\">\r\n                <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding col-md-12 setbetweentop\">\r\n              <a [routerLink]=\"['/mission/outclean']\">\r\n                <span class=\"textfont\"> {{ mission.missionname }}</span>\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"container setpadding settop-top\">\r\n    <div class=\"col-md-12 row setpadding\">\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md \">\r\n          <h2>運動任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-4 \" *ngFor=\"let mission of missions[5] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<3 \">\r\n            <div class=\"setpadding col-md-12\">\r\n                <a [routerLink]=\"['/mission/sport']\">\r\n              <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n                </a>\r\n            </div>\r\n            <div class=\"setpadding col-md-12 setbetweentop\">\r\n                <a [routerLink]=\"['/mission/sport']\">\r\n              <span class=\"textfont\"> {{ mission.missionname }}</span>\r\n                </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"container setpadding settop-top\">\r\n    <div class=\"col-md-12 row setpadding\">\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md \">\r\n          <h2>美術任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-4 \" *ngFor=\"let mission of missions[6] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<3 \">\r\n            <div class=\"setpadding col-md-12\">\r\n                <a [routerLink]=\"['/mission/art']\">\r\n              <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n                </a>\r\n            </div>\r\n            <div class=\"setpadding col-md-12 setbetweentop\">\r\n                <a [routerLink]=\"['/mission/art']\">\r\n              <span class=\"textfont\"> {{ mission.missionname }}</span>\r\n                </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"container\">\r\n    <div class=\"row justify-content-center home-setbottomhei\">\r\n      <div class=\"row col-md-10 setleftpadding setrightpadding\">\r\n        <div class=\"col-md setleftpadding\">\r\n          <h1>主辦單位</h1>\r\n        </div>\r\n        <div class=\"col-md text-right setrightpadding\">\r\n          <div class=\"col-md-12 setrightpadding\">\r\n            <button type=\"button\" class=\"btn btn-secondary\">更多</button>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-10 row setpadding\">\r\n        <div class=\"col-md setborder setfootermargin-right\">\r\n          <div class=\"col-md-12\">\r\n            <img src=\"./assets/activity/apple1.jpg\" class=\"setfooterimg\">\r\n          </div>\r\n          <div class=\"col-md-12\">\r\n            <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">台北青年職涯</p>\r\n          </div>\r\n          <div class=\"col-md-12 setfootermargin-bottom \">\r\n            <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md setborder setfootermargin-right\">\r\n          <div class=\"col-md-12\">\r\n            <img src=\"./assets/activity/apple2.png\" class=\"setfooterimg\">\r\n          </div>\r\n          <div class=\"col-md-12\">\r\n            <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">五倍紅寶石</p>\r\n          </div>\r\n          <div class=\"col-md-12 setfootermargin-bottom\">\r\n            <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md setborder setfootermargin-right\">\r\n          <div class=\"col-md-12\">\r\n            <img src=\"./assets/activity/apple3.png\" class=\"setfooterimg\">\r\n          </div>\r\n          <div class=\"col-md-12\">\r\n            <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">地下連雲企業</p>\r\n          </div>\r\n          <div class=\"col-md-12 setfootermargin-bottom\">\r\n            <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md setborder setfootermargin-right\">\r\n          <div class=\"col-md-12\">\r\n            <img src=\"./assets/activity/apple4.jpg\" class=\"setfooterimg\">\r\n          </div>\r\n          <div class=\"col-md-12\">\r\n            <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">93巷人文空間</p>\r\n          </div>\r\n          <div class=\"col-md-12 setfootermargin-bottom\">\r\n            <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md setborder setfootermargin-right\">\r\n          <div class=\"col-md-12\">\r\n            <img src=\"./assets/activity/apple5.jpg\" class=\"setfooterimg\">\r\n          </div>\r\n          <div class=\"col-md-12\">\r\n            <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">餘白藝廊</p>\r\n          </div>\r\n          <div class=\"col-md-12 setfootermargin-bottom\">\r\n            <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md setborder\">\r\n          <div class=\"col-md-12\">\r\n            <img src=\"./assets/activity/apple6.jpg\" class=\"setfooterimg\">\r\n          </div>\r\n          <div class=\"col-md-12\">\r\n            <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">天下雜誌</p>\r\n          </div>\r\n          <div class=\"col-md-12 setfootermargin-bottom\">\r\n            <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n          </div>\r\n        </div>\r\n\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"container\">\r\n    <div class=\"row justify-content-center\">\r\n      <div class=\"col-md-12 row justify-content-center\">\r\n        <div class=\"col-md-3 setfootertop \" style=\"text-align:center\">\r\n          <h2>合作夥伴</h2>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 home-setfootertop\"></div>\r\n      <div class=\"col-md-1 home-setfooterbottom\">\r\n        <img src=\"./assets/activity/home3.jpg\" class=\"home-setbottompic \">\r\n      </div>\r\n      <div class=\"col-md-1\">\r\n        <img src=\"./assets/activity/h2.png\" class=\"home-setbottompic\">\r\n      </div>\r\n      <div class=\"col-md-1\">\r\n        <img src=\"./assets/activity/h3.png\" class=\"home-setbottompic\">\r\n      </div>\r\n      <div class=\"col-md-1\">\r\n        <img src=\"./assets/activity/h4.png\" class=\"home-setbottompic\">\r\n      </div>\r\n      <div class=\"col-md-1\">\r\n        <img src=\"./assets/activity/h6.jpg\" class=\"home-setbottompic\">\r\n      </div>\r\n      <div class=\"col-md-1\">\r\n        <img src=\"./assets/activity/home1.jpg\" class=\"home-setbottompic\">\r\n      </div>\r\n      <div class=\"col-md-1\">\r\n        <img src=\"./assets/activity/home1.png\" class=\"home-setbottompic\">\r\n      </div>\r\n      <div class=\"col-md-1\">\r\n        <img src=\"./assets/activity/h6.jpg\" class=\"home-setbottompic\">\r\n      </div>\r\n      <div class=\"col-md-1\">\r\n        <img src=\"./assets/activity/home2.jpg\" class=\"home-setbottompic\">\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div id=\"home\">\r\n  <div class=\"container settoptop\">\r\n    <div id=\"carouselExampleIndicators\" class=\"carousel slide\" data-ride=\"carousel\">\r\n      <ol class=\"carousel-indicators\">\r\n        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>\r\n        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>\r\n        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>\r\n        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"3\"></li>\r\n        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"4\"></li>\r\n      </ol>\r\n      <div class=\"carousel-inner\">\r\n        <div class=\"carousel-item active\">\r\n          <img class=\"d-block w-100 sethight\" src=\"./assets/activity/pic1.jpg\" alt=\"First slide\">\r\n        </div>\r\n        <div class=\"carousel-item\">\r\n          <img class=\"d-block w-100 sethight\" src=\"./assets/activity/pic2.jpg\" alt=\"Second slide\">\r\n        </div>\r\n        <div class=\"carousel-item\">\r\n          <img class=\"d-block w-100 sethight\" src=\"./assets/activity/pic3.jpg\" alt=\"Third slide\">\r\n        </div>\r\n        <div class=\"carousel-item\">\r\n          <img class=\"d-block w-100 sethight\" src=\"./assets/activity/pic4.jpg\" alt=\"Four slide\">\r\n        </div>\r\n        <div class=\"carousel-item\">\r\n          <img class=\"d-block w-100 sethight\" src=\"./assets/activity/pic5.jpg\" alt=\"Five slide\">\r\n        </div>\r\n      </div>\r\n      <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">\r\n        <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Previous</span>\r\n      </a>\r\n      <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">\r\n        <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\r\n        <span class=\"sr-only\">Next</span>\r\n      </a>\r\n    </div>\r\n  </div>\r\n  <div class=\"container setpadding\">\r\n    <div class=\"row align-items-center settopbottom\">\r\n      <div class=\"col-md\">\r\n        <h2>展演講座</h2>\r\n      </div>\r\n      <div class=\"col-md text-right setrightpadding\">\r\n        <div class=\"col-md-12\">\r\n          <button type=\"button\" class=\"btn btn-secondary\">前往</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"container\">\r\n    <div class=\"row setpadding\">\r\n      <div class=\"col-md-6 setleftpadding\" *ngFor=\"let mission of missionssit; let i =index\">\r\n        <div class=\"card\" *ngIf=\"i==0\">\r\n          <img class=\"card-img-top home-imgbig\" src=\"{{mission.missionpicture}}\">\r\n          <div class=\"card-body\">\r\n            <p class=\"text-title\">{{mission.missionname}}</p>\r\n            <p class=\"text-time\">開始時間：{{mission.missioncreatetime | date: 'yyyy/MM/dd'}}</p>\r\n            <p class=\"text-time\">結束時間：{{mission.missionexperiencetime | date: 'yyyy/MM/dd'}}</p>\r\n            <p class=\"text-text\">地區：{{mission.missionlocation}}</p>\r\n            <p class=\"text-text\">{{mission.missioncontent}}</p>\r\n          </div>\r\n          <div class=\"button\">\r\n            <a href=\"#\" class=\"btn btn-info home-btn\">瞭解詳情</a>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-6 setpadding\">\r\n        <div class=\"row setpadding\">\r\n          <div class=\"col-md-6 setmarginbotttom setrightpadding\" *ngFor=\"let mission of missionssit2.slice(0,2);let i =index\">\r\n            <div class=\"card\" *ngIf=\"i<=1\">\r\n              <img class=\"card-img-top home-imgsmall \" src=\"{{mission.missionpicture}}\">\r\n              <div class=\"card-body setbottompadding\">\r\n                <p class=\"text-title\">{{mission.missionname}}</p>\r\n                <p class=\"text-text\">{{mission.missioncontent}}</p>\r\n                <div class=\"col-md-12 setpadding\">\r\n                  <div class=\"row\">\r\n                    <div class=\"col-md-6\">\r\n                      <p class=\"text-time\">{{mission.missioncreatetime | date: 'yyyy/MM/dd'}}</p>\r\n                    </div>\r\n                    <div class=\"col-md-6 setmarginbotttom setpadding\">\r\n                      <a href=\"#\" class=\"btn btn-info home-btn\">瞭解詳情</a>\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-md-6 setrightpadding\" *ngFor=\"let mission of missionssit2.slice(2,4);let i =index\">\r\n            <div class=\"card\" *ngIf=\"i<=1\">\r\n              <img class=\"card-img-top home-imgsmall \" src=\"{{mission.missionpicture}}\">\r\n              <div class=\"card-body setbottompadding\">\r\n                <p class=\"text-title\">{{mission.missionname}}</p>\r\n                <p class=\"text-text\">{{mission.missioncontent}}</p>\r\n                <div class=\"row\">\r\n                  <div class=\"col-md-6\">\r\n                    <p class=\"text-time\">{{mission.missioncreatetime | date: 'yyyy/MM/dd'}}</p>\r\n                  </div>\r\n                  <div class=\"col-md-6 setmarginbotttom setpadding\">\r\n                    <a href=\"#\" class=\"btn btn-info home-btn\">瞭解詳情</a>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n  <div class=\"container setpadding\">\r\n    <div class=\"col-md-12 row setpadding settopbottom\">\r\n      <div class=\"col-md \">\r\n        <h2>影片任務</h2>\r\n      </div>\r\n      <div class=\"col-md text-right \">\r\n        <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-md-12 row setpadding\">\r\n      <div class=\"col-md-4 \" *ngFor=\"let mission of missions[1] ; let i= index\">\r\n        <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<3 \">\r\n          <div class=\"setpadding col-md-12\">\r\n            <a [routerLink]=\"['/mission/information']\">\r\n              <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n            </a>\r\n\r\n          </div>\r\n          <div class=\"setpadding col-md-11 setbetweentop\">\r\n            <a [routerLink]=\"['/mission/information']\">\r\n              <p class=\"textfont\"> {{ mission.missionname }}</p>\r\n            </a>\r\n          </div>\r\n          <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n            <div class=\"col-md-9 \">\r\n              <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n            </div>\r\n            <div class=\"col-md-3 setpadding\">\r\n              <a>\r\n                <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n              </a>\r\n              <span class=\"hottext\">6</span>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"container setpadding\">\r\n      <div class=\"col-md-12 row setpadding settopbottom\">\r\n        <div class=\"col-md \">\r\n          <h2>展演任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-4\" *ngFor=\"let mission of missions[2] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<3 \">\r\n            <div class=\"setpadding col-md-12\">\r\n              <a [routerLink]=\"['/mission/join-exhibition']\">\r\n                <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding col-md-11 setbetweentop\">\r\n              <a [routerLink]=\"['/mission/join-exhibition']\">\r\n                <p class=\"textfont\"> {{ mission.missionname }}</p>\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"container setpadding\">\r\n      <div class=\"col-md-12 row setpadding settopbottom\">\r\n        <div class=\"col-md \">\r\n          <h2>旅遊任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-3 \" *ngFor=\"let mission of missions[3] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<4\">\r\n            <div class=\"setpadding col-md-12\">\r\n              <a [routerLink]=\"['/mission/playtour']\">\r\n                <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding col-md-11 setbetweentop\">\r\n              <a [routerLink]=\"['/mission/playtour']\">\r\n                <p class=\"textfont\"> {{ mission.missionname }}</p>\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"container setpadding\">\r\n      <div class=\"col-md-12 row setpadding settopbottom\">\r\n        <div class=\"col-md \">\r\n          <h2>清潔任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-4 \" *ngFor=\"let mission of missions[4] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<3 \">\r\n            <div class=\"setpadding col-md-12\">\r\n              <a [routerLink]=\"['/mission/outclean']\">\r\n                <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding col-md-11 setbetweentop\">\r\n              <a [routerLink]=\"['/mission/outclean']\">\r\n                <p class=\"textfont\"> {{ mission.missionname }}</p>\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"container setpadding\">\r\n      <div class=\"col-md-12 row setpadding settopbottom\">\r\n        <div class=\"col-md \">\r\n          <h2>運動任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-4 \" *ngFor=\"let mission of missions[5] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<3 \">\r\n            <div class=\"setpadding col-md-12\">\r\n              <a [routerLink]=\"['/mission/sport']\">\r\n                <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding col-md-11 setbetweentop\">\r\n              <a [routerLink]=\"['/mission/sport']\">\r\n                <p class=\"textfont\"> {{ mission.missionname }}</p>\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"container setpadding\">\r\n      <div class=\"col-md-12 row setpadding settopbottom\">\r\n        <div class=\"col-md\">\r\n          <h2>美術任務</h2>\r\n        </div>\r\n        <div class=\"col-md text-right \">\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"btnSearch();\">更多</button>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-12 row setpadding\">\r\n        <div class=\"col-md-3 \" *ngFor=\"let mission of missions[6] ; let i= index\">\r\n          <div class=\"setpadding setborder row justify-content-center backgroundwhite\" *ngIf=\"i<4 \">\r\n            <div class=\"setpadding col-md-12\">\r\n              <a [routerLink]=\"['/mission/art']\">\r\n                <img src=\"{{mission.missionpicture}}\" class=\"home-setimg setradius\">\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding col-md-11 setbetweentop\">\r\n              <a [routerLink]=\"['/mission/art']\">\r\n                <p class=\"textfont\"> {{ mission.missionname }}</p>\r\n              </a>\r\n            </div>\r\n            <div class=\"setpadding row col-md-12 setbetweentop setbottom-bottom\">\r\n              <div class=\"col-md-9 \">\r\n                <span class=\"text-font\">{{ mission.missioncreatetime | date: 'yyyy/MM/dd'}} </span>\r\n              </div>\r\n              <div class=\"col-md-3 setpadding\">\r\n                <a>\r\n                  <i class=\"fa fa-heart fa-1g img-thumbnail\" aria-hidden=\"true\"></i>\r\n                </a>\r\n                <span class=\"hottext\">6</span>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class=\"container\">\r\n      <div class=\"row justify-content-center home-setbottomhei\">\r\n        <div class=\"row col-md-10 setleftpadding setrightpadding\">\r\n          <div class=\"col-md setleftpadding\">\r\n            <h1>主辦單位</h1>\r\n          </div>\r\n          <div class=\"col-md text-right setrightpadding\">\r\n            <div class=\"col-md-12 setrightpadding\">\r\n              <button type=\"button\" class=\"btn btn-secondary\">更多</button>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md-10 row setpadding\">\r\n          <div class=\"col-md setborder setfootermargin-right\">\r\n            <div class=\"col-md-12\">\r\n              <img src=\"./assets/activity/apple1.jpg\" class=\"setfooterimg\">\r\n            </div>\r\n            <div class=\"col-md-12\">\r\n              <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">台北青年職涯</p>\r\n            </div>\r\n            <div class=\"col-md-12 setfootermargin-bottom \">\r\n              <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-md setborder setfootermargin-right\">\r\n            <div class=\"col-md-12\">\r\n              <img src=\"./assets/activity/apple2.png\" class=\"setfooterimg\">\r\n            </div>\r\n            <div class=\"col-md-12\">\r\n              <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">五倍紅寶石</p>\r\n            </div>\r\n            <div class=\"col-md-12 setfootermargin-bottom\">\r\n              <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-md setborder setfootermargin-right\">\r\n            <div class=\"col-md-12\">\r\n              <img src=\"./assets/activity/apple3.png\" class=\"setfooterimg\">\r\n            </div>\r\n            <div class=\"col-md-12\">\r\n              <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">地下連雲企業</p>\r\n            </div>\r\n            <div class=\"col-md-12 setfootermargin-bottom\">\r\n              <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-md setborder setfootermargin-right\">\r\n            <div class=\"col-md-12\">\r\n              <img src=\"./assets/activity/apple4.jpg\" class=\"setfooterimg\">\r\n            </div>\r\n            <div class=\"col-md-12\">\r\n              <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">93巷人文空間</p>\r\n            </div>\r\n            <div class=\"col-md-12 setfootermargin-bottom\">\r\n              <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-md setborder setfootermargin-right\">\r\n            <div class=\"col-md-12\">\r\n              <img src=\"./assets/activity/apple5.jpg\" class=\"setfooterimg\">\r\n            </div>\r\n            <div class=\"col-md-12\">\r\n              <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">餘白藝廊</p>\r\n            </div>\r\n            <div class=\"col-md-12 setfootermargin-bottom\">\r\n              <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n            </div>\r\n          </div>\r\n          <div class=\"col-md setborder\">\r\n            <div class=\"col-md-12\">\r\n              <img src=\"./assets/activity/apple6.jpg\" class=\"setfooterimg\">\r\n            </div>\r\n            <div class=\"col-md-12\">\r\n              <p class=\"d-inline-block text-truncate\" style=\"max-width: 80px;\">天下雜誌</p>\r\n            </div>\r\n            <div class=\"col-md-12 setfootermargin-bottom\">\r\n              <button type=\"button\" class=\"btn btn-info\">+追蹤</button>\r\n            </div>\r\n          </div>\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"container\">\r\n      <div class=\"row justify-content-center\">\r\n        <div class=\"col-md-12 row justify-content-center\">\r\n          <div class=\"col-md-3 setfootertop \" style=\"text-align:center\">\r\n            <h2>合作夥伴</h2>\r\n          </div>\r\n        </div>\r\n        <div class=\"col-md-12 home-setfootertop\"></div>\r\n        <div class=\"col-md-1 home-setfooterbottom\">\r\n          <img src=\"./assets/activity/home3.jpg\" class=\"home-setbottompic \">\r\n        </div>\r\n        <div class=\"col-md-1\">\r\n          <img src=\"./assets/activity/h2.png\" class=\"home-setbottompic\">\r\n        </div>\r\n        <div class=\"col-md-1\">\r\n          <img src=\"./assets/activity/h3.png\" class=\"home-setbottompic\">\r\n        </div>\r\n        <div class=\"col-md-1\">\r\n          <img src=\"./assets/activity/h4.png\" class=\"home-setbottompic\">\r\n        </div>\r\n        <div class=\"col-md-1\">\r\n          <img src=\"./assets/activity/h6.jpg\" class=\"home-setbottompic\">\r\n        </div>\r\n        <div class=\"col-md-1\">\r\n          <img src=\"./assets/activity/home1.jpg\" class=\"home-setbottompic\">\r\n        </div>\r\n        <div class=\"col-md-1\">\r\n          <img src=\"./assets/activity/home1.png\" class=\"home-setbottompic\">\r\n        </div>\r\n        <div class=\"col-md-1\">\r\n          <img src=\"./assets/activity/h6.jpg\" class=\"home-setbottompic\">\r\n        </div>\r\n        <div class=\"col-md-1\">\r\n          <img src=\"./assets/activity/home2.jpg\" class=\"home-setbottompic\">\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -649,20 +655,36 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-var HomeComponent = (function () {
+var HomeComponent = /** @class */ (function () {
     function HomeComponent(router, missionService) {
         this.router = router;
         this.missionService = missionService;
         this.missionpic = [];
         this.missiontitle = [];
         this.missiontype = [];
+        this.organizertitle = [];
+        this.organizerimg = [];
         this.result = "";
         this.missions = [];
+        this.missionssit = [];
+        this.missionssit2 = [];
     }
     HomeComponent.prototype.ngOnInit = function () {
         this.missioncheck();
         $('.carousel').carousel({
             interval: 2500
+        });
+    };
+    // 主辦單位
+    HomeComponent.prototype.organizer = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var body;
+            return __generator(this, function (_a) {
+                body = {
+                    organizertitle: this.organizertitle,
+                };
+                return [2 /*return*/];
+            });
         });
     };
     HomeComponent.prototype.missioncheck = function () {
@@ -694,7 +716,8 @@ var HomeComponent = (function () {
                                     }));
                                 });
                                 _this.missions = temp;
-                                console.log(_this.missions);
+                                _this.missionssit = temp[0].slice(0, 1);
+                                _this.missionssit2 = temp[0].slice(1, 5);
                             })];
                     case 1:
                         _a.sent();
@@ -736,19 +759,19 @@ var HomeComponent = (function () {
     HomeComponent.prototype.btnMissionovisithibition = function () {
         this.router.navigate(['mission/visit-exhibition']);
     };
+    HomeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-home',
+            template: __webpack_require__("../../../../../src/app/container/home/home.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/home/home.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_2__service_mission_mission_service__["a" /* MissionService */]]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_mission_mission_service__["a" /* MissionService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_mission_mission_service__["a" /* MissionService */]) === "function" && _b || Object])
+    ], HomeComponent);
     return HomeComponent;
+    var _a, _b;
 }());
-HomeComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-home',
-        template: __webpack_require__("../../../../../src/app/container/home/home.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/home/home.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_2__service_mission_mission_service__["a" /* MissionService */]]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_mission_mission_service__["a" /* MissionService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_mission_mission_service__["a" /* MissionService */]) === "function" && _b || Object])
-], HomeComponent);
 
-var _a, _b;
 //# sourceMappingURL=home.component.js.map
 
 /***/ }),
@@ -794,21 +817,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var ArtComponent = (function () {
+var ArtComponent = /** @class */ (function () {
     function ArtComponent() {
     }
     ArtComponent.prototype.ngOnInit = function () {
     };
+    ArtComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-art',
+            template: __webpack_require__("../../../../../src/app/container/mission/art/art.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/art/art.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ArtComponent);
     return ArtComponent;
 }());
-ArtComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-art',
-        template: __webpack_require__("../../../../../src/app/container/mission/art/art.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/art/art.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], ArtComponent);
 
 //# sourceMappingURL=art.component.js.map
 
@@ -855,21 +878,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var BicycleComponent = (function () {
+var BicycleComponent = /** @class */ (function () {
     function BicycleComponent() {
     }
     BicycleComponent.prototype.ngOnInit = function () {
     };
+    BicycleComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-bicycle',
+            template: __webpack_require__("../../../../../src/app/container/mission/bicycle/bicycle.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/bicycle/bicycle.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], BicycleComponent);
     return BicycleComponent;
 }());
-BicycleComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-bicycle',
-        template: __webpack_require__("../../../../../src/app/container/mission/bicycle/bicycle.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/bicycle/bicycle.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], BicycleComponent);
 
 //# sourceMappingURL=bicycle.component.js.map
 
@@ -916,21 +939,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var CleanComponent = (function () {
+var CleanComponent = /** @class */ (function () {
     function CleanComponent() {
     }
     CleanComponent.prototype.ngOnInit = function () {
     };
+    CleanComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-clean',
+            template: __webpack_require__("../../../../../src/app/container/mission/clean/clean.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/clean/clean.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], CleanComponent);
     return CleanComponent;
 }());
-CleanComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-clean',
-        template: __webpack_require__("../../../../../src/app/container/mission/clean/clean.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/clean/clean.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], CleanComponent);
 
 //# sourceMappingURL=clean.component.js.map
 
@@ -977,21 +1000,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var CreateComponent = (function () {
+var CreateComponent = /** @class */ (function () {
     function CreateComponent() {
     }
     CreateComponent.prototype.ngOnInit = function () {
     };
+    CreateComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-create',
+            template: __webpack_require__("../../../../../src/app/container/mission/create/create.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/create/create.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], CreateComponent);
     return CreateComponent;
 }());
-CreateComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-create',
-        template: __webpack_require__("../../../../../src/app/container/mission/create/create.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/create/create.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], CreateComponent);
 
 //# sourceMappingURL=create.component.js.map
 
@@ -1038,23 +1061,166 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var InformationComponent = (function () {
+var InformationComponent = /** @class */ (function () {
     function InformationComponent() {
     }
     InformationComponent.prototype.ngOnInit = function () {
     };
+    InformationComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-information',
+            template: __webpack_require__("../../../../../src/app/container/mission/information/information.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/information/information.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], InformationComponent);
     return InformationComponent;
 }());
-InformationComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-information',
-        template: __webpack_require__("../../../../../src/app/container/mission/information/information.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/information/information.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], InformationComponent);
 
 //# sourceMappingURL=information.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/container/mission/interduce/interduce.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "#interduce{\r\n    margin-top:37px;\r\n}\r\n#interduce .setpicwidth{\r\n    width: 100%;\r\n    height: 250px;\r\n}\r\n#MyBlog{\r\n    position: fixed;  /*固定在網頁上不隨卷軸移動，若要隨卷軸移動用absolute*/\r\n    background: #e0e0d1;  /*背景顏色*/\r\n    border-radius: 10px;  /*圓角*/\r\n    -moz-border-radius: 10px;\r\n    -webkit-border-radius: 10px;\r\n}\r\n#interduce .setmarginbottom{\r\n    margin-bottom: 10px;\r\n}\r\n#interduce .texttitle{\r\n    font-size: 24px;\r\n}\r\n#interduce .setbtn{\r\n    width: 100%;\r\n    height: 40px;\r\n}\r\n#interduce .text-title{\r\n    font-size: 35px;\r\n}\r\n#interduce .text-time{\r\n    font-size: 22px;\r\n}\r\n#interduce .settop{\r\n    margin-top: 20px;\r\n}\r\n#interduce .text-timemin{\r\n    color:   #33ffd6;\r\n}\r\n#interduce .setsize{\r\n    height: 25px;\r\n    width: 25px;\r\n}\r\n#interduce .settop{\r\n    margin-top: 10px;\r\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/container/mission/interduce/interduce.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"interduce\" class=\"container\">\r\n  <div class=\"row\">\r\n    <div class=\"col-md-12\">\r\n      <img class=\"setpicwidth\" src=\"./assets/activity/activity5.jpg\" alt=\"\">\r\n    </div>\r\n    <div class=\"col-md-12 row settop\">\r\n      <div class=\"col-md-9\">\r\n        <div class=\"col-md-12\">\r\n          <span class=\"text-title\">台灣國際平面設計獎</span>\r\n        </div>\r\n        <div class=\"col-md-12 settop\">\r\n          <span class=\"text-time\">\r\n            <i class=\"fa fa-calendar setsize\" aria-hidden=\"true\"></i>活動時間</span>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <span class=\"text-timemin\">2017/10/18~2017/12/10</span>\r\n        </div>\r\n        <div class=\"col-md-12 settop\">\r\n          <span class=\"text-time\">\r\n            <i class=\"fa fa-map-marker setsize\" aria-hidden=\"true\"></i>活動地點</span>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <span class=\"text-timemin\">台北市大安區大安路一段176巷15號 (捷運大安站6號，出口附近)</span>\r\n        </div>\r\n        <div class=\"col-md-12 settop\">\r\n          <span class=\"text-time\">\r\n            活動介紹</span>\r\n        </div>\r\n        <div class=\"col-md-12\">\r\n          <span class=\"text-timemin\">台北市大安區大安路一段176巷15號 (捷運大安站6號，出口附近)</span>\r\n        </div>\r\n      </div>\r\n      <div class=\"col-md-3\">\r\n        <div id=\"MyBlog\">\r\n          <div class=\"col-md-12 texttitle setmarginbottom\">\r\n            <span id=\"title\">展演活動</span>\r\n          </div>\r\n          <div class=\"col-md-12 setmarginbottom\">\r\n            <span>快來參加活動哦</span>\r\n          </div>\r\n          <div class=\"col-md-12 setmarginbottom\">\r\n            <span>2017/10/18~2017/12/10</span>\r\n          </div>\r\n          <div class=\"col-md-12  setmarginbottom\">\r\n            <button class=\"setbtn btn-info\">參加活動</button>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n\r\n  </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/container/mission/interduce/interduce.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InterduceComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_mission_mission_service__ = __webpack_require__("../../../../../src/app/service/mission/mission.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+var InterduceComponent = /** @class */ (function () {
+    function InterduceComponent(router, missionService) {
+        this.router = router;
+        this.missionService = missionService;
+        this.missionpic = [];
+        this.missiontitle = [];
+        this.missiontype = [];
+        this.result = "";
+        this.missions = [];
+    }
+    InterduceComponent.prototype.ngOnInit = function () {
+    };
+    InterduceComponent.prototype.missioncheck = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var body;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        body = {};
+                        return [4 /*yield*/, this.missionService.Getmission(body).subscribe(function (result) {
+                                var x = [
+                                    '展演講座',
+                                    '影片任務',
+                                    '展演任務',
+                                    '旅遊任務',
+                                    '清潔任務',
+                                    '運動任務',
+                                    '美術任務',
+                                ];
+                                var temp = [];
+                                console.log(result);
+                                x.forEach(function (element) {
+                                    temp.push(result.filter(function (x) {
+                                        return x.missiontype == element;
+                                    }));
+                                });
+                                _this.missions = temp;
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    InterduceComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-interduce',
+            template: __webpack_require__("../../../../../src/app/container/mission/interduce/interduce.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/interduce/interduce.component.css")],
+            providers: [__WEBPACK_IMPORTED_MODULE_2__service_mission_mission_service__["a" /* MissionService */]]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__service_mission_mission_service__["a" /* MissionService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_mission_mission_service__["a" /* MissionService */]) === "function" && _b || Object])
+    ], InterduceComponent);
+    return InterduceComponent;
+    var _a, _b;
+}());
+
+//# sourceMappingURL=interduce.component.js.map
 
 /***/ }),
 
@@ -1099,21 +1265,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var JoinExhibitionComponent = (function () {
+var JoinExhibitionComponent = /** @class */ (function () {
     function JoinExhibitionComponent() {
     }
     JoinExhibitionComponent.prototype.ngOnInit = function () {
     };
+    JoinExhibitionComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-join-exhibition',
+            template: __webpack_require__("../../../../../src/app/container/mission/join-exhibition/join-exhibition.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/join-exhibition/join-exhibition.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], JoinExhibitionComponent);
     return JoinExhibitionComponent;
 }());
-JoinExhibitionComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-join-exhibition',
-        template: __webpack_require__("../../../../../src/app/container/mission/join-exhibition/join-exhibition.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/join-exhibition/join-exhibition.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], JoinExhibitionComponent);
 
 //# sourceMappingURL=join-exhibition.component.js.map
 
@@ -1160,21 +1326,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var OutcleanComponent = (function () {
+var OutcleanComponent = /** @class */ (function () {
     function OutcleanComponent() {
     }
     OutcleanComponent.prototype.ngOnInit = function () {
     };
+    OutcleanComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-outclean',
+            template: __webpack_require__("../../../../../src/app/container/mission/outclean/outclean.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/outclean/outclean.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], OutcleanComponent);
     return OutcleanComponent;
 }());
-OutcleanComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-outclean',
-        template: __webpack_require__("../../../../../src/app/container/mission/outclean/outclean.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/outclean/outclean.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], OutcleanComponent);
 
 //# sourceMappingURL=outclean.component.js.map
 
@@ -1221,21 +1387,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var PlaytourComponent = (function () {
+var PlaytourComponent = /** @class */ (function () {
     function PlaytourComponent() {
     }
     PlaytourComponent.prototype.ngOnInit = function () {
     };
+    PlaytourComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-playtour',
+            template: __webpack_require__("../../../../../src/app/container/mission/playtour/playtour.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/playtour/playtour.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], PlaytourComponent);
     return PlaytourComponent;
 }());
-PlaytourComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-playtour',
-        template: __webpack_require__("../../../../../src/app/container/mission/playtour/playtour.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/playtour/playtour.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], PlaytourComponent);
 
 //# sourceMappingURL=playtour.component.js.map
 
@@ -1282,21 +1448,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SportComponent = (function () {
+var SportComponent = /** @class */ (function () {
     function SportComponent() {
     }
     SportComponent.prototype.ngOnInit = function () {
     };
+    SportComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-sport',
+            template: __webpack_require__("../../../../../src/app/container/mission/sport/sport.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/sport/sport.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SportComponent);
     return SportComponent;
 }());
-SportComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-sport',
-        template: __webpack_require__("../../../../../src/app/container/mission/sport/sport.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/sport/sport.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], SportComponent);
 
 //# sourceMappingURL=sport.component.js.map
 
@@ -1343,21 +1509,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var TourplayComponent = (function () {
+var TourplayComponent = /** @class */ (function () {
     function TourplayComponent() {
     }
     TourplayComponent.prototype.ngOnInit = function () {
     };
+    TourplayComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-tourplay',
+            template: __webpack_require__("../../../../../src/app/container/mission/tourplay/tourplay.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/tourplay/tourplay.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TourplayComponent);
     return TourplayComponent;
 }());
-TourplayComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-tourplay',
-        template: __webpack_require__("../../../../../src/app/container/mission/tourplay/tourplay.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/tourplay/tourplay.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], TourplayComponent);
 
 //# sourceMappingURL=tourplay.component.js.map
 
@@ -1404,21 +1570,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var VisitExhibitionComponent = (function () {
+var VisitExhibitionComponent = /** @class */ (function () {
     function VisitExhibitionComponent() {
     }
     VisitExhibitionComponent.prototype.ngOnInit = function () {
     };
+    VisitExhibitionComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-visit-exhibition',
+            template: __webpack_require__("../../../../../src/app/container/mission/visit-exhibition/visit-exhibition.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/mission/visit-exhibition/visit-exhibition.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], VisitExhibitionComponent);
     return VisitExhibitionComponent;
 }());
-VisitExhibitionComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-visit-exhibition',
-        template: __webpack_require__("../../../../../src/app/container/mission/visit-exhibition/visit-exhibition.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/mission/visit-exhibition/visit-exhibition.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], VisitExhibitionComponent);
 
 //# sourceMappingURL=visit-exhibition.component.js.map
 
@@ -1470,7 +1636,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var NavComponent = (function () {
+var NavComponent = /** @class */ (function () {
     function NavComponent(router) {
         this.router = router;
         this.IsLogin = false;
@@ -1501,18 +1667,18 @@ var NavComponent = (function () {
     NavComponent.prototype.btnMissioncreate = function () {
         this.router.navigate(['mission/create']);
     };
+    NavComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-nav',
+            template: __webpack_require__("../../../../../src/app/container/nav/nav.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/nav/nav.component.css")]
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object])
+    ], NavComponent);
     return NavComponent;
+    var _a;
 }());
-NavComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-nav',
-        template: __webpack_require__("../../../../../src/app/container/nav/nav.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/nav/nav.component.css")]
-    }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object])
-], NavComponent);
 
-var _a;
 //# sourceMappingURL=nav.component.js.map
 
 /***/ }),
@@ -1558,21 +1724,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SearchComponent = (function () {
+var SearchComponent = /** @class */ (function () {
     function SearchComponent() {
     }
     SearchComponent.prototype.ngOnInit = function () {
     };
+    SearchComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-search',
+            template: __webpack_require__("../../../../../src/app/container/search/search.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/search/search.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], SearchComponent);
     return SearchComponent;
 }());
-SearchComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-search',
-        template: __webpack_require__("../../../../../src/app/container/search/search.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/search/search.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], SearchComponent);
 
 //# sourceMappingURL=search.component.js.map
 
@@ -1619,21 +1785,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var PointComponent = (function () {
+var PointComponent = /** @class */ (function () {
     function PointComponent() {
     }
     PointComponent.prototype.ngOnInit = function () {
     };
+    PointComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-point',
+            template: __webpack_require__("../../../../../src/app/container/user/point/point.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/user/point/point.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], PointComponent);
     return PointComponent;
 }());
-PointComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-point',
-        template: __webpack_require__("../../../../../src/app/container/user/point/point.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/user/point/point.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], PointComponent);
 
 //# sourceMappingURL=point.component.js.map
 
@@ -1660,7 +1826,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/user/profile/profile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"profile\">\r\n\r\n  <nav class=\"navbar navbar-expand-lg navbar-default bg-light\">\r\n    <div class=\"container collapse navbar-collapse\">\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item active\">\r\n          <a class=\"nav-link\" href=\"#\" [routerLink]=\"['/user/profile']\">個人資訊</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\">社群帳號</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" href=\"#\" [routerLink]=\"['/user/point']\">任務點數</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n        <h2 class=\"group-title\">個人資訊</h2>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n        <div class=\"alert alert-info\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\" ng-click=\"userProfile.close()\">×</button>\r\n          <strong>貼心提醒：</strong>務必注意資料的完整和正確性哦！\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-4\">\r\n        <figure class=\"figure\">\r\n          <img src=\"./assets/img/profile.png\" width=\"200\" class=\"figure-img img-fluid rounded\" alt=\"This is you.\">\r\n        </figure>\r\n      </div>\r\n      <div class=\"col-lg-8\">\r\n        <form>\r\n          <div class=\"form-group row\">\r\n            <label for=\"staticEmail\" class=\"col-sm-2 col-form-label\">我的帳號：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" readonly class=\"form-control-plaintext\" id=\"staticEmail\" value=\"email@example.com\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"staticEmail\" class=\"col-sm-2 col-form-label\">電子信箱：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"staticEmail\" value=\"email@example.com\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"inputPassword\" class=\"col-sm-2 col-form-label\">登入密碼：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"password\" class=\"form-control\" id=\"inputPassword\" placeholder=\"Password\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"inputName\" class=\"col-sm-2 col-form-label\">我的姓名：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"inputName\" value=\"王小明\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"inputName\" class=\"col-sm-2 col-form-label\">我的性別：</label>\r\n            <div class=\"col-sm-10\">\r\n              <select class=\"custom-select\">\r\n                    <option>請選擇性別</option>\r\n                    <option value=\"1\" selected>我是男生</option>\r\n                    <option value=\"0\">我是女生</option>\r\n                  </select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"userBirth\" class=\"col-sm-2 col-form-label\">我的生日：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"userBirth\" value=\"2000-06-24\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"userAddr\" class=\"col-sm-2 col-form-label\">住家地址：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"userAddr\" value=\"台北市中正區重慶南路一段122號\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"userTel\" class=\"col-sm-2 col-form-label\">住家電話</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"userTel\" value=\"02-2311-3731\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"userBirth\" class=\"col-sm-2 col-form-label\">監護人姓名：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"userBirth\" value=\"王爸爸\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"userBirth\" class=\"col-sm-2 col-form-label\">監護人電話：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"userBirth\" value=\"0912-456-789\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group pull-right\">\r\n            <button type=\"submit\" class=\"btn btn-info bg-info\">儲存</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n"
+module.exports = "<div id=\"profile\">\r\n\r\n  <nav class=\"navbar navbar-expand-lg navbar-default bg-light\">\r\n    <div class=\"container collapse navbar-collapse\">\r\n      <ul class=\"navbar-nav\">\r\n        <li class=\"nav-item active\">\r\n          <a class=\"nav-link\" href=\"#\" [routerLink]=\"['/user/profile']\">個人資訊</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\">社群帳號</a>\r\n        </li>\r\n        <li class=\"nav-item\">\r\n          <a class=\"nav-link\" href=\"#\" [routerLink]=\"['/user/point']\">任務點數</a>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </nav>\r\n\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n        <h2 class=\"group-title\">個人資訊</h2>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-12\">\r\n        <div class=\"alert alert-info\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\" ng-click=\"userProfile.close()\">×</button>\r\n          <strong>貼心提醒：</strong>務必注意資料的完整和正確性哦！\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"row\">\r\n      <div class=\"col-lg-4\">\r\n        <figure class=\"figure\">\r\n          <img src=\"./assets/activity/profile.png\" width=\"200\" class=\"figure-img img-fluid rounded\" alt=\"This is you.\">\r\n        </figure>\r\n      </div>\r\n      <div class=\"col-lg-8\">\r\n        <form>\r\n          <div class=\"form-group row\">\r\n            <label for=\"staticEmail\" class=\"col-sm-2 col-form-label\">我的帳號：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" readonly class=\"form-control-plaintext\" id=\"staticEmail\" value=\"email@example.com\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"staticEmail\" class=\"col-sm-2 col-form-label\">電子信箱：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"staticEmail\" value=\"email@example.com\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"inputPassword\" class=\"col-sm-2 col-form-label\">登入密碼：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"password\" class=\"form-control\" id=\"inputPassword\" placeholder=\"Password\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"inputName\" class=\"col-sm-2 col-form-label\">我的姓名：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"inputName\" value=\"王小明\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"inputName\" class=\"col-sm-2 col-form-label\">我的性別：</label>\r\n            <div class=\"col-sm-10\">\r\n              <select class=\"custom-select\">\r\n                    <option>請選擇性別</option>\r\n                    <option value=\"1\" selected>我是男生</option>\r\n                    <option value=\"0\">我是女生</option>\r\n                  </select>\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"userBirth\" class=\"col-sm-2 col-form-label\">我的生日：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"userBirth\" value=\"2000-06-24\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"userAddr\" class=\"col-sm-2 col-form-label\">住家地址：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"userAddr\" value=\"台北市中正區重慶南路一段122號\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"userTel\" class=\"col-sm-2 col-form-label\">住家電話</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"userTel\" value=\"02-2311-3731\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"userBirth\" class=\"col-sm-2 col-form-label\">監護人姓名：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"userBirth\" value=\"王爸爸\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group row\">\r\n            <label for=\"userBirth\" class=\"col-sm-2 col-form-label\">監護人電話：</label>\r\n            <div class=\"col-sm-10\">\r\n              <input type=\"text\" class=\"form-control\" id=\"userBirth\" value=\"0912-456-789\">\r\n            </div>\r\n          </div>\r\n          <div class=\"form-group pull-right\">\r\n            <button type=\"submit\" class=\"btn btn-info bg-info\">儲存</button>\r\n          </div>\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1680,21 +1846,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var ProfileComponent = (function () {
+var ProfileComponent = /** @class */ (function () {
     function ProfileComponent() {
     }
     ProfileComponent.prototype.ngOnInit = function () {
     };
+    ProfileComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-profile',
+            template: __webpack_require__("../../../../../src/app/container/user/profile/profile.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/user/profile/profile.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ProfileComponent);
     return ProfileComponent;
 }());
-ProfileComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-profile',
-        template: __webpack_require__("../../../../../src/app/container/user/profile/profile.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/user/profile/profile.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], ProfileComponent);
 
 //# sourceMappingURL=profile.component.js.map
 
@@ -1721,7 +1887,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/user/user.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"user-profile jumbotron bg-white\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-2\">\r\n        <img class=\"user-photo img-thumbnail\" src=\"./assets/img/profile.png\" alt=\"\">\r\n      </div>\r\n      <div class=\"col-sm-10\">\r\n        <h2>王小明</h2>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"container\">\r\n  <ul class=\"nav nav-tabs user-tab\" role=\"tablist\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link active\" id=\"mission-like-tab\" data-toggle=\"tab\" href=\"#like-tab\" role=\"tab\" aria-controls=\"like-tab\" aria-expanded=\"true\">喜歡的任務(5)</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" id=\"mission-join-tab\" data-toggle=\"tab\" href=\"#join-tab\" role=\"tab\" aria-controls=\"join-tab\">參加的任務(1)</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" id=\"mission-track-tab\" data-toggle=\"tab\" href=\"#track-tab\" role=\"tab\" aria-controls=\"track-tab\">追蹤的主辦單位(0)</a>\r\n    </li>\r\n  </ul>\r\n  <div class=\"tab-content user-tab-content\">\r\n    <div class=\"tab-pane fade show active\" id=\"like-tab\" role=\"tabpanel\" aria-labelledby=\"mission-like-tab\">\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/img/activity1.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">限時團購！【 我貼，故我在 】系列，Git 高質感貼紙</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail liked\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/img/activity.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">限時團購！【 我貼，故我在 】系列，Git 高質感貼紙</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail liked\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/img/activity.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">限時團購！【 我貼，故我在 】系列，Git 高質感貼紙</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail liked\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/img/activity.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">限時團購！【 我貼，故我在 】系列，Git 高質感貼紙</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail liked\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"tab-pane fade\" id=\"join-tab\" role=\"tabpanel\" aria-labelledby=\"mission-join-tab\">\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/img/activity1.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">限時團購！【 我貼，故我在 】系列，Git 高質感貼紙</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail liked\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"tab-pane fade\" id=\"track-tab\" role=\"tabpanel\" aria-labelledby=\"mission-track-tab\">\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/img/activity1.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">主辦單位</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+module.exports = "<div class=\"user-profile jumbotron bg-white\">\r\n  <div class=\"container\">\r\n    <div class=\"row\">\r\n      <div class=\"col-sm-2\">\r\n        <img class=\"user-photo img-thumbnail\" src=\"./assets/activity/profile.png\" alt=\"\">\r\n      </div>\r\n      <div class=\"col-sm-10\">\r\n        <h2>王小明</h2>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"container\">\r\n  <ul class=\"nav nav-tabs user-tab\" role=\"tablist\">\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link active\" id=\"mission-like-tab\" data-toggle=\"tab\" href=\"#like-tab\" role=\"tab\" aria-controls=\"like-tab\" aria-expanded=\"true\">喜歡的任務(5)</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" id=\"mission-join-tab\" data-toggle=\"tab\" href=\"#join-tab\" role=\"tab\" aria-controls=\"join-tab\">參加的任務(1)</a>\r\n    </li>\r\n    <li class=\"nav-item\">\r\n      <a class=\"nav-link\" id=\"mission-track-tab\" data-toggle=\"tab\" href=\"#track-tab\" role=\"tab\" aria-controls=\"track-tab\">追蹤的主辦單位(0)</a>\r\n    </li>\r\n  </ul>\r\n  <div class=\"tab-content user-tab-content\">\r\n    <div class=\"tab-pane fade show active\" id=\"like-tab\" role=\"tabpanel\" aria-labelledby=\"mission-like-tab\">\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/activity/activity1.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">限時團購！【 我貼，故我在 】系列，Git 高質感貼紙</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail liked\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/activity/activity.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">限時團購！【 我貼，故我在 】系列，Git 高質感貼紙</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail liked\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/activity/activity.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">限時團購！【 我貼，故我在 】系列，Git 高質感貼紙</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail liked\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/activity/activity.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">限時團購！【 我貼，故我在 】系列，Git 高質感貼紙</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail liked\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"tab-pane fade\" id=\"join-tab\" role=\"tabpanel\" aria-labelledby=\"mission-join-tab\">\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/activity/activity1.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">限時團購！【 我貼，故我在 】系列，Git 高質感貼紙</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail liked\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"tab-pane fade\" id=\"track-tab\" role=\"tabpanel\" aria-labelledby=\"mission-track-tab\">\r\n      <div class=\"card\">\r\n        <img class=\"card-img-top\" src=\"./assets/activity/activity1.png\" alt=\"Card image cap\">\r\n        <div class=\"card-body\">\r\n          <h4 class=\"card-title\">主辦單位</h4>\r\n          <p class=\"card-time\">2017-10-01(日) 00:00~00:00</p>\r\n          <p class=\"card-text\">【 我貼，故我在 】系列第一波：Git 高質感貼紙，我們準備了兩款優質的貼紙設計，有「 純淨透明款」與「 萬用純白款」，適合貼在不同色系</p>\r\n          <div class=\"row card-control\">\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"img-thumbnail\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i></a>\r\n              <span class=\"card-text\">5</span>\r\n            </div>\r\n            <div class=\"col-sm-6\">\r\n              <a href=\"#\" class=\"btn btn-info\">熱門中</a>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -1741,21 +1907,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var UserComponent = (function () {
+var UserComponent = /** @class */ (function () {
     function UserComponent() {
     }
     UserComponent.prototype.ngOnInit = function () {
     };
+    UserComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+            selector: 'app-user',
+            template: __webpack_require__("../../../../../src/app/container/user/user.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/container/user/user.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], UserComponent);
     return UserComponent;
 }());
-UserComponent = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
-        selector: 'app-user',
-        template: __webpack_require__("../../../../../src/app/container/user/user.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/user/user.component.css")]
-    }),
-    __metadata("design:paramtypes", [])
-], UserComponent);
 
 //# sourceMappingURL=user.component.js.map
 
@@ -1782,7 +1948,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MissionService = (function () {
+var MissionService = /** @class */ (function () {
     function MissionService(http) {
         this.http = http;
         this.api = 'api/mission';
@@ -1793,14 +1959,14 @@ var MissionService = (function () {
             return mis.json() || {};
         });
     };
+    MissionService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+    ], MissionService);
     return MissionService;
+    var _a;
 }());
-MissionService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
-], MissionService);
 
-var _a;
 //# sourceMappingURL=mission.service.js.map
 
 /***/ }),
@@ -1826,7 +1992,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var UserService = (function () {
+var UserService = /** @class */ (function () {
     function UserService(http) {
         this.http = http;
         this.api = 'api/user/login';
@@ -1838,14 +2004,14 @@ var UserService = (function () {
             return res.json() || {};
         });
     };
+    UserService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
+    ], UserService);
     return UserService;
+    var _a;
 }());
-UserService = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object])
-], UserService);
 
-var _a;
 //# sourceMappingURL=user.service.js.map
 
 /***/ }),
@@ -1859,7 +2025,6 @@ var _a;
 // The build system defaults to the dev environment which uses `environment.ts`, but if you do
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
-// The file contents for the current environment will overwrite these during build.
 var environment = {
     production: false
 };
