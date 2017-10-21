@@ -14,11 +14,18 @@ class Log {
         }
     }
     async add(ctx) {
+        let c_ip = ctx.request.headers['x-forwarded-for'];
+        if (c_ip == undefined) {
+            c_ip = ctx.request.ip == '::1' ? '127.0.0.1' : ctx.request.ip;
+        }
+        ctx.body = {
+            status: c_ip
+        }
         try {
             let params = [
                 ctx.request.body.userId,
                 datetime(),
-                ctx.request.ip
+                ctx.body.status 
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
