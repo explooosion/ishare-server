@@ -114,11 +114,12 @@ class Mission {
                 ctx.request.body.status,
                 ctx.request.body.experience,
                 ctx.request.body.verifytime,
-                ctx.request.body.picture
+                ctx.request.body.picture,
+                ctx.request.body.verifyusername
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_mission_join (missionid, childusername, createtime, finishtime, status,experience,verifytime,picture) values (?, ?, ?, ?, ?, ?, ?, ?)', params
+                'insert into web_mission_join (missionid, childusername, createtime, finishtime, status,experience,verifytime,picture,verifyusername) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', params
             );
             return result;
         } catch (e) {
@@ -136,11 +137,12 @@ class Mission {
                 ctx.request.body.experience,
                 ctx.request.body.verifytime,
                 ctx.request.body.picture,
+                ctx.request.body.verifyusername,
                 ctx.request.body.id
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'Update web_mission_join set missionid = ? , childusername = ? , createtime = ?, finishtime = ? , status = ? , experience = ? ,verifytime = ? , picture = ? where id = ?', params
+                'Update web_mission_join set missionid = ? , childusername = ? , createtime = ?, finishtime = ? , status = ? , experience = ? ,verifytime = ? , picture = ? , verifyusername = ? where id = ?', params
             );
             return result;
         } catch (e) {
