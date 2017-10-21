@@ -7,7 +7,7 @@ class LogControllers{
         ctx.body = await Log.find(ctx);
     }
     async add(ctx){
-        ctx.body = await Log.add(ctx);
+       return await Log.add(ctx);
     }
 }
 
