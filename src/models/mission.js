@@ -149,7 +149,7 @@ class Mission {
         try {
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'delete from web_mission_join where id = ?', [ctx.request.body.id]
+                'delete from web_mission_join where missionid = ? and childusername=?', [ctx.request.body.missionid,ctx.request.body.childusername]
             );
             return result;
         } catch (e) {
