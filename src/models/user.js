@@ -55,6 +55,17 @@ class User {
                     return false;
                 }
                 break;
+            case 5: //管理員
+                try {
+                    const connection = await mysql.createConnection(config);
+                    const [rows, fields] = await connection.query(
+                        'select * from web_admin where adminusername  = ? and adminpassword  = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
+                    );
+                    return rows;
+                } catch (e) {
+                    return false;
+                }
+                break;
             default:
                 return false;
                 break;

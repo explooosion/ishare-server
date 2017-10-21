@@ -64,8 +64,7 @@ router.post('/teacher/delete', TeacherControllers.delete);
 
 // Log
 router.get('/log', LogControllers.find);
-router.post('/log/login', LogControllers.login);
-router.post('/log/logout', LogControllers.logout);
+router.post('/log/add', LogControllers.login);
 
 // Mission_Join
 router.get('/mission/join', MissionControllers.join_find);

@@ -13,31 +13,16 @@ class Log{
             return false
         }
     }
-    async login(ctx) {
+    async add(ctx) {
         try {
             let params = [
                 ctx.request.body.loginusername,
                 ctx.request.body.logintime,
-                ctx.request.body.logouttime,
+                ctx.request.body.loginip,
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_child (loginusername, logintime, logouttime) values (?, ?, ?)', params);
-            return result;
-        } catch (e) {
-            console.log(e);
-            return false;
-        }
-    }
-    async logout(ctx){
-        try {
-            let params = [
-                ctx.request.body.logouttime,
-                ctx.request.body.loginusername
-            ];
-            const connection = await mysql.createConnection(config);
-            const [result] = await connection.query(
-                'Update web_child set logouttime = ? where loginusername = ?', params);
+                'insert into web_child (loginusername, logintime, loginip) values (?, ?, ?)', params);
             return result;
         } catch (e) {
             console.log(e);
