@@ -15,12 +15,16 @@ import LogControllers from '../controllers/log';
 
 const verify = util.promisify(jwt.verify); // 解密 
 const secret = require('../config/secret.json');
-
 const router = new Router();
 
-router.get('/', async (ctx, next) => {
+router.get('/', async(ctx, next) => {
+
+    let c_ip = ctx.request.headers['x-forwarded-for'];
+    if (c_ip == undefined) {
+        c_ip = ctx.request.ip == '::1' ? '127.0.0.1' : ctx.request.ip;
+    }
     ctx.body = {
-        status: true
+        status: c_ip
     }
 })
 
