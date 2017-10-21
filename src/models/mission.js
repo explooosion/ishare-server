@@ -128,21 +128,17 @@ class Mission {
     }
     async join_update(ctx) {
         try {
-            let params = [
-                ctx.request.body.missionid,
-                ctx.request.body.childusername,
-                ctx.request.body.createtime,
-                ctx.request.body.finishtime,
+            let params = [ 
                 ctx.request.body.status,
                 ctx.request.body.experience,
                 ctx.request.body.verifytime,
-                ctx.request.body.picture,
                 ctx.request.body.verifyusername,
-                ctx.request.body.id
+                ctx.request.body.missionid,
+                ctx.request.body.childusername
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'Update web_mission_join set missionid = ? , childusername = ? , createtime = ?, finishtime = ? , status = ? , experience = ? ,verifytime = ? , picture = ? , verifyusername = ? where id = ?', params
+                'Update web_mission_join set status = ? , experience = ? ,verifytime = ? , verifyusername = ? where missionid = ? and childusername = ?', params
             );
             return result;
         } catch (e) {

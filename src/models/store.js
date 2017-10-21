@@ -49,8 +49,6 @@ class Store {
     async update(ctx){
         try {
             let params = [
-                ctx.request.body.storeusername,
-                ctx.request.body.storepassword,
                 ctx.request.body.storename,
                 ctx.request.body.storeaddr,
                 ctx.request.body.storeadminstore,
@@ -62,7 +60,7 @@ class Store {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'Update web_store set storeusername = ? , storepassword = ? , storename = ?, storeaddr = ? , storeadminstore = ? , storetel = ? , storeein = ? , storetype = ? , storephoto = ? where id = ?', params
+                'Update web_store set storename = ?, storeaddr = ? , storeadminstore = ? , storetel = ? , storeein = ? , storetype = ? , storephoto = ? where id = ?', params
             );
             return result;
         } catch (e) {

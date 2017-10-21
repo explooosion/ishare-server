@@ -51,8 +51,6 @@ class Child {
     async update(ctx){
         try {
             let params = [
-                ctx.request.body.childusername,
-                ctx.request.body.childpassword,
                 ctx.request.body.childname,
                 ctx.request.body.childgender,
                 ctx.request.body.childpoint,
@@ -63,7 +61,7 @@ class Child {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'update web_child set childusername = ? , childpassword = ? , childname = ? , childgender = ? , childpoint = ? , childcode = ? , childschool = ? , childstudentid = ? where id = ?', params);
+                'update web_child set childname = ? , childgender = ? , childpoint = ? , childcode = ? , childschool = ? , childstudentid = ? where id = ?', params);
             return result;
         } catch(e) {
             return false;
