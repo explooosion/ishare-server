@@ -86,17 +86,17 @@ class Mission {
         }
     }
     async join_find(ctx) {
-        let sql = 'Select * from web_mission_join where 1 = 1';
-        if (ctx.query.username != undefined) {
-            sql += ' and childusername = ' + "'" + ctx.query.username + "'";
-        };
-        if (ctx.query.status != undefined) {
-            sql += ' and status = ' + "'" + ctx.query.status + "'"
-        };
-        if (ctx.query.missionid != undefined) {
-            sql += ' and missionid = ' + "'" + ctx.query.missionid + "'"
-        }
         try {
+            let sql = 'Select * from web_mission_join where 1 = 1';
+            if (ctx.query.username != undefined) {
+                sql += ' and childusername = ' + "'" + ctx.query.username + "'";
+            };
+            if (ctx.query.status != undefined) {
+                sql += ' and status = ' + "'" + ctx.query.status + "'"
+            };
+            if (ctx.query.missionid != undefined) {
+                sql += ' and missionid = ' + "'" + ctx.query.missionid + "'"
+            }
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(sql + ' limit 1000');
             return rows;

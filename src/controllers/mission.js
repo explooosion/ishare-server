@@ -19,7 +19,7 @@ class MissionControllers{
         ctx.body = await Mission.delete(ctx);
     }
     async join_find(ctx){
-        ctx.body = await Mission.find(ctx);
+        ctx.body = await Mission.join_find(ctx);
     }
     async join_add(ctx){
         ctx.body = await Mission.join_add(ctx);

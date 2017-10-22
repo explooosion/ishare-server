@@ -51,10 +51,14 @@ router.post('/record/delete', RecordControllers.delete);
 
 // Mission
 router.get('/mission', MissionControllers.find);
-router.get('/mission/:id', MissionControllers.findById);
+router.get('/mission/join', MissionControllers.join_find);
 router.post('/mission/add', MissionControllers.add);
+router.post('/mission/join/add', MissionControllers.join_add);
 router.post('/mission/update', MissionControllers.update);
+router.post('/mission/join/update', MissionControllers.join_update);
 router.post('/mission/delete', MissionControllers.delete);
+router.post('/mission/join/delete', MissionControllers.join_delete);
+router.get('/mission/:id', MissionControllers.findById);
 
 // User Login
 router.post('/user/login', UserControllers.login);
@@ -71,9 +75,6 @@ router.get('/log', LogControllers.find);
 router.post('/log/add', LogControllers.add);
 
 // Mission_Join
-router.get('/mission/join', MissionControllers.join_find);
-router.post('/mission/join/add', MissionControllers.join_add);
-router.post('/mission/join/update', MissionControllers.join_update);
-router.post('/mission/join/delete', MissionControllers.join_delete);
+
 
 export default router;
