@@ -20,7 +20,7 @@ class User {
                     return false;
                 }
                 break;
-            case '2': //店家
+            case 2: //店家
                 try {
                     const connection = await mysql.createConnection(config);
                     const [rows, fields] = await connection.query(
