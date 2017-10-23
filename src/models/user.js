@@ -14,7 +14,7 @@ class User {
                     const [rows, fields] = await connection.query(
                         'select * from web_service where serviceusername = ? and servicepassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
-                    if(rows.length != 0) { log.add(rows) }
+                    if(rows.length != 0) { log.add(ctx) }
                     return rows;
                 } catch (e) {
                     return false;
@@ -26,7 +26,7 @@ class User {
                     const [rows, fields] = await connection.query(
                         'select * from web_store where storeusername = ? and storepassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
-                    if(rows.length != 0) { log.add(rows) }
+                    if(rows.length != 0) { log.add(ctx) }
                     return rows;
                 } catch (e) {
                     return false;
@@ -38,7 +38,7 @@ class User {
                     const [rows, fields] = await connection.query(
                         'select * from web_teacher where teacherusername = ? and teacherpassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
-                    if(rows.length != 0) { log.add(rows) }
+                    if(rows.length != 0) { log.add(ctx) }
                     return rows;
                 } catch (e) {
                     return false;
@@ -63,7 +63,7 @@ class User {
                     const [rows, fields] = await connection.query(
                         'select * from web_admin where adminusername  = ? and adminpassword  = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
-                    if(rows.length != 0) { log.add(rows) }
+                    if(rows.length != 0) { log.add(ctx) }
                     return rows;
                 } catch (e) {
                     return false;
