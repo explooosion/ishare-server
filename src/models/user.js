@@ -50,7 +50,8 @@ class User {
                     const [rows, fields] = await connection.query(
                         'select * from web_child where childusername = ? and childpassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
-                    if(rows.length != 0) { log.add(rows) }
+                    console.log(rows.length);
+                    if(rows.length != 0) { log.add(ctx) }
                     return rows;
                 } catch (e) {
                     return false;

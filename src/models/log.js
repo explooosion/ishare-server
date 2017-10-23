@@ -21,6 +21,7 @@ class Log {
         ctx.body = {
             status: c_ip
         }
+        console.log(ctx.body.status)
         try {
             let params = [
                 ctx.request.body.userId,
