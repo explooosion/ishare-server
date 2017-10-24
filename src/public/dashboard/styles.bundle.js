@@ -126,6 +126,21 @@ exports.push([module.i, "/* 修正 card  */\r\n\r\n.card {\r\n    background-col
 
 /***/ }),
 
+/***/ "../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/table.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "/*\r\n\r\n  表格設定\r\n\r\n  使用方法如同 bootstrap 的 table\r\n\r\n  bootstrap 預設：\r\n  class=\"table\"\r\n\r\n  用法：\r\n  <table class=\"table table-button\"> ... <table>\r\n\r\n*/\r\n\r\n.table-button tbody tr {\r\n    /* 如果表格內有 button 就要取行高 */\r\n    line-height: 2rem;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/text-color.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -163,6 +178,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 // imports
 exports.push([module.i, "@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);", ""]);
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/button.css"), "");
+exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/table.css"), "");
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/bg-color.css"), "");
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/text-color.css"), "");
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../../../src/css/card.css"), "");

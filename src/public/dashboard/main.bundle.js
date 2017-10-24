@@ -251,6 +251,57 @@ AppModule = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/class/user/child.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Child; });
+var Child = (function () {
+    function Child() {
+        this.id = 0;
+        this.childusername = '';
+        this.childpassword = '';
+        this.childpasswordRe = '';
+        this.childname = '';
+        this.childgender = '';
+        this.childpoint = 0;
+        this.childcode = '';
+        this.childschool = '';
+        this.childstudentid = '';
+    }
+    return Child;
+}());
+
+//# sourceMappingURL=child.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/class/user/store.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Store; });
+var Store = (function () {
+    function Store() {
+        this.id = 0;
+        this.storeusername = '';
+        this.storepassword = '';
+        this.storepasswordRe = '';
+        this.storename = '';
+        this.storeaddr = '';
+        this.storeadminstore = '';
+        this.storetel = '';
+        this.storeein = '';
+        this.storetype = '';
+        this.storephoto = '';
+    }
+    return Store;
+}());
+
+//# sourceMappingURL=store.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/container/account/account.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -272,7 +323,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/account/account.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n      <!-- Breadcrumbs -->\n      <ol class=\"breadcrumb\">\n        <li class=\"breadcrumb-item\">\n          <a [routerLink]=\"['']\">首頁</a>\n        </li>\n        <li class=\"breadcrumb-item active\">系統帳戶管理</li>\n      </ol>\n    </main>\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n      <!-- Breadcrumbs -->\r\n      <ol class=\"breadcrumb\">\r\n        <li class=\"breadcrumb-item\">\r\n          <a [routerLink]=\"['']\">首頁</a>\r\n        </li>\r\n        <li class=\"breadcrumb-item active\">系統帳戶管理</li>\r\n      </ol>\r\n    </main>\r\n"
 
 /***/ }),
 
@@ -338,7 +389,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/child/child.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">學童管理</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 學童列表 - 共 {{ datas.length }} 筆資料\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#modelAddChild\">新增</button>\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table\">\r\n        <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>#</th>\r\n            <th>帳號</th>\r\n            <th>姓名</th>\r\n            <th>學號</th>\r\n            <th>點數</th>\r\n            <th>代號</th>\r\n            <th>就讀學校</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"6\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page } ; let i = index\">\r\n            <th scope=\"row\">{{ i + ( page - 1 ) * 10 + 1 }}</th>\r\n            <td>{{data.childusername}}</td>\r\n            <td>{{data.childname}}</td>\r\n            <td>{{data.childstudentid}}</td>\r\n            <td>{{data.childpoint}}</td>\r\n            <td>{{data.childcode}}</td>\r\n            <td>{{data.childschool}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      共 {{ datas.length }} 筆資料\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" #modelAddChild id=\"modelAddChild\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\"\r\n    aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\r\n          <button #modelClose type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">帳號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childusername\" [(ngModel)]=\"childusername\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"childpassword\" [(ngModel)]=\"childpassword\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">確認密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"childpasswordRe\" [(ngModel)]=\"childpasswordRe\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">兌換代碼:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childcode\" [(ngModel)]=\"childcode\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">姓名:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childname\" [(ngModel)]=\"childname\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">性別:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input name=\"childgender\" type=\"radio\" value=\"男生\" class=\"custom-control-input\" [ngModel]=\"childgender\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">男生</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input name=\"childgender\" type=\"radio\" value=\"女生\" class=\"custom-control-input\" [ngModel]=\"childgender\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">女生</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">學號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childstudentid\" [(ngModel)]=\"childstudentid\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">點數:</label>\r\n              <input type=\"number\" class=\"form-control\" name=\"childpoint\" min=\"0\" max=\"1000\" [(ngModel)]=\"childpoint\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">就讀學校:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childschool\" [(ngModel)]=\"childschool\" required>\r\n            </div>\r\n\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <swal #dialogSuccess title=\"新增成功\" type=\"success\"></swal>\r\n          <swal #dialogError title=\"資料錯誤，請重新確認\" type=\"error\"></swal>\r\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"userAddChild(modelAddChild);\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</main>\r\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">學童管理</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 學童列表 - 共 {{ datas.length }} 筆資料\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#modelAddChild\" (click)=\"data = []; isAddMode = true;\">新增</button>\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table table-striped table-border table-button\">\r\n        <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>帳號</th>\r\n            <th>姓名</th>\r\n            <th>性別</th>\r\n            <th>學號</th>\r\n            <th>點數</th>\r\n            <th>代號</th>\r\n            <th>就讀學校</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"9\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page } ; let i = index\">\r\n            <th scope=\"row\">{{ i + ( page - 1 ) * 10 + 1 }}</th>\r\n            <td>{{ data.childusername }}</td>\r\n            <td>{{ data.childname }}</td>\r\n            <td>{{ data.childgender }}</td>\r\n            <td>{{ data.childstudentid }}</td>\r\n            <td>{{ data.childpoint }}</td>\r\n            <td>{{ data.childcode }}</td>\r\n            <td>{{ data.childschool }}</td>\r\n            <td class=\"text-right\">\r\n              <swal #dialogDeleteError title=\"資料刪除失敗，請重新確認\" type=\"error\"></swal>\r\n              <swal #dialogChildDelete title=\"確定要刪除？\" type=\"question\" [options]=\"{ showCancelButton: 'true' }\" (confirm)=\"userDeleteChild(data)\"></swal>\r\n              <button type=\"button\" class=\"btn btn-info mr-2\" (click)=\"userGetChildById(data)\" data-toggle=\"modal\" data-target=\"#modelAddChild\">編輯</button>\r\n              <button type=\"button\" class=\"btn btn-danger mr-2\" (click)=\"dialogChildDelete.show()\">刪除</button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      共 {{ datas.length }} 筆資料\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"modelAddChild\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\r\n          <button #modelClose type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">帳號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childusername\" [(ngModel)]=\"data.childusername\" [readonly]=\"!isAddMode\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"childpassword\" [(ngModel)]=\"data.childpassword\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">確認密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"childpasswordRe\" [(ngModel)]=\"data.childpasswordRe\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">兌換代碼:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childcode\" [(ngModel)]=\"data.childcode\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">姓名:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childname\" [(ngModel)]=\"data.childname\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">性別:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input name=\"childgender\" type=\"radio\" value=\"男\" class=\"custom-control-input\" [ngModel]=\"data.childgender\" (ngModelChange)=\"data.childgender = $event\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">男生</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input name=\"childgender\" type=\"radio\" value=\"女\" class=\"custom-control-input\" [ngModel]=\"data.childgender\" (ngModelChange)=\"data.childgender = $event\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">女生</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">學號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childstudentid\" [(ngModel)]=\"data.childstudentid\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">點數:</label>\r\n              <input type=\"number\" class=\"form-control\" name=\"childpoint\" min=\"0\" max=\"1000\" [(ngModel)]=\"data.childpoint\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">就讀學校:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"childschool\" [(ngModel)]=\"data.childschool\" required>\r\n            </div>\r\n\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <swal #dialogSuccess title=\"資料更新成功\" type=\"success\"></swal>\r\n          <swal #dialogError title=\"資料錯誤，請重新確認\" type=\"error\"></swal>\r\n          <swal #dialogUpdateError title=\"資料更新失敗，請重新確認\" type=\"error\"></swal>\r\n          <swal #dialogInsertError title=\"資料更新失敗，請重新確認\" type=\"error\"></swal>\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"data = []\">重填</button>\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"userDataCheck();\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</main>\r\n"
 
 /***/ }),
 
@@ -351,7 +402,8 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__ = __webpack_require__("../../../../../src/app/service/user/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__ = __webpack_require__("../../../../@toverux/ngsweetalert2/dist/types+es2015-modules/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__class_user_child__ = __webpack_require__("../../../../../src/app/class/user/child.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -401,28 +453,100 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+
 var ChildComponent = (function () {
     function ChildComponent(router, userService, checkloginService) {
         this.router = router;
         this.userService = userService;
         this.checkloginService = checkloginService;
-        this.datas = [];
-        this.page = 1;
-        this.isLoading = true;
-        this.childusername = 'yeeman9487';
-        this.childpassword = '123456';
-        this.childpasswordRe = '123456';
-        this.childname = 'Yee';
-        this.childgender = '男生';
-        this.childpoint = 120;
-        this.childcode = 'B';
-        this.childschool = '臺北市立敦化國民小學';
-        this.childstudentid = '10111';
+        this.datas = []; // 學生資料集合
+        this.data = new __WEBPACK_IMPORTED_MODULE_4__class_user_child__["a" /* Child */](); // 學生資料單筆(by username)
+        this.isAddMode = true; // 表單模式(新增/編輯)
+        this.page = 1; // 當前頁碼
+        this.isLoading = true; // 是否載入中
     }
     ChildComponent.prototype.ngOnInit = function () {
         this.checkloginService.checkLogin();
         this.userGetChild();
     };
+    /**
+     * 資料欄位驗證
+     *
+     * @memberof ChildComponent
+     */
+    ChildComponent.prototype.userDataCheck = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var valid, body;
+            return __generator(this, function (_a) {
+                valid = false;
+                body = {};
+                console.log(this.data.childgender);
+                if (Object.keys(this.data).length < 1) {
+                    this.swalDialogError
+                        .show().then(function (value) {
+                        _this.data.childpassword = '';
+                        _this.data.childpasswordRe = '';
+                    });
+                }
+                else if (this.data.childpassword != this.data.childpasswordRe ||
+                    this.data.childpassword == '' ||
+                    this.data.childpasswordRe == '') {
+                    this.swalDialogError
+                        .show().then(function (value) {
+                        _this.data.childpassword = '';
+                        _this.data.childpasswordRe = '';
+                    });
+                }
+                else {
+                    valid = true;
+                    body = {
+                        id: this.data.id,
+                        childusername: this.data.childusername,
+                        childpassword: this.data.childpassword,
+                        childname: this.data.childname,
+                        childgender: this.data.childgender,
+                        childpoint: this.data.childpoint,
+                        childcode: this.data.childcode,
+                        childschool: this.data.childschool,
+                        childstudentid: this.data.childstudentid
+                    };
+                }
+                if (valid) {
+                    if (this.isAddMode) {
+                        this.userAddChild(body); // 新增資料
+                    }
+                    else {
+                        this.userUpdateChild(body); // 更新資料
+                    }
+                }
+                return [2 /*return*/];
+            });
+        });
+    };
+    /**
+     * 取得學生資料 by username
+     *
+     * @param {Child} obj
+     * @memberof ChildComponent
+     */
+    ChildComponent.prototype.userGetChildById = function (obj) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                this.data = this.datas.filter(function (d) { return d.childusername === obj.childusername; })[0]; // this.data 非陣列（是 Child 物件），因此要取出[0]
+                // 老師編輯暫時先不用重新輸入密碼
+                this.data.childpasswordRe = this.data.childpassword;
+                // 修改表單模式
+                this.isAddMode = false;
+                return [2 /*return*/];
+            });
+        });
+    };
+    /**
+     * 取得學生資料 all
+     *
+     * @memberof ChildComponent
+     */
     ChildComponent.prototype.userGetChild = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
@@ -439,70 +563,104 @@ var ChildComponent = (function () {
             });
         });
     };
-    ChildComponent.prototype.userAddChild = function (obj) {
+    /**
+     * 新增學生資料
+     *
+     * @memberof ChildComponent
+     */
+    ChildComponent.prototype.userAddChild = function (body) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
-            var body;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0:
-                        console.log(obj);
-                        if (!(this.childpassword != this.childpasswordRe)) return [3 /*break*/, 1];
-                        this.swalDialogError
-                            .show().then(function (value) {
-                            _this.childpassword = '';
-                            _this.childpasswordRe = '';
-                        });
-                        return [3 /*break*/, 4];
+                    case 0: return [4 /*yield*/, this.userService.userAddChild(body).subscribe(function (result) {
+                            if (result.affectedRows > 0) {
+                                _this.swalDialogSuccess
+                                    .show().then(function (value) {
+                                    // reset data
+                                    _this.data = new __WEBPACK_IMPORTED_MODULE_4__class_user_child__["a" /* Child */]();
+                                    _this.userGetChild();
+                                    _this.modelClose.nativeElement.click();
+                                });
+                            }
+                            else {
+                                _this.swalDialogInsertError
+                                    .show().then(function (value) {
+                                    _this.data.childpassword = '';
+                                    _this.data.childpasswordRe = '';
+                                    _this.data.childpoint = 0;
+                                });
+                            }
+                        })];
                     case 1:
-                        if (!(this.childusername == '' ||
-                            this.childpassword == '' ||
-                            this.childpasswordRe == '' ||
-                            this.childname == '' ||
-                            this.childgender == '' ||
-                            this.childpoint > 1000 ||
-                            this.childcode == '' ||
-                            this.childschool == '' ||
-                            this.childstudentid == '')) return [3 /*break*/, 2];
-                        this.swalDialogError
-                            .show().then(function (value) {
-                            _this.childpassword = '';
-                            _this.childpasswordRe = '';
-                            _this.childpoint = 0;
-                        });
-                        return [3 /*break*/, 4];
-                    case 2:
-                        body = {
-                            childusername: this.childusername,
-                            childpassword: this.childpassword,
-                            childname: this.childname,
-                            childgender: this.childgender,
-                            childpoint: this.childpoint,
-                            childcode: this.childcode,
-                            childschool: this.childschool,
-                            childstudentid: this.childstudentid
-                        };
-                        return [4 /*yield*/, this.userService.userAddChild(body).subscribe(function (result) {
-                                console.log(result);
-                                if (result.affectedRows > 0) {
-                                    _this.swalDialogSuccess
-                                        .show().then(function (value) {
-                                        _this.modelClose.nativeElement.click();
-                                    });
-                                }
-                                else {
-                                    _this.swalDialogError
-                                        .show().then(function (value) {
-                                        _this.childpassword = '';
-                                        _this.childpasswordRe = '';
-                                        _this.childpoint = 0;
-                                    });
-                                }
-                            })];
-                    case 3:
                         _a.sent();
-                        _a.label = 4;
-                    case 4: return [2 /*return*/];
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 更新學生資料
+     *
+     * @memberof ChildComponent
+     */
+    ChildComponent.prototype.userUpdateChild = function (body) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.userService.userUpdateChild(body).subscribe(function (result) {
+                            if (result.affectedRows > 0) {
+                                _this.swalDialogSuccess
+                                    .show().then(function (value) {
+                                    // reset data
+                                    _this.data = new __WEBPACK_IMPORTED_MODULE_4__class_user_child__["a" /* Child */]();
+                                    _this.userGetChild();
+                                    _this.modelClose.nativeElement.click();
+                                });
+                            }
+                            else {
+                                _this.swalDialogUpdateError
+                                    .show().then(function (value) {
+                                    _this.data.childpassword = '';
+                                    _this.data.childpasswordRe = '';
+                                    _this.data.childpoint = 0;
+                                });
+                            }
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 刪除學生資料
+     *
+     * @memberof ChildComponent
+     */
+    ChildComponent.prototype.userDeleteChild = function (obj) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.userService.userDeleteChild(obj).subscribe(function (result) {
+                            if (result.affectedRows > 0) {
+                                _this.swalDialogSuccess
+                                    .show().then(function (value) {
+                                    _this.userGetChild(); // reload
+                                    _this.modelClose.nativeElement.click();
+                                });
+                            }
+                            else {
+                                _this.swalDialogDeleteError
+                                    .show();
+                            }
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
                 }
             });
         });
@@ -521,6 +679,18 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogSuccess'),
     __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _c || Object)
 ], ChildComponent.prototype, "swalDialogSuccess", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogUpdateError'),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _d || Object)
+], ChildComponent.prototype, "swalDialogUpdateError", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogInsertError'),
+    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _e || Object)
+], ChildComponent.prototype, "swalDialogInsertError", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogDeleteError'),
+    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _f || Object)
+], ChildComponent.prototype, "swalDialogDeleteError", void 0);
 ChildComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-child',
@@ -528,10 +698,10 @@ ChildComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/container/child/child.component.css")],
         providers: [__WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_5_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _j || Object])
 ], ChildComponent);
 
-var _a, _b, _c, _d, _e, _f;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=child.component.js.map
 
 /***/ }),
@@ -623,7 +793,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/log/log.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n  <!-- Breadcrumbs -->\n  <ol class=\"breadcrumb\">\n    <li class=\"breadcrumb-item\">\n      <a [routerLink]=\"['']\">首頁</a>\n    </li>\n    <li class=\"breadcrumb-item active\">系統日誌</li>\n  </ol>\n\n  <div class=\"card mb-3\">\n    <div class=\"card-header\">\n      <i class=\"fa fa-users\"></i> 系統日誌\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal1\">新增</button>\n    </div>\n    <div class=\"card-body\">\n      <table class=\"table table-hover\">\n        <thead class=\"thead-default\">\n          <tr>\n            <th>姓名</th>\n            <th>年齡</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let meal of meals | paginate: { itemsPerPage: 10, currentPage: page }\">\n            <td>{{meal.name}}</td>\n            <td>{{meal.age}}</td>\n          </tr>\n        </tbody>\n      </table>\n      <div class=\"has-text-centered text-center\">\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\n      </div>\n    </div>\n    <div class=\"card-footer small text-muted\">\n      最後更新 早上 08:30\n    </div>\n  </div>\n\n\n  <!-- Modal -->\n  <div class=\"modal fade\" id=\"myModal1\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">&times;</span>\n            <span class=\"sr-only\">Close</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">\n          <form>\n            <div class=\"form-group\">\n              <label class=\"control-label\">姓名:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">性別:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">男生</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">女生</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">葷素:</label>\n              <div class=\"form-check\">\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">葷食</span>\n                </label>\n                <label class=\"custom-control custom-radio\">\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\n                  <span class=\"custom-control-indicator\"></span>\n                  <span class=\"custom-control-description\">素食</span>\n                </label>\n              </div>\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">電話:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">住址:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">就讀學校:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人:</label>\n              <input type=\"text\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">監護人手機:</label>\n              <input type=\"tel\" class=\"form-control\">\n            </div>\n            <div class=\"form-group\">\n              <label class=\"control-label\">備註:</label>\n              <textarea class=\"form-control\"></textarea>\n            </div>\n          </form>\n        </div>\n        <div class=\"modal-footer\">\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\n        </div>\n      </div>\n    </div>\n  </div>\n</main>\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">系統日誌</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 系統日誌 - 共 {{ datas.length }} 筆資料\r\n      <!-- <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal1\">新增</button> -->\r\n    </div>\r\n    <div class=\"card-body\">\r\n      <table class=\"table table-striped table-border\">\r\n        <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>登入帳號</th>\r\n            <th>登入位址</th>\r\n            <th>登入時間</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"5\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page } ; let i = index\">\r\n            <th scope=\"row\">{{ i + ( page - 1 ) * 10 + 1 }}</th>\r\n            <td>{{data.loginusername}}</td>\r\n            <td>{{data.loginip}}</td>\r\n            <td>{{data.logintime | date: 'yyyy/MM/dd HH:MM:ss' }}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n        共 {{ datas.length }} 筆資料\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModal1\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">姓名:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">性別:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">男生</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">女生</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">葷素:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">葷食</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">素食</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">電話:</label>\r\n              <input type=\"tel\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">住址:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">就讀學校:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">監護人:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">監護人手機:</label>\r\n              <input type=\"tel\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">備註:</label>\r\n              <textarea class=\"form-control\"></textarea>\r\n            </div>\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</main>\r\n"
 
 /***/ }),
 
@@ -634,6 +804,7 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_log_log_service__ = __webpack_require__("../../../../../src/app/service/log/log.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -643,32 +814,71 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
 
 
 var LogComponent = (function () {
-    function LogComponent(checkloginService) {
+    function LogComponent(logService, checkloginService) {
+        this.logService = logService;
         this.checkloginService = checkloginService;
-        this.meals = [
-            { name: 'Robby', age: 6 },
-            { name: 'asd', age: 8 },
-            { name: 'Robybtvrby', age: 14 },
-            { name: 'ukjyhrtge', age: 1 },
-            { name: '234treth', age: 4 },
-            { name: 'Robby', age: 6 },
-            { name: 'asd', age: 8 },
-            { name: 'Robybtvrby', age: 14 },
-            { name: 'ukjyhrtge', age: 1 },
-            { name: '234treth', age: 4 },
-            { name: 'Robby', age: 6 },
-            { name: 'asd', age: 8 },
-            { name: 'Robybtvrby', age: 14 },
-            { name: 'ukjyhrtge', age: 1 },
-            { name: '234treth', age: 4 }
-        ];
-        this.page = 1;
+        this.datas = [];
+        this.page = 1; // 當前頁碼
+        this.isLoading = true; // 是否載入中
     }
     LogComponent.prototype.ngOnInit = function () {
         this.checkloginService.checkLogin();
+        this.logList();
+    };
+    LogComponent.prototype.logList = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.logService.getLog().subscribe(function (result) {
+                            _this.isLoading = false;
+                            _this.datas = result;
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
     };
     return LogComponent;
 }());
@@ -676,12 +886,13 @@ LogComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-log',
         template: __webpack_require__("../../../../../src/app/container/log/log.component.html"),
-        styles: [__webpack_require__("../../../../../src/app/container/log/log.component.css")]
+        styles: [__webpack_require__("../../../../../src/app/container/log/log.component.css")],
+        providers: [__WEBPACK_IMPORTED_MODULE_2__service_log_log_service__["a" /* LogService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__service_log_log_service__["a" /* LogService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_log_log_service__["a" /* LogService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _b || Object])
 ], LogComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=log.component.js.map
 
 /***/ }),
@@ -707,7 +918,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-12 ml-sm-auto col-md-12 pt-5 login-page\" role=\"main\">\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <div class=\"col-md-4 mx-auto bg-white login-form\">\n        <h4 class=\"login-title bg-primary\">系統登入</h4>\n        <form class=\"login-group\">\n          <div class=\"form-group\">\n            <label for=\"txtUserId\">帳號：</label>\n            <input type=\"email\" class=\"form-control\" name=\"txtUserId\" id=\"txtUserId\" placeholder=\"請輸入帳號\" [(ngModel)]=\"userId\">\n          </div>\n          <div class=\"form-group\">\n            <label for=\"txtUserPwd\">密碼：</label>\n            <input type=\"password\" class=\"form-control\" name=\"txtUserPwd\" id=\"txtUserPwd\" placeholder=\"請輸入密碼\" [(ngModel)]=\"userPwd\">\n          </div>\n          <!-- <div class=\"form-check\">\n            <label class=\"form-check-label\">\n              <input type=\"checkbox\" class=\"form-check-input\"> Check me out\n            </label>\n          </div> -->\n          <swal #dialogSuccess title=\"登入成功\" type=\"success\"></swal>\n          <button type=\"submit\" class=\"btn btn-lg btn-primary\" (click)=\"login()\">登入</button>\n        </form>\n      </div>\n    </div>\n  </div>\n</main>\n"
+module.exports = "<main class=\"col-sm-12 ml-sm-auto col-md-12 pt-5 login-page\" role=\"main\">\r\n  <div class=\"container-fluid\">\r\n    <div class=\"row\">\r\n      <div class=\"col-md-4 mx-auto bg-white login-form\">\r\n        <h4 class=\"login-title bg-primary\">系統登入</h4>\r\n        <form class=\"login-group\">\r\n          <div class=\"form-group\">\r\n            <label for=\"txtUserId\">帳號：</label>\r\n            <input type=\"email\" class=\"form-control\" name=\"txtUserId\" id=\"txtUserId\" placeholder=\"請輸入帳號\" [(ngModel)]=\"userId\">\r\n          </div>\r\n          <div class=\"form-group\">\r\n            <label for=\"txtUserPwd\">密碼：</label>\r\n            <input type=\"password\" class=\"form-control\" name=\"txtUserPwd\" id=\"txtUserPwd\" placeholder=\"請輸入密碼\" [(ngModel)]=\"userPwd\">\r\n          </div>\r\n          <!-- <div class=\"form-check\">\r\n            <label class=\"form-check-label\">\r\n              <input type=\"checkbox\" class=\"form-check-input\"> Check me out\r\n            </label>\r\n          </div> -->\r\n          <swal #dialogSuccess title=\"登入成功\" type=\"success\"></swal>\r\n          <swal #dialogError title=\"帳號或密碼錯誤\" type=\"error\"></swal>\r\n          <button type=\"submit\" class=\"btn btn-lg btn-primary\" (click)=\"login()\">登入</button>\r\n        </form>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</main>\r\n"
 
 /***/ }),
 
@@ -722,6 +933,7 @@ module.exports = "<main class=\"col-sm-12 ml-sm-auto col-md-12 pt-5 login-page\"
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_ng2_cookies_ng2_cookies__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__ = __webpack_require__("../../../../@toverux/ngsweetalert2/dist/types+es2015-modules/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__service_user_user_service__ = __webpack_require__("../../../../../src/app/service/user/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__service_log_log_service__ = __webpack_require__("../../../../../src/app/service/log/log.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -771,9 +983,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+
 var LoginComponent = (function () {
-    function LoginComponent(router, userService) {
+    function LoginComponent(router, logService, userService) {
         this.router = router;
+        this.logService = logService;
         this.userService = userService;
         this.userId = 'jack123';
         this.userPwd = 'jack321';
@@ -798,6 +1012,9 @@ var LoginComponent = (function () {
                                     _this.swalDialogSuccess
                                         .show().then(function (value) { location.href = "./dashboard"; });
                                 }
+                                else {
+                                    _this.swalDialogError.show();
+                                }
                             })];
                     case 1:
                         _a.sent();
@@ -812,17 +1029,21 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogSuccess'),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _a || Object)
 ], LoginComponent.prototype, "swalDialogSuccess", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogError'),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _b || Object)
+], LoginComponent.prototype, "swalDialogError", void 0);
 LoginComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-login',
         template: __webpack_require__("../../../../../src/app/container/login/login.component.html"),
         styles: [__webpack_require__("../../../../../src/app/container/login/login.component.css")],
-        providers: [__WEBPACK_IMPORTED_MODULE_4__service_user_user_service__["a" /* UserService */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_4__service_user_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_5__service_log_log_service__["a" /* LogService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_user_user_service__["a" /* UserService */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__service_log_log_service__["a" /* LogService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__service_log_log_service__["a" /* LogService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__service_user_user_service__["a" /* UserService */]) === "function" && _e || Object])
 ], LoginComponent);
 
-var _a, _b, _c;
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
@@ -960,7 +1181,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/record/record.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">兌換紀錄</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 兌換紀錄 - 共 {{ datas.length }} 筆資料\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal\">新增</button>\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table\">\r\n        <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>#</th>\r\n            <th>學童帳號</th>\r\n            <th>店家帳號</th>\r\n            <th>兌換點數</th>\r\n            <th>兌換日期</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"4\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page } ; let i = index\">\r\n            <th scope=\"row\">{{ i + ( page - 1 ) * 10 + 1 }}</th>\r\n            <td>{{ data['recordchild']}}</td>\r\n            <td>{{ data['recordstore']}}</td>\r\n            <td>{{ data['recordpoint']}}</td>\r\n            <td>{{ data['recordtime']}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      共 {{ datas.length }} 筆資料\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"exampleModalLabel\">新增學童</h4>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">姓名:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">性別:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">男生</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">女生</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">葷素:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">葷食</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">素食</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">電話:</label>\r\n              <input type=\"tel\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">住址:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">就讀學校:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">監護人:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">監護人手機:</label>\r\n              <input type=\"tel\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">備註:</label>\r\n              <textarea class=\"form-control\"></textarea>\r\n            </div>\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['home']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">兌換紀錄</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 兌換紀錄 - 共 {{ datas.length }} 筆資料\r\n      <!-- <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#myModal\">新增</button> -->\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table table-striped table-border\">\r\n        <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>學童帳號</th>\r\n            <th>店家帳號</th>\r\n            <th>兌換點數</th>\r\n            <th>兌換日期</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"5\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page } ; let i = index\">\r\n            <th scope=\"row\">{{ i + ( page - 1 ) * 10 + 1 }}</th>\r\n            <td>{{ data['recordchild']}}</td>\r\n            <td>{{ data['recordstore']}}</td>\r\n            <td>{{ data['recordpoint']}}</td>\r\n            <td>{{ data['recordtime']}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      共 {{ datas.length }} 筆資料\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"recordModalLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"recordModalLabel\">新增學童</h4>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">姓名:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">性別:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"sex1\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">男生</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"sex2\" name=\"sex\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">女生</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">葷素:</label>\r\n              <div class=\"form-check\">\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"meal1\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">葷食</span>\r\n                </label>\r\n                <label class=\"custom-control custom-radio\">\r\n                  <input id=\"meal2\" name=\"meal\" type=\"radio\" class=\"custom-control-input\">\r\n                  <span class=\"custom-control-indicator\"></span>\r\n                  <span class=\"custom-control-description\">素食</span>\r\n                </label>\r\n              </div>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">電話:</label>\r\n              <input type=\"tel\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">住址:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">就讀學校:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">監護人:</label>\r\n              <input type=\"text\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">監護人手機:</label>\r\n              <input type=\"tel\" class=\"form-control\">\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">備註:</label>\r\n              <textarea class=\"form-control\"></textarea>\r\n            </div>\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <button type=\"button\" class=\"btn btn-primary\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n"
 
 /***/ }),
 
@@ -1085,7 +1306,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/store/store.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">店家管理</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 店家列表 - 共 {{ datas.length }} 筆資料\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#modelAddStore\">新增</button>\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table\">\r\n        <thead class=\"thead-default\">\r\n          <tr>\r\n            <th>#</th>\r\n            <th>帳號</th>\r\n            <th>店名</th>\r\n            <th>地址</th>\r\n            <th>店長</th>\r\n            <th>電話</th>\r\n            <th>統一編號</th>\r\n            <th>店家類型</th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"7\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page } ; let i = index\">\r\n            <th scope=\"row\">{{ i + ( page - 1 ) * 10 + 1 }}</th>\r\n            <td>{{data.storeusername}}</td>\r\n            <td>{{data.storename}}</td>\r\n            <td>{{data.storeaddr}}</td>\r\n            <td>{{data.storeadminstore}}</td>\r\n            <td>{{data.storetel}}</td>\r\n            <td>{{data.storeein}}</td>\r\n            <td>{{data.storetype}}</td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      共 {{ datas.length }} 筆資料\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"modelAddStore\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modelAddStoreLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"modelAddStoreLabel\">新增店家</h4>\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">帳號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeusername\" [(ngModel)]=\"storeusername\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"storepassword\" [(ngModel)]=\"storepassword\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">確認密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"storepasswordRe\" [(ngModel)]=\"storepasswordRe\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">店名:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storename\" [(ngModel)]=\"storename\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">地址:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeaddr\" [(ngModel)]=\"storeaddr\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">店長:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeadminstore\" [(ngModel)]=\"storeadminstore\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">電話:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storetel\" [(ngModel)]=\"storetel\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">統一編號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeein\" [(ngModel)]=\"storeein\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">店家類型:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storetype\" [(ngModel)]=\"storetype\" required>\r\n            </div>\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <swal #dialogSuccess title=\"新增成功\" type=\"success\"></swal>\r\n          <swal #dialogError title=\"資料錯誤，請重新確認\" type=\"error\"></swal>\r\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"userAddStore(modelAddStore);\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</main>\r\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">店家管理</li>\r\n  </ol>\r\n\r\n  <div class=\"card mb-3\">\r\n    <div class=\"card-header\">\r\n      <i class=\"fa fa-users\"></i> 店家列表 - 共 {{ datas.length }} 筆資料\r\n      <button type=\"button\" class=\"btn btn-primary pull-right\" data-toggle=\"modal\" data-target=\"#modelAddStore\" (click)=\"data = []; isAddMode = true;\">新增</button>\r\n    </div>\r\n\r\n    <div class=\"card-body\">\r\n      <table class=\"table table-striped table-border table-button\">\r\n        <thead>\r\n          <tr>\r\n            <th>#</th>\r\n            <th>帳號</th>\r\n            <th>店名</th>\r\n            <th>地址</th>\r\n            <th>店長</th>\r\n            <th>電話</th>\r\n            <th>統一編號</th>\r\n            <th>店家類型</th>\r\n            <th></th>\r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr *ngIf=\"isLoading\" class=\"text-center\">\r\n            <td colspan=\"9\">\r\n              <i class=\"fa fa-spinner fa-3x fa-spin\"></i>\r\n            </td>\r\n          </tr>\r\n          <tr *ngFor=\"let data of datas | paginate: { itemsPerPage: 10, currentPage: page } ; let i = index\">\r\n            <th scope=\"row\">{{ i + ( page - 1 ) * 10 + 1 }}</th>\r\n            <td>{{data.storeusername}}</td>\r\n            <td>{{data.storename}}</td>\r\n            <td>{{data.storeaddr}}</td>\r\n            <td>{{data.storeadminstore}}</td>\r\n            <td>{{data.storetel}}</td>\r\n            <td>{{data.storeein}}</td>\r\n            <td>{{data.storetype}}</td>\r\n            <td class=\"text-right\">\r\n              <swal #dialogDeleteError title=\"資料刪除失敗，請重新確認\" type=\"error\"></swal>\r\n              <swal #dialogStoreDelete title=\"確定要刪除？\" type=\"question\" [options]=\"{ showCancelButton: 'true' }\" (confirm)=\"userDeleteStore(data)\"></swal>\r\n              <button type=\"button\" class=\"btn btn-info mr-2\" (click)=\"userGetStoreById(data)\" data-toggle=\"modal\" data-target=\"#modelAddStore\">編輯</button>\r\n              <button type=\"button\" class=\"btn btn-danger mr-2\" (click)=\"dialogStoreDelete.show()\">刪除</button>\r\n            </td>\r\n          </tr>\r\n        </tbody>\r\n      </table>\r\n      <div class=\"has-text-centered text-center\">\r\n        <pagination-controls (pageChange)=\"page = $event\"></pagination-controls>\r\n      </div>\r\n    </div>\r\n    <div class=\"card-footer small text-muted\">\r\n      共 {{ datas.length }} 筆資料\r\n    </div>\r\n  </div>\r\n\r\n  <!-- Modal -->\r\n  <div class=\"modal fade\" id=\"modelAddStore\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modelAddStoreLabel\" aria-hidden=\"true\">\r\n    <div class=\"modal-dialog\" role=\"document\">\r\n      <div class=\"modal-content\">\r\n        <div class=\"modal-header\">\r\n          <h4 class=\"modal-title\" id=\"modelAddStoreLabel\">新增店家</h4>\r\n          <button #modelClose type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\r\n            <span aria-hidden=\"true\">&times;</span>\r\n            <span class=\"sr-only\">Close</span>\r\n          </button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <form>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">帳號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeusername\" [(ngModel)]=\"data.storeusername\" [readonly]=\"!isAddMode\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"storepassword\" [(ngModel)]=\"data.storepassword\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">確認密碼:</label>\r\n              <input type=\"password\" class=\"form-control\" name=\"storepasswordRe\" [(ngModel)]=\"data.storepasswordRe\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">店名:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storename\" [(ngModel)]=\"data.storename\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">地址:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeaddr\" [(ngModel)]=\"data.storeaddr\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">店長:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeadminstore\" [(ngModel)]=\"data.storeadminstore\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">電話:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storetel\" [(ngModel)]=\"data.storetel\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">統一編號:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storeein\" [(ngModel)]=\"data.storeein\" required>\r\n            </div>\r\n            <div class=\"form-group\">\r\n              <label class=\"control-label\">店家類型:</label>\r\n              <input type=\"text\" class=\"form-control\" name=\"storetype\" [(ngModel)]=\"data.storetype\" required>\r\n            </div>\r\n          </form>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n          <swal #dialogSuccess title=\"資料更新成功\" type=\"success\"></swal>\r\n          <swal #dialogError title=\"資料錯誤，請重新確認\" type=\"error\"></swal>\r\n          <swal #dialogUpdateError title=\"資料更新失敗，請重新確認\" type=\"error\"></swal>\r\n          <swal #dialogInsertError title=\"資料更新失敗，請重新確認\" type=\"error\"></swal>\r\n          <button type=\"button\" class=\"btn btn-secondary\" (click)=\"data = []\">重填</button>\r\n          <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\">取消</button>\r\n          <button type=\"button\" class=\"btn btn-primary\" (click)=\"userDataCheck();\">儲存</button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n</main>\r\n"
 
 /***/ }),
 
@@ -1098,7 +1319,8 @@ module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__ = __webpack_require__("../../../../../src/app/service/user/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__ = __webpack_require__("../../../../@toverux/ngsweetalert2/dist/types+es2015-modules/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__class_user_store__ = __webpack_require__("../../../../../src/app/class/user/store.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_service_common_check_login_service__ = __webpack_require__("../../../../../src/app/service/common/check-login.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1148,29 +1370,99 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
+
 var StoreComponent = (function () {
     function StoreComponent(router, userService, checkloginService) {
         this.router = router;
         this.userService = userService;
         this.checkloginService = checkloginService;
-        this.datas = [];
+        this.datas = []; // 學生資料集合
+        this.data = new __WEBPACK_IMPORTED_MODULE_4__class_user_store__["a" /* Store */](); // 學生資料單筆(by username)
+        this.isAddMode = true; // 表單模式(新增/編輯)
         this.page = 1;
         this.isLoading = true;
-        this.storeusername = 'b01';
-        this.storepassword = '123456';
-        this.storepasswordRe = '123456';
-        this.storename = '好米吉便當專賣';
-        this.storeaddr = '台北市松山區民生東路五段36巷1號';
-        this.storeadminstore = '張大東';
-        this.storetel = '02-2768-9942';
-        this.storeein = '1145671';
-        this.storetype = '';
-        this.storephoto = '';
     }
     StoreComponent.prototype.ngOnInit = function () {
         this.checkloginService.checkLogin();
         this.userGetStore();
     };
+    /**
+     * 資料欄位驗證
+     *
+     * @memberof StoreComponent
+     */
+    StoreComponent.prototype.userDataCheck = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var valid, body;
+            return __generator(this, function (_a) {
+                valid = false;
+                body = {};
+                if (Object.keys(this.data).length < 1) {
+                    this.swalDialogError
+                        .show().then(function (value) {
+                        _this.data.storepassword = '';
+                        _this.data.storepasswordRe = '';
+                    });
+                }
+                else if (this.data.storepassword != this.data.storepasswordRe ||
+                    this.data.storepassword == '' ||
+                    this.data.storepasswordRe == '') {
+                    this.swalDialogError
+                        .show().then(function (value) {
+                        _this.data.storepassword = '';
+                        _this.data.storepasswordRe = '';
+                    });
+                }
+                else {
+                    valid = true;
+                    body = {
+                        id: this.data.id,
+                        storeusername: this.data.storeusername,
+                        storepassword: this.data.storepassword,
+                        storename: this.data.storename,
+                        storeaddr: this.data.storeaddr,
+                        storeadminstore: this.data.storeadminstore,
+                        storetel: this.data.storetel,
+                        storeein: this.data.storeein,
+                        storetype: this.data.storetype
+                    };
+                }
+                if (valid) {
+                    if (this.isAddMode) {
+                        this.userAddStore(body); // 新增資料
+                    }
+                    else {
+                        this.userUpdateStore(body); // 更新資料
+                    }
+                }
+                return [2 /*return*/];
+            });
+        });
+    };
+    /**
+     * 取得店家資料 by username
+     *
+     * @param {Store} obj
+     * @memberof StoreComponent
+     */
+    StoreComponent.prototype.userGetStoreById = function (obj) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                this.data = this.datas.filter(function (d) { return d.storeusername === obj.storeusername; })[0]; // this.data 非陣列（是 Store 物件），因此要取出[0]
+                // 編輯暫時先不用重新輸入密碼
+                this.data.storepasswordRe = this.data.storepassword;
+                // 修改表單模式
+                this.isAddMode = false;
+                return [2 /*return*/];
+            });
+        });
+    };
+    /**
+     * 取得店家資料 all
+     *
+     * @memberof StoreComponent
+     */
     StoreComponent.prototype.userGetStore = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
@@ -1187,68 +1479,102 @@ var StoreComponent = (function () {
             });
         });
     };
-    StoreComponent.prototype.userAddStore = function (obj) {
+    /**
+     * 新增店家資料
+     *
+     * @memberof StoreComponent
+     */
+    StoreComponent.prototype.userAddStore = function (body) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
-            var body;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0:
-                        console.log(obj);
-                        if (!(this.storepassword != this.storepasswordRe)) return [3 /*break*/, 1];
-                        this.swalDialogError
-                            .show().then(function (value) {
-                            _this.storepassword = '';
-                            _this.storepasswordRe = '';
-                        });
-                        return [3 /*break*/, 4];
+                    case 0: return [4 /*yield*/, this.userService.userAddStore(body).subscribe(function (result) {
+                            if (result.affectedRows > 0) {
+                                _this.swalDialogSuccess
+                                    .show().then(function (value) {
+                                    // reset data
+                                    _this.data = new __WEBPACK_IMPORTED_MODULE_4__class_user_store__["a" /* Store */]();
+                                    _this.userGetStore();
+                                    _this.modelClose.nativeElement.click();
+                                });
+                            }
+                            else {
+                                _this.swalDialogInsertError
+                                    .show().then(function (value) {
+                                    _this.data.storepassword = '';
+                                    _this.data.storepasswordRe = '';
+                                });
+                            }
+                        })];
                     case 1:
-                        if (!(this.storeusername == '' ||
-                            this.storepassword == '' ||
-                            this.storepasswordRe == '' ||
-                            this.storename == '' ||
-                            this.storeaddr == '' ||
-                            this.storeadminstore == '' ||
-                            this.storetel == '' ||
-                            this.storeein == '')) return [3 /*break*/, 2];
-                        this.swalDialogError
-                            .show().then(function (value) {
-                            _this.storepassword = '';
-                            _this.storepasswordRe = '';
-                        });
-                        return [3 /*break*/, 4];
-                    case 2:
-                        body = {
-                            storeusername: this.storeusername,
-                            storepassword: this.storepassword,
-                            storename: this.storename,
-                            storeaddr: this.storeaddr,
-                            storeadminstore: this.storeadminstore,
-                            storetel: this.storetel,
-                            storeein: this.storeein,
-                            storetype: this.storetype,
-                            storephoto: this.storephoto
-                        };
-                        return [4 /*yield*/, this.userService.userAddStore(body).subscribe(function (result) {
-                                console.log(result);
-                                if (result.affectedRows > 0) {
-                                    _this.swalDialogSuccess
-                                        .show().then(function (value) {
-                                        _this.modelClose.nativeElement.click();
-                                    });
-                                }
-                                else {
-                                    _this.swalDialogError
-                                        .show().then(function (value) {
-                                        _this.storepassword = '';
-                                        _this.storepasswordRe = '';
-                                    });
-                                }
-                            })];
-                    case 3:
                         _a.sent();
-                        _a.label = 4;
-                    case 4: return [2 /*return*/];
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 更新店家資料
+     *
+     * @memberof StoreComponent
+     */
+    StoreComponent.prototype.userUpdateStore = function (body) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.userService.userUpdateStore(body).subscribe(function (result) {
+                            if (result.affectedRows > 0) {
+                                _this.swalDialogSuccess
+                                    .show().then(function (value) {
+                                    // reset data
+                                    _this.data = new __WEBPACK_IMPORTED_MODULE_4__class_user_store__["a" /* Store */]();
+                                    _this.userGetStore();
+                                    _this.modelClose.nativeElement.click();
+                                });
+                            }
+                            else {
+                                _this.swalDialogUpdateError
+                                    .show().then(function (value) {
+                                    _this.data.storepassword = '';
+                                    _this.data.storepasswordRe = '';
+                                });
+                            }
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    /**
+     * 刪除店家資料
+     *
+     * @memberof StoreComponent
+     */
+    StoreComponent.prototype.userDeleteStore = function (obj) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.userService.userDeleteStore(obj).subscribe(function (result) {
+                            if (result.affectedRows > 0) {
+                                _this.swalDialogSuccess
+                                    .show().then(function (value) {
+                                    _this.userGetStore(); // reload
+                                    _this.modelClose.nativeElement.click();
+                                });
+                            }
+                            else {
+                                _this.swalDialogDeleteError
+                                    .show();
+                            }
+                        })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
                 }
             });
         });
@@ -1267,6 +1593,18 @@ __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogSuccess'),
     __metadata("design:type", typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _c || Object)
 ], StoreComponent.prototype, "swalDialogSuccess", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogUpdateError'),
+    __metadata("design:type", typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _d || Object)
+], StoreComponent.prototype, "swalDialogUpdateError", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogInsertError'),
+    __metadata("design:type", typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _e || Object)
+], StoreComponent.prototype, "swalDialogInsertError", void 0);
+__decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('dialogDeleteError'),
+    __metadata("design:type", typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__toverux_ngsweetalert2__["a" /* SwalComponent */]) === "function" && _f || Object)
+], StoreComponent.prototype, "swalDialogDeleteError", void 0);
 StoreComponent = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
         selector: 'app-store',
@@ -1274,10 +1612,10 @@ StoreComponent = __decorate([
         styles: [__webpack_require__("../../../../../src/app/container/store/store.component.css")],
         providers: [__WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]]
     }),
-    __metadata("design:paramtypes", [typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _f || Object])
+    __metadata("design:paramtypes", [typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__service_user_user_service__["a" /* UserService */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_5_app_service_common_check_login_service__["a" /* CheckLoginService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_app_service_common_check_login_service__["a" /* CheckLoginService */]) === "function" && _j || Object])
 ], StoreComponent);
 
-var _a, _b, _c, _d, _e, _f;
+var _a, _b, _c, _d, _e, _f, _g, _h, _j;
 //# sourceMappingURL=store.component.js.map
 
 /***/ }),
@@ -1303,7 +1641,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/container/timer/timer.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\n\n  <!-- Breadcrumbs -->\n  <ol class=\"breadcrumb\">\n    <li class=\"breadcrumb-item\">\n      <a [routerLink]=\"['']\">首頁</a>\n    </li>\n    <li class=\"breadcrumb-item active\">時段管理</li>\n  </ol>\n</main>\n"
+module.exports = "<main class=\"col-sm-9 ml-sm-auto col-md-10 pt-3\" role=\"main\">\r\n\r\n  <!-- Breadcrumbs -->\r\n  <ol class=\"breadcrumb\">\r\n    <li class=\"breadcrumb-item\">\r\n      <a [routerLink]=\"['']\">首頁</a>\r\n    </li>\r\n    <li class=\"breadcrumb-item active\">時段管理</li>\r\n  </ol>\r\n</main>\r\n"
 
 /***/ }),
 
@@ -1392,6 +1730,68 @@ CheckLoginService = __decorate([
 
 var _a;
 //# sourceMappingURL=check-login.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/service/log/log.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var LogService = (function () {
+    function LogService(http) {
+        this.http = http;
+    }
+    /**
+     * 取得系統日誌
+     *
+     * @returns
+     * @memberof LogService
+     */
+    LogService.prototype.getLog = function () {
+        return this.http.get('/api/log')
+            .map(function (res) {
+            return res.json() || {};
+        });
+    };
+    /**
+     * 新增系統日誌
+     *
+     * @param {Object} body
+     * @returns
+     * @memberof LogService
+     */
+    LogService.prototype.addLog = function (body) {
+        return this.http.post('/api/log/add', body)
+            .map(function (res) {
+            return res.json() || {};
+        });
+    };
+    return LogService;
+}());
+LogService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+], LogService);
+
+var _a;
+//# sourceMappingURL=log.service.js.map
 
 /***/ }),
 
@@ -1505,6 +1905,32 @@ var UserService = (function () {
         });
     };
     /**
+     * 學童資料更新
+     *
+     * @param {object} body
+     * @returns
+     * @memberof UserService
+     */
+    UserService.prototype.userUpdateChild = function (body) {
+        return this.http.post('/api/child/update', body)
+            .map(function (res) {
+            return res.json() || {};
+        });
+    };
+    /**
+     * 學童資料刪除
+     *
+     * @param {object} body
+     * @returns
+     * @memberof UserService
+     */
+    UserService.prototype.userDeleteChild = function (body) {
+        return this.http.post('/api/child/delete', body)
+            .map(function (res) {
+            return res.json() || {};
+        });
+    };
+    /**
      * 店家資料取得
      *
      * @returns
@@ -1527,6 +1953,32 @@ var UserService = (function () {
         return this.http.post('/api/store/add', body)
             .map(function (res) {
             console.log(res);
+            return res.json() || {};
+        });
+    };
+    /**
+     * 店家資料更新
+     *
+     * @param {object} body
+     * @returns
+     * @memberof UserService
+     */
+    UserService.prototype.userUpdateStore = function (body) {
+        return this.http.post('/api/store/update', body)
+            .map(function (res) {
+            return res.json() || {};
+        });
+    };
+    /**
+     * 店家資料刪除
+     *
+     * @param {object} body
+     * @returns
+     * @memberof UserService
+     */
+    UserService.prototype.userDeleteStore = function (body) {
+        return this.http.post('/api/store/delete', body)
+            .map(function (res) {
             return res.json() || {};
         });
     };
