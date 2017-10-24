@@ -128,7 +128,7 @@ class Mission {
     }
     async join_update(ctx) {
         try {
-            let params = [ 
+            let params = [
                 ctx.request.body.status,
                 ctx.request.body.experience,
                 ctx.request.body.verifytime,
@@ -136,9 +136,26 @@ class Mission {
                 ctx.request.body.missionid,
                 ctx.request.body.childusername
             ];
+            let params2 = [];
+            let data = [
+                'status',
+                'experience',
+                'verifytime',
+                'verifyusername',
+            ]
             const connection = await mysql.createConnection(config);
+            let sql = 'Update web_mission_join set ';
+            for (let i = 0; i < params.length - 2; i++) {
+                if (params[i] != undefined) {
+                    sql +=  data[i] + '= ?, ';
+                    params2.push(params[i]);
+                }
+            }
+            params2.push(ctx.request.body.missionid);params2.push(ctx.request.body.childusername);
+            sql = sql.substring(0, sql.length - 2);
+            sql = sql + ' where missionid = ?' + ' and childusername = ?';
             const [result] = await connection.query(
-                'Update web_mission_join set status = ? , experience = ? ,verifytime = ? , verifyusername = ? where missionid = ? and childusername = ?', params
+                sql, params2
             );
             return result;
         } catch (e) {
@@ -149,7 +166,7 @@ class Mission {
         try {
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'delete from web_mission_join where missionid = ? and childusername=?', [ctx.request.body.missionid,ctx.request.body.childusername]
+                'delete from web_mission_join where missionid = ? and childusername=?', [ctx.request.body.missionid, ctx.request.body.childusername]
             );
             return result;
         } catch (e) {
