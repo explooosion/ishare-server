@@ -7,7 +7,7 @@ class Log {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_log limit 1000');
+            const [rows, fields] = await connection.query('select * from web_log order by id desc limit 1000');
             return rows;
         } catch (e) {
             return false
@@ -26,7 +26,7 @@ class Log {
             let params = [
                 ctx.request.body.userId,
                 datetime(),
-                ctx.body.status 
+                ctx.body.status
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
