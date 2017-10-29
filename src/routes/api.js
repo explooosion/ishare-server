@@ -24,7 +24,23 @@ router.get('/', async(ctx, next) => {
         c_ip = ctx.request.ip == '::1' ? '127.0.0.1' : ctx.request.ip;
     }
     ctx.body = {
-        status: c_ip
+        status: c_ip,
+        user: {
+            1: '社福單位',
+            2: '店家',
+            3: '老師',
+            4: '學生',
+            5: '管理員'
+        },
+        mission: {
+            1: '展演講座',
+            2: '影片任務',
+            3: '旅遊任務',
+            4: '運動任務',
+            5: '清潔任務',
+            6: '美術任務',
+            7: '展演任務',
+        }
     }
 })
 
