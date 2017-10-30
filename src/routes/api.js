@@ -33,13 +33,12 @@ router.get('/', async(ctx, next) => {
             5: '管理員'
         },
         mission: {
-            1: '展演講座 talk',
-            2: '影片任務 video',
+            1: '影片任務 video',
+            2: '展演任務 show',
             3: '旅遊任務 travel',
-            4: '運動任務 sport',
-            5: '清潔任務 clean',
+            4: '清潔任務 clean',
+            5: '運動任務 sport',
             6: '美術任務 art',
-            7: '展演任務 show',
         }
     }
 })
