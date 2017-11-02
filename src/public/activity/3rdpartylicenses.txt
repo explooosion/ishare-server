@@ -27,7 +27,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 MIT
 MIT
 
-primeng@4.3.0-rc.2
+primeng@4.3.0
 MIT
 The MIT License (MIT)
 

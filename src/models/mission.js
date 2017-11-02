@@ -147,11 +147,12 @@ class Mission {
             let sql = 'Update web_mission_join set ';
             for (let i = 0; i < params.length - 2; i++) {
                 if (params[i] != undefined) {
-                    sql +=  data[i] + '= ?, ';
+                    sql += data[i] + '= ?, ';
                     params2.push(params[i]);
                 }
             }
-            params2.push(ctx.request.body.missionid);params2.push(ctx.request.body.childusername);
+            params2.push(ctx.request.body.missionid);
+            params2.push(ctx.request.body.childusername);
             sql = sql.substring(0, sql.length - 2);
             sql = sql + ' where missionid = ?' + ' and childusername = ?';
             const [result] = await connection.query(
@@ -175,4 +176,3 @@ class Mission {
     }
 }
 export default new Mission();
-

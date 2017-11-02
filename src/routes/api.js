@@ -39,6 +39,54 @@ router.get('/', async(ctx, next) => {
             4: '清潔任務 clean',
             5: '運動任務 sport',
             6: '美術任務 art',
+        },
+        tree: {
+            child: [
+                '/child/',
+                '/child/:id',
+                '/child/add',
+                '/child/update',
+                '/child/delete',
+            ],
+            store: [
+                '/store/',
+                '/store/:id',
+                '/store/add',
+                '/store/update',
+                '/store/delete',
+            ],
+            teacher: [
+                '/teacher/',
+                '/teacher/:id',
+                '/teacher/add',
+                '/teacher/update',
+                '/teacher/delete',
+            ],
+            record: [
+                '/record/',
+                '/record/:id',
+                '/record/add',
+                '/record/update',
+                '/record/delete',
+            ],
+            mission: [
+                '/mission/',
+                '/mission/:id',
+                '/mission/add',
+                '/mission/update',
+                '/mission/delete',
+                '/mission/join',
+                '/mission/join/add',
+                '/mission/join/update',
+                '/mission/join/delete',
+            ],
+            user: [
+                '/user/login',
+            ],
+            log: [
+                '/',
+                '/log/add',
+            ]
         }
     }
 })
