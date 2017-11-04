@@ -20,6 +20,7 @@ class Mission {
             return false;
         }
     }
+
     async findById(ctx) {
         try {
             const connection = await mysql.createConnection(config);
@@ -31,9 +32,10 @@ class Mission {
             return false;
         }
     }
+
     async add(ctx) {
         try {
-            let params = [
+            const params = [
                 ctx.request.body.missionname,
                 ctx.request.body.missiontype,
                 ctx.request.body.missioncontent,
@@ -52,9 +54,10 @@ class Mission {
             return false;
         }
     }
+
     async update(ctx) {
         try {
-            let params = [
+            const params = [
                 ctx.request.body.missionname,
                 ctx.request.body.missiontype,
                 ctx.request.body.missioncontent,
@@ -74,6 +77,7 @@ class Mission {
             return false;
         }
     }
+
     async delete(ctx) {
         try {
             const connection = await mysql.createConnection(config);
@@ -85,6 +89,7 @@ class Mission {
             return false;
         }
     }
+
     async join_find(ctx) {
         try {
             let sql = 'Select * from web_mission_join where 1 = 1';
@@ -104,9 +109,10 @@ class Mission {
             return false;
         }
     }
+
     async join_add(ctx) {
         try {
-            let params = [
+            const params = [
                 ctx.request.body.missionid,
                 ctx.request.body.childusername,
                 ctx.request.body.createtime,
@@ -126,43 +132,39 @@ class Mission {
             return false;
         }
     }
+
     async join_update(ctx) {
+
         try {
-            let params = [
+            const params = [
+                ctx.request.body.submittime,
+                ctx.request.body.starttime,
                 ctx.request.body.status,
                 ctx.request.body.experience,
-                ctx.request.body.verifytime,
-                ctx.request.body.verifyusername,
+                ctx.request.body.picture,
                 ctx.request.body.missionid,
                 ctx.request.body.childusername
             ];
-            let params2 = [];
-            let data = [
-                'status',
-                'experience',
-                'verifytime',
-                'verifyusername',
-            ]
+
+            const sql = `
+            UPDATE web_mission_join SET 
+            submittime = ?, 
+            starttime = ?, 
+            status = ?, 
+            experience = ? ,
+            picture = ? 
+            WHERE missionid = ? AND childusername = ?
+            `;
+
             const connection = await mysql.createConnection(config);
-            let sql = 'Update web_mission_join set ';
-            for (let i = 0; i < params.length - 2; i++) {
-                if (params[i] != undefined) {
-                    sql += data[i] + '= ?, ';
-                    params2.push(params[i]);
-                }
-            }
-            params2.push(ctx.request.body.missionid);
-            params2.push(ctx.request.body.childusername);
-            sql = sql.substring(0, sql.length - 2);
-            sql = sql + ' where missionid = ?' + ' and childusername = ?';
-            const [result] = await connection.query(
-                sql, params2
-            );
+            const [result] = await connection.query(sql, params);
+
             return result;
         } catch (e) {
             return false;
         }
     }
+
     async join_delete(ctx) {
         try {
             const connection = await mysql.createConnection(config);
@@ -173,6 +175,22 @@ class Mission {
         } catch (e) {
             return false;
         }
+    }
+
+    /**
+     * 任務審核-通過
+     * @param {*} ctx 
+     */
+    async verify_pass(ctx) {
+        // ...
+    }
+
+    /**
+     * 任務審核-駁回
+     * @param {*} ctx 
+     */
+    async verify_reject(ctx) {
+        // ...
     }
 }
 export default new Mission();
