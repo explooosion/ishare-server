@@ -17,6 +17,12 @@ const verify = util.promisify(jwt.verify); // 解密
 const secret = require('../config/secret.json');
 const router = new Router();
 
+router.post('/', async(ctx, next) => {
+    ctx.body = {
+        Message: 'Welcome to API'
+    }
+})
+
 router.get('/', async(ctx, next) => {
 
     let c_ip = ctx.request.headers['x-forwarded-for'];

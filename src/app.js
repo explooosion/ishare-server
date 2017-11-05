@@ -9,7 +9,7 @@ import logger from 'koa-logger';
 import convert from 'koa-convert';
 import bodyParser from 'koa-bodyparser';
 import helmet from 'koa-helmet';
-import jwtKoa from 'koa-jwt';
+import jwt from 'koa-jwt';
 import cors from 'kcors';
 
 // unit
@@ -31,11 +31,12 @@ app
     .use(views(__dirname + '/view/', {
         extension: 'html'
     }))
-    // .use(jwtKoa({
-    //     secret: secret.sign
+    // .use(jwt({
+    //     secret: 'ishare',
+    //     // passthrough: true
     // }).unless({
-    //     // 不需要驗證的請求路徑
-    //     path: [/^\/api/, /^\/api\/login/, /^\/api\/exchange/, /^\/api\/child/, /^\/dashboard/, /^\/qrcode/]
+    //     // path: ['/', /^\/activity/, /^\/qrcode/, /^\/dashboard/]
+    //     path: ['/', '/api', '/api/user/login']
     // }))
     .use(routes())
 
