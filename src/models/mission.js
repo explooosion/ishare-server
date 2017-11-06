@@ -35,6 +35,7 @@ class Mission {
         }
     }
 
+
     async add(ctx) {
         try {
             const params = [
@@ -111,6 +112,35 @@ class Mission {
             return false;
         }
     }
+
+
+    /**
+     * 尋找任務且具有任務資訊
+     * @param {*} ctx 
+     */
+    async join_find_mission(ctx) {
+        try {
+            let sql = `SELECT * from web_mission LEFT JOIN web_mission_join 
+            ON web_mission.id = web_mission_join.missionid WHERE 1=1`;
+            if (ctx.query.username != undefined) {
+                sql += ' and web_mission_join.childusername = ' + "'" + ctx.query.username + "'";
+            };
+            if (ctx.query.status != undefined) {
+                sql += ' and web_mission_join.status = ' + "'" + ctx.query.status + "'"
+            };
+            if (ctx.query.missionid != undefined) {
+                sql += ' and web_mission_join.missionid = ' + "'" + ctx.query.missionid + "'"
+            }
+
+            sql += ' ';
+            const connection = await mysql.createConnection(config);
+            const [rows, fields] = await connection.query(sql + ' limit 1000');
+            return rows;
+        } catch (e) {
+            return false;
+        }
+    }
+
 
     async join_add(ctx) {
         try {

@@ -46,6 +46,7 @@ router.get('/', async(ctx, next) => {
             5: '運動任務 sport',
             6: '美術任務 art',
         },
+        mission_status: ['已參加', '已提交', '已審核', '已退回'],
         tree: {
             child: [
                 '/child/',
@@ -121,6 +122,7 @@ router.post('/record/delete', RecordControllers.delete);
 // Mission
 router.get('/mission', MissionControllers.find);
 router.get('/mission/join', MissionControllers.join_find);
+router.get('/mission/join/all', MissionControllers.join_find_mission);
 router.get('/mission/:id', MissionControllers.findById);
 router.post('/mission/add', MissionControllers.add);
 router.post('/mission/update', MissionControllers.update);
