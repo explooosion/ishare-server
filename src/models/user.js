@@ -48,20 +48,20 @@ class User {
                         'select * from web_teacher where teacherusername = ? and teacherpassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
 
-                    if (rows.length !== 0) {
-                        log.add(ctx);
-                    }
-                    let userToken = {
-                        userId: ctx.request.userId,
-                        userPwd: ctx.request.userPwd,
-                        logingroup: ctx.request.logingroup
-                    };
-                    const token = jwt.sign(userToken, secret.sign, {
-                        expiresIn: '1h'
-                    });
-
-                    let _rows = rows[0];
-                    return _rows;
+                    // 測試 JWT 用
+                    // if (rows.length !== 0) {
+                    //     log.add(ctx);
+                    // }
+                    // let userToken = {
+                    //     userId: ctx.request.userId,
+                    //     userPwd: ctx.request.userPwd,
+                    //     logingroup: ctx.request.logingroup
+                    // };
+                    // const token = jwt.sign(userToken, secret.sign, {
+                    //     expiresIn: '1h'
+                    // });
+                    // let _rows = rows[0];
+                    return rows;
                 } catch (e) {
                     return false;
                 }
