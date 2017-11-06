@@ -1,6 +1,6 @@
 {
   "name": "angel-plan",
-  "version": "2.1.0",
+  "version": "2.5.0",
   "description": "ishare project - angel plan",
   "main": "start.js",
   "scripts": {
