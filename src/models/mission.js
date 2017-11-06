@@ -2,6 +2,8 @@
 import mysql from 'mysql2/promise';
 import config from '../config/db';
 
+import R from 'ramda';
+
 class Mission {
 
     async find(ctx) {
@@ -136,31 +138,28 @@ class Mission {
     async join_update(ctx) {
 
         try {
-            const params = [
-                ctx.request.body.submittime,
-                ctx.request.body.starttime,
-                ctx.request.body.status,
-                ctx.request.body.experience,
-                ctx.request.body.picture,
-                ctx.request.body.missionid,
-                ctx.request.body.childusername
-            ];
 
-            const sql = `
-            UPDATE web_mission_join SET 
-            submittime = ?, 
-            starttime = ?, 
-            status = ?, 
-            experience = ? ,
-            picture = ? 
-            WHERE missionid = ? AND childusername = ?
-            `;
+            const obj = ctx.request.body;
+
+            let params = [];
+            let _param = [ctx.request.body.missionid, ctx.request.body.childusername];
+            let sql = 'UPDATE web_mission_join SET';
+
+            Object.keys(obj).forEach((value, index, array) => {
+                if (R.and(value !== 'missionid', value !== 'childusername')) {
+                    params.push(ctx.request.body[value]);
+                    sql += ` ${value} = ?,`;
+                }
+            });
+
+            params = R.concat(params, _param);
+            sql = sql.substr(0, sql.length - 1) + ' WHERE missionid = ? AND childusername = ?';
 
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(sql, params);
-
             return result;
         } catch (e) {
+            console.log(e);
             return false;
         }
     }
