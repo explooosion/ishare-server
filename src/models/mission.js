@@ -114,23 +114,34 @@ class Mission {
 
     async join_add(ctx) {
         try {
+
+            // 有些欄位請初始化格式
+
             const params = [
                 ctx.request.body.missionid,
                 ctx.request.body.childusername,
                 ctx.request.body.createtime,
-                ctx.request.body.finishtime,
-                ctx.request.body.status,
-                ctx.request.body.experience,
-                ctx.request.body.verifytime,
-                ctx.request.body.picture,
-                ctx.request.body.verifyusername
+                '已參加',
+                JSON.stringify({
+                    "家人": false,
+                    "朋友": false
+                }),
+                JSON.stringify({
+                    "彩繪": false,
+                    "捏塑": false,
+                    "雕刻": false,
+                    "平面設計": false,
+                    "立體設計": false
+                })
             ];
+            console.log(params);
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_mission_join (missionid, childusername, createtime, finishtime, status,experience,verifytime,picture,verifyusername) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', params
+                'insert into web_mission_join (missionid, childusername, createtime, status, travelmember, arttype) values (?, ?, ?, ?, ?, ?)', params
             );
             return result;
         } catch (e) {
+            console.log(e);
             return false;
         }
     }
