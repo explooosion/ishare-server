@@ -247,11 +247,12 @@ class Mission {
                 ctx.request.body.status,
                 ctx.request.body.verifytime,
                 ctx.request.body.verifyusername,
-                ctx.request.body.id
+                ctx.request.body.missionid,
+                ctx.request.body.childusername
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'Update web_mission set status = ? , verifytime = ? , verifyusername = ? where id = ?', params
+                'Update web_mission_join set status = ? , verifytime = ? , verifyusername = ? where missionid = ? and childusername = ?', params
             );
             return result;
         } catch (e) {

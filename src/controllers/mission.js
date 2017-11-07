@@ -36,6 +36,9 @@ class MissionControllers {
     async join_delete(ctx) {
         ctx.body = await Mission.join_delete(ctx);
     }
+    async verify(ctx) {
+        ctx.body = await Mission.verify(ctx);
+    }
 }
 
 export default new MissionControllers();

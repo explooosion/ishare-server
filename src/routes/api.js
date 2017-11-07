@@ -129,6 +129,7 @@ router.get('/mission/creater/:uid', MissionControllers.findByCreater);
 router.post('/mission/add', MissionControllers.add);
 router.post('/mission/update', MissionControllers.update);
 router.post('/mission/delete', MissionControllers.delete);
+router.post('/mission/verify', MissionControllers.verify);
 router.post('/mission/join/add', MissionControllers.join_add);
 router.post('/mission/join/update', MissionControllers.join_update);
 router.post('/mission/join/delete', MissionControllers.join_delete);
