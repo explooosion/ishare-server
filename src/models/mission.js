@@ -38,22 +38,27 @@ class Mission {
 
     async add(ctx) {
         try {
-            const params = [
-                ctx.request.body.missionname,
-                ctx.request.body.missiontype,
-                ctx.request.body.missioncontent,
-                ctx.request.body.missionlevel,
-                ctx.request.body.missionlink,
-                ctx.request.body.missioncreatetime,
-                ctx.request.body.missionfinaltime,
-                ctx.request.body.missionlocation
-            ];
+
+            const obj = ctx.request.body;
+
+            let params = [];
+            let sql = 'INSERT INTO web_mission (';
+
+            Object.keys(obj).forEach((value, index, array) => {
+                params.push(ctx.request.body[value]);
+                sql += ` ${value},`;
+            });
+            sql = sql.substr(0, sql.length - 1) + ' ) values (';
+            for (let i = 0; i < params.length; i++) {
+                sql += ' ?,';
+            }
+            sql = sql.substr(0, sql.length - 1) + ' )';
+
             const connection = await mysql.createConnection(config);
-            const [result] = await connection.query(
-                'insert into web_mission (missionname, missiontype, missioncontent, missionlevel, missionlink,missioncreatetime,missionfinaltime,missionlocation) values (?, ?, ?, ?, ?, ?, ?, ?)', params
-            );
+            const [result] = await connection.query(sql, params);
             return result;
         } catch (e) {
+            console.log(e);
             return false;
         }
     }
