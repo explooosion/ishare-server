@@ -36,6 +36,19 @@ class Mission {
     }
 
 
+    async findByCreater(ctx) {
+        try {
+            const connection = await mysql.createConnection(config);
+            const [rows, fields] = await connection.query(
+                'SELECT * FROM web_mission WHERE missioncreateuser = ?', [ctx.params.uid]
+            );
+            return rows;
+        } catch (e) {
+            console.log(e)
+            return false;
+        }
+    }
+
     async add(ctx) {
         try {
 
@@ -125,7 +138,7 @@ class Mission {
      */
     async join_find_mission(ctx) {
         try {
-            let sql = `SELECT * from web_mission LEFT JOIN web_mission_join 
+            let sql = `SELECT * from web_mission RIGHT JOIN web_mission_join 
             ON web_mission.id = web_mission_join.missionid WHERE 1=1`;
             if (ctx.query.username != undefined) {
                 sql += ' and web_mission_join.childusername = ' + "'" + ctx.query.username + "'";
@@ -136,10 +149,12 @@ class Mission {
             if (ctx.query.missionid != undefined) {
                 sql += ' and web_mission_join.missionid = ' + "'" + ctx.query.missionid + "'"
             }
+            if (ctx.query.missioncreateuser != undefined) {
+                sql += ' and web_mission.missioncreateuser = ' + "'" + ctx.query.missioncreateuser + "'"
+            }
 
-            sql += ' ';
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query(sql + ' limit 1000');
+            const [rows, fields] = await connection.query(`${sql} limit 1000`);
             return rows;
         } catch (e) {
             return false;

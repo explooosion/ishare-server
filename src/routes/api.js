@@ -78,6 +78,7 @@ router.get('/', async(ctx, next) => {
             ],
             mission: [
                 '/mission/',
+                '/mission/creater/:id',
                 '/mission/:id',
                 '/mission/add',
                 '/mission/update',
@@ -124,6 +125,7 @@ router.get('/mission', MissionControllers.find);
 router.get('/mission/join', MissionControllers.join_find);
 router.get('/mission/join/all', MissionControllers.join_find_mission);
 router.get('/mission/:id', MissionControllers.findById);
+router.get('/mission/creater/:uid', MissionControllers.findByCreater);
 router.post('/mission/add', MissionControllers.add);
 router.post('/mission/update', MissionControllers.update);
 router.post('/mission/delete', MissionControllers.delete);

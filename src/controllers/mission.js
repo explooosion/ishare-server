@@ -9,6 +9,9 @@ class MissionControllers {
     async findById(ctx) {
         ctx.body = await Mission.findById(ctx);
     }
+    async findByCreater(ctx) {
+        ctx.body = await Mission.findByCreater(ctx);
+    }
     async add(ctx) {
         ctx.body = await Mission.add(ctx);
     }
