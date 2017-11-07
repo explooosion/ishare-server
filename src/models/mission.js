@@ -226,16 +226,23 @@ class Mission {
      * 任務審核-通過
      * @param {*} ctx 
      */
-    async verify_pass(ctx) {
-        // ...
+    async verify(ctx) {
+        try {
+            const params = [
+                ctx.request.body.status,
+                ctx.request.body.verifytime,
+                ctx.request.body.verifyusername,
+                ctx.request.body.id
+            ];
+            const connection = await mysql.createConnection(config);
+            const [result] = await connection.query(
+                'Update web_mission set status = ? , verifytime = ? , verifyusername = ? where id = ?', params
+            );
+            return result;
+        } catch (e) {
+            return false;
+        }
     }
 
-    /**
-     * 任務審核-駁回
-     * @param {*} ctx 
-     */
-    async verify_reject(ctx) {
-        // ...
-    }
 }
 export default new Mission();
