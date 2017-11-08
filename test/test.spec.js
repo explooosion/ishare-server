@@ -6,9 +6,21 @@ import supertest from 'supertest';
 const request = supertest.agent(app.listen());
 
 describe('Index Page', function () {
-    it('returns status code 200', function (done) {
+    it('returns status code 302', function (done) {
         request
             .get('/')
+            .expect(302)
+            .end(function (err, res) {
+                if (err) throw err;
+                done();
+            })
+    });
+});
+
+describe('API', function () {
+    it('returns status code 200', function (done) {
+        request
+            .get('/api')
             .expect(200)
             .end(function (err, res) {
                 if (err) throw err;
