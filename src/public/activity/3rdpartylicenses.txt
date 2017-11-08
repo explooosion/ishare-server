@@ -47,11 +47,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-@angular/forms@5.0.0
+@angular/forms@5.0.1
 MIT
 MIT
 
-mydatepicker@2.3.0
+mydatepicker@2.4.0
 MIT
 The MIT License (MIT)
 
@@ -79,19 +79,19 @@ ng2-cookies@1.0.12
 MIT
 MIT
 
-@angular/core@5.0.0
+@angular/core@5.0.1
 MIT
 MIT
 
-@angular/platform-browser@5.0.0
+@angular/platform-browser@5.0.1
 MIT
 MIT
 
-@angular/router@5.0.0
+@angular/router@5.0.1
 MIT
 MIT
 
-@angular/common@5.0.0
+@angular/common@5.0.1
 MIT
 MIT
 
@@ -142,7 +142,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-@angular/animations@5.0.0
+@angular/animations@5.0.1
 MIT
 MIT
 
@@ -192,7 +192,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-bootstrap@4.0.0-beta
+bootstrap@4.0.0-beta.2
 MIT
 The MIT License (MIT)
 
