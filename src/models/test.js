@@ -12,7 +12,7 @@ class test {
 
         connection.connect();
 
-        connection.query('select storename from web_store',function(err, results, fields) {
+        connection.query('SELECT storename FROM web_store',function(err, results, fields) {
             console.log(results[0].storename.toString());
             temp = results[0].storename.toString();
             }

@@ -8,7 +8,7 @@ class Child {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_child limit 1000');
+            const [rows, fields] = await connection.query('SELECT * FROM web_child LIMIT 1000');
             return rows;
         } catch (e) {
             return false
@@ -18,7 +18,7 @@ class Child {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_child where id = ?', [ctx.params.id]
+                'SELECT * FROM web_child WHERE id = ?', [ctx.params.id]
             );
             return rows;
         } catch (e) {
@@ -40,7 +40,7 @@ class Child {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_child (childusername, childpassword, childname, childgender, childpoint, childcode, childschool, childstudentid) values (?, ?, ?, ?, ?, ?, ?, ?)', params);
+                'INSERT INTO web_child (childusername, childpassword, childname, childgender, childpoint, childcode, childschool, childstudentid) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', params);
             return result;
         } catch (e) {
             console.log(e);
@@ -61,7 +61,7 @@ class Child {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'update web_child set childname = ? , childgender = ? , childpoint = ? , childcode = ? , childschool = ? , childstudentid = ? where id = ?', params);
+                'UPDATE web_child SET childname = ? , childgender = ? , childpoint = ? , childcode = ? , childschool = ? , childstudentid = ? WHERE id = ?', params);
             return result;
         } catch(e) {
             return false;
@@ -72,7 +72,7 @@ class Child {
         try {
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'delete from web_child where id = ?', [ctx.request.body.id]
+                'DELETE FROM web_child WHERE id = ?', [ctx.request.body.id]
             );
             return result;
         } catch (e) {

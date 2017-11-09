@@ -17,7 +17,7 @@ class User {
                 try {
                     const connection = await mysql.createConnection(config);
                     const [rows, fields] = await connection.query(
-                        'select * from web_service where serviceusername = ? and servicepassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
+                        'SELECT * FROM web_service WHERE serviceusername = ? AND servicepassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
                     if (rows.length != 0) {
                         log.add(ctx)
@@ -31,7 +31,7 @@ class User {
                 try {
                     const connection = await mysql.createConnection(config);
                     const [rows, fields] = await connection.query(
-                        'select * from web_store where storeusername = ? and storepassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
+                        'SELECT * FROM web_store WHERE storeusername = ? AND storepassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
                     if (rows.length != 0) {
                         log.add(ctx)
@@ -45,7 +45,7 @@ class User {
                 try {
                     const connection = await mysql.createConnection(config);
                     const [rows, fields] = await connection.query(
-                        'select * from web_teacher where teacherusername = ? and teacherpassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
+                        'SELECT * FROM web_teacher WHERE teacherusername = ? AND teacherpassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
 
                     // 測試 JWT 用
@@ -70,7 +70,7 @@ class User {
                 try {
                     const connection = await mysql.createConnection(config);
                     const [rows, fields] = await connection.query(
-                        'select * from web_child where childusername = ? and childpassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
+                        'SELECT * FROM web_child WHERE childusername = ? AND childpassword = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
                     console.log(rows.length);
                     if (rows.length != 0) {
@@ -85,7 +85,7 @@ class User {
                 try {
                     const connection = await mysql.createConnection(config);
                     const [rows, fields] = await connection.query(
-                        'select * from web_admin where adminusername  = ? and adminpassword  = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
+                        'SELECT * FROM web_admin WHERE adminusername  = ? AND adminpassword  = ?', [ctx.request.body.userId, ctx.request.body.userPwd]
                     );
                     if (rows.length != 0) {
                         log.add(ctx)

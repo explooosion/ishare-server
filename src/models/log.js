@@ -7,7 +7,7 @@ class Log {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_log order by id desc limit 1000');
+            const [rows, fields] = await connection.query('SELECT * FROM web_log ORDER BY id DESC LIMIT 1000');
             return rows;
         } catch (e) {
             return false
@@ -30,7 +30,7 @@ class Log {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_log (loginusername, logintime, loginip) values (?, ?, ?)', params);
+                'INSERT INTO web_log (loginusername, logintime, loginip) VALUES (?, ?, ?)', params);
             return true;
         } catch (e) {
             console.log(e);

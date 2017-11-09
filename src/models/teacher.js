@@ -7,7 +7,7 @@ class Teacher {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_teacher limit 1000');
+            const [rows, fields] = await connection.query('SELECT * FROM web_teacher LIMIT 1000');
             return rows;
         } catch (e) {
             return false;
@@ -17,7 +17,7 @@ class Teacher {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_teacher where id = ?', [ctx.params.id]
+                'SELECT * FROM web_teacher WHERE id = ?', [ctx.params.id]
             );
             return rows;
         } catch (e) {
@@ -35,7 +35,7 @@ class Teacher {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_teacher (teacherusername, teacherpassword, teachername, teachergender, teachertel) values (?, ?, ?, ?, ?)', params);
+                'INSERT INTO web_teacher (teacherusername, teacherpassword, teachername, teachergender, teachertel) VALUES (?, ?, ?, ?, ?)', params);
             return result;
         } catch (e) {
             return false;
@@ -51,7 +51,7 @@ class Teacher {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'Update web_teacher set teachername = ?, teachergender = ? , teachertel = ? where id = ?', params
+                'UPDATE web_teacher SET teachername = ?, teachergender = ? , teachertel = ? WHERE id = ?', params
             );
             return result;
         } catch (e) {
@@ -62,7 +62,7 @@ class Teacher {
         try {
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'delete from web_teacher where id = ?', [ctx.request.body.id]
+                'DELETE FROM web_teacher WHERE id = ?', [ctx.request.body.id]
             );
             return result;
         } catch (e) {

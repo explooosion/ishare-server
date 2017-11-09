@@ -7,7 +7,7 @@ class Store {
     async find(ctx) {
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query('select * from web_store limit 1000');
+            const [rows, fields] = await connection.query('SELECT * FROM web_store LIMIT 1000');
             return rows;
         } catch (e) {
             return false;
@@ -17,7 +17,7 @@ class Store {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'select * from web_store where id = ?', [ctx.params.id]
+                'SELECT * FROM web_store WHERE id = ?', [ctx.params.id]
             );
             return rows;
         } catch (e) {
@@ -39,7 +39,7 @@ class Store {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_store (storeusername, storepassword, storename, storeaddr, storeadminstore, storetel, storeein, storetype, storephoto) values (?, ?, ?, ?, ?, ?, ?, ?, ?)', params
+                'INSERT INTO web_store (storeusername, storepassword, storename, storeaddr, storeadminstore, storetel, storeein, storetype, storephoto) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)', params
             );
             return result;
         } catch (e) {
@@ -60,7 +60,7 @@ class Store {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'Update web_store set storename = ?, storeaddr = ? , storeadminstore = ? , storetel = ? , storeein = ? , storetype = ? , storephoto = ? where id = ?', params
+                'UPDATE web_store SET storename = ?, storeaddr = ? , storeadminstore = ? , storetel = ? , storeein = ? , storetype = ? , storephoto = ? WHERE id = ?', params
             );
             return result;
         } catch (e) {
@@ -71,7 +71,7 @@ class Store {
         try {
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'delete from web_store where id = ?', [ctx.request.body.id]
+                'DELETE FROM web_store WHERE id = ?', [ctx.request.body.id]
             );
             return result;
         } catch (e) {

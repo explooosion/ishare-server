@@ -7,16 +7,16 @@ import R from 'ramda';
 class Mission {
 
     async find(ctx) {
-        let sql = 'Select * from web_mission where 1 = 1';
+        let sql = 'SELECT * FROM web_mission WHERE 1 = 1';
         if (ctx.query.type != undefined) {
-            sql += ' and missiontype = ' + "'" + ctx.query.type + "'";
+            sql += ' AND missiontype = ' + "'" + ctx.query.type + "'";
         };
         if (ctx.query.location != undefined) {
-            sql += ' and missionlocation = ' + "'" + ctx.query.location + "'"
+            sql += ' AND missionlocation = ' + "'" + ctx.query.location + "'"
         };
         try {
             const connection = await mysql.createConnection(config);
-            const [rows, fields] = await connection.query(sql + ' limit 1000');
+            const [rows, fields] = await connection.query(sql + ' LIMIT 1000');
             return rows;
         } catch (e) {
             return false;
@@ -27,7 +27,7 @@ class Mission {
         try {
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(
-                'Select * from web_mission where id = ?', [ctx.params.id]
+                'SELECT * FROM web_mission WHERE id = ?', [ctx.params.id]
             );
             return rows;
         } catch (e) {
@@ -91,7 +91,7 @@ class Mission {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'Update web_mission set missionname = ? , missiontype = ? , missioncontent = ?, missionlevel = ? , missionlink = ? , missioncreatetime = ? ,missionfinaltime = ? , missionlocation = ? where id = ?', params
+                'UPDATE web_mission SET missionname = ? , missiontype = ? , missioncontent = ?, missionlevel = ? , missionlink = ? , missioncreatetime = ? ,missionfinaltime = ? , missionlocation = ? WHERE id = ?', params
             );
             return result;
         } catch (e) {
@@ -103,7 +103,7 @@ class Mission {
         try {
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'delete from web_mission where id = ?', [ctx.request.body.id]
+                'DELETE FROM web_mission WHERE id = ?', [ctx.request.body.id]
             );
             return result;
         } catch (e) {
@@ -113,15 +113,15 @@ class Mission {
 
     async join_find(ctx) {
         try {
-            let sql = 'Select * from web_mission_join where 1 = 1';
+            let sql = 'SELECT * FROM web_mission_join WHERE 1 = 1';
             if (ctx.query.username != undefined) {
-                sql += ' and childusername = ' + "'" + ctx.query.username + "'";
+                sql += ' AND childusername = ' + "'" + ctx.query.username + "'";
             };
             if (ctx.query.status != undefined) {
-                sql += ' and status = ' + "'" + ctx.query.status + "'"
+                sql += ' AND status = ' + "'" + ctx.query.status + "'"
             };
             if (ctx.query.missionid != undefined) {
-                sql += ' and missionid = ' + "'" + ctx.query.missionid + "'"
+                sql += ' AND missionid = ' + "'" + ctx.query.missionid + "'"
             }
             const connection = await mysql.createConnection(config);
             const [rows, fields] = await connection.query(sql + ' limit 1000');
@@ -138,19 +138,19 @@ class Mission {
      */
     async join_find_mission(ctx) {
         try {
-            let sql = `SELECT * from web_mission RIGHT JOIN web_mission_join 
+            let sql = `SELECT * FROM web_mission RIGHT JOIN web_mission_join 
             ON web_mission.id = web_mission_join.missionid WHERE 1=1`;
             if (ctx.query.username != undefined) {
-                sql += ' and web_mission_join.childusername = ' + "'" + ctx.query.username + "'";
+                sql += ' AND web_mission_join.childusername = ' + "'" + ctx.query.username + "'";
             };
             if (ctx.query.status != undefined) {
-                sql += ' and web_mission_join.status = ' + "'" + ctx.query.status + "'"
+                sql += ' AND web_mission_join.status = ' + "'" + ctx.query.status + "'"
             };
             if (ctx.query.missionid != undefined) {
-                sql += ' and web_mission_join.missionid = ' + "'" + ctx.query.missionid + "'"
+                sql += ' AND web_mission_join.missionid = ' + "'" + ctx.query.missionid + "'"
             }
             if (ctx.query.missioncreateuser != undefined) {
-                sql += ' and web_mission.missioncreateuser = ' + "'" + ctx.query.missioncreateuser + "'"
+                sql += ' AND web_mission.missioncreateuser = ' + "'" + ctx.query.missioncreateuser + "'"
             }
 
             const connection = await mysql.createConnection(config);
@@ -187,7 +187,7 @@ class Mission {
             console.log(params);
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'insert into web_mission_join (missionid, childusername, createtime, status, travelmember, arttype) values (?, ?, ?, ?, ?, ?)', params
+                'INSERT INTO web_mission_join (missionid, childusername, createtime, status, travelmember, arttype) VALUES (?, ?, ?, ?, ?, ?)', params
             );
             return result;
         } catch (e) {
@@ -207,7 +207,7 @@ class Mission {
             let sql = 'UPDATE web_mission_join SET';
 
             Object.keys(obj).forEach((value, index, array) => {
-                if (R.and(value !== 'missionid', value !== 'childusername')) {
+                if (R.AND(value !== 'missionid', value !== 'childusername')) {
                     params.push(ctx.request.body[value]);
                     sql += ` ${value} = ?,`;
                 }
@@ -229,7 +229,7 @@ class Mission {
         try {
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'delete from web_mission_join where missionid = ? and childusername=?', [ctx.request.body.missionid, ctx.request.body.childusername]
+                'DELETE FROM web_mission_join WHERE missionid = ? AND childusername=?', [ctx.request.body.missionid, ctx.request.body.childusername]
             );
             return result;
         } catch (e) {
@@ -252,7 +252,7 @@ class Mission {
             ];
             const connection = await mysql.createConnection(config);
             const [result] = await connection.query(
-                'Update web_mission_join set status = ? , verifytime = ? , verifyusername = ? where missionid = ? and childusername = ?', params
+                'UPDATE web_mission_join SET status = ? , verifytime = ? , verifyusername = ? WHERE missionid = ? AND childusername = ?', params
             );
             return result;
         } catch (e) {
