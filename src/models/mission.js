@@ -206,8 +206,9 @@ class Mission {
             let _param = [ctx.request.body.missionid, ctx.request.body.childusername];
             let sql = 'UPDATE web_mission_join SET';
 
+            // 動態產出 sql 的 key
             Object.keys(obj).forEach((value, index, array) => {
-                if (R.AND(value !== 'missionid', value !== 'childusername')) {
+                if (R.and(value !== 'missionid', value !== 'childusername')) {
                     params.push(ctx.request.body[value]);
                     sql += ` ${value} = ?,`;
                 }
